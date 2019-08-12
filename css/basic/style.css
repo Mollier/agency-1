@@ -9,3 +9,12 @@
   src: url("../../assets/fonts/GTWalsheimProBold.ttf") format("ttf");
  }
  
+
+ body {
+   background-color:#040028; 
+ }
+
+ section {
+   height: 50vh;
+   background-color: cornflowerblue;
+ }

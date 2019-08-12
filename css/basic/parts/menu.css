@@ -76,6 +76,16 @@ li a {
   line-height: 16px;
   color: white;
   text-decoration: none;
+  transition: 500ms;
+}
+
+li a:hover {
+  color: #F9D7C8;
+  transition: 500ms;
+  text-shadow: #F9D7C8 0 0 3px;
+  font-weight: bold;
+  font-size: 15px;
+  padding:5px;
 }
 
 .is_in a{
