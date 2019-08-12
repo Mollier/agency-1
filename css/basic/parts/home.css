@@ -1,5 +1,32 @@
-header {
-  height: 100vh;
+.header__top {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #040028;
+}
+
+.header__top__logo {
+  margin-left: 20px;
+  z-index:100;
+}
+.header__top__right {
+  display: flex;
+  
+}
+
+.header__top__profil {
+  margin-right: 20px;
+  z-index:100;
+}
+.header__top__profil img{
+  height: 20px;
+  width: 20px;
+}
+
+.header_secondary {
+  height: 90vh;
   width: 100vw;
   background-color: #040028;
   display: flex;
@@ -12,7 +39,7 @@ header {
 }
 
 header p:nth-of-type(1) {
-  font-size: 29px;
+  font-size: 23px;
   line-height: 34px;
   text-align: center;
   letter-spacing: 0.03em;
@@ -31,7 +58,7 @@ header p:nth-of-type(2) {
   text-align: center;
 }
 
-.round {
+.round_framb {
   height: 203px;
   width: 57px;
   position: absolute;
@@ -39,7 +66,11 @@ header p:nth-of-type(2) {
   background-image: url('../../../assets/round_header.svg')
 }
 
-.header__top {
-  height: 80px;
-  background-color:violet;
+.round_green {
+  height: 100px;
+  width: 141px;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  background-image: url('../../../assets/round_green.svg')
 }
