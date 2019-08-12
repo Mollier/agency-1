@@ -1,2 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import './reset.css';
 @import './parts/home.css';
+
+@font-face {
+  font-family: "GTWalsheimProBold";
+  src: url("../../assets/fonts/GTWalsheimProBold.ttf") format("ttf");
+ }
+ 
