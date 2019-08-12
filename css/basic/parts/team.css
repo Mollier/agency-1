@@ -1,0 +1,115 @@
+.header_secondary--team {
+  height: 60vh;
+  position: relative;
+}
+
+.header_secondary--team h1 {
+  font-family: GTWalsheimProBold, sans-serif;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+/* framboise */
+color: #F9D7C8;
+
+}
+
+.round_middle {
+  background: #A3FFD3;
+  width: 158.3px;
+  height: 158.3px;
+  border-radius: 100px;
+  position: absolute;
+  bottom:-13%;
+}
+
+
+.team__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.team__txt {
+ font-family: Montserrat;
+ font-style: normal;
+ font-weight: 300;
+ font-size: 14px;
+ line-height: 160%;
+ text-align: center;
+ letter-spacing: 0.03em;
+ width: calc(100vw - 10px);
+ text-align: center;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+}
+.team__txt a {
+  text-decoration: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+  margin-top: 20px;
+}
+.button {
+  width: 176px;
+  height: 49px;
+  border: 0.25px solid #040028;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+
+.team__someone {
+  height: auto;
+  width: 283px;
+  display: flex;
+  flex-direction: column;
+}
+
+.team__someone__infos {
+  background: #F9D7C8;
+  height: 284px;
+}
+
+.team__someone__infos h3{
+  font-family: GTWalsheimProBold, sans-serif;
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 38px;
+  line-height: 101.7%;
+  /* or 39px */
+  text-align: center;
+  letter-spacing: 0.03em;
+  font-variant: small-caps;
+}
+
+.team__someone__infos h4{ 
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 160%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 20px;
+}
+
+.round__black {
+  background: #040028;
+  width: 24px;
+  height: 24px;
+  border-radius: 100px;
+  margin:auto;
+  margin-top: 44px;
+}

@@ -1,7 +1,7 @@
 <nav class="menu-close" id="menu-close">
         <ul class="items-menu">
-          <li class="is_in"><a href="index.html">L'agence</a></li>
-            <li><a href="index.html">L'équipe</a></li>
+          <li class="is_in"><a href="index.php">L'agence</a></li>
+            <li><a href="team.php">L'équipe</a></li>
             <li><a href="index.html">Nos réalisations</a></li>
             <li><a href="index.html">Nos services</a></li>
             <li><a href="index.html">Blog</a></li>
