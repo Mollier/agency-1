@@ -22,7 +22,19 @@
     </div>
   </header>
   <section>
-    
+      <div class="menu_second">
+          <div class="pronoms">
+            <img src="./assets/arrow_left.svg" alt="arrow">
+            <span>Je</span>
+            <span class="hidden">Je</span>
+            <span class="hidden">Je</span>
+            <span class="hidden">Je</span>
+            <span class="hidden">Je</span>
+            <span class="hidden">Je</span>
+            <img src="./assets/arrow_right.svg" alt="arrow">
+          </div>
+          <a href=""><div class="button">Accéder</div></a>
+      </div>
   </section>
   <?php include('./inc/footer.php')?>
 </body>

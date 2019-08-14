@@ -74,3 +74,38 @@ header p:nth-of-type(2) {
   left:0;
   background-image: url('../../../assets/round_green.svg')
 }
+
+/* second menu */
+
+.menu_second {
+  height: 300px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: honeydew;
+}
+
+.pronoms {
+  height: 100px;
+  background-color: rgb(137, 137, 218);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.pronoms span {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 63px;
+  text-align: center;
+  color: #040028;
+}
+.hidden {
+  display: none;
+}
