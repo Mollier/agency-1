@@ -63,19 +63,6 @@
 	margin-top: 20px;
 }
 
-.button
-{
-	width: 176px;
-	height: 49px;
-	border: 0.25px solid #040028;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: black;
-	text-decoration: none;
-	margin-bottom: 20px;
-}
-
 .team__someone
 {
 	height: auto;
