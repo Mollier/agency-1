@@ -32,7 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: GTWalsheimProBold, sans-serif;
+  font-family: 'GTWalsheimProBold', sans-serif;
   color: white;
   flex-direction: column;
   position: relative;
@@ -81,15 +81,12 @@ header p:nth-of-type(2) {
   height: 300px;
   width: 100vw;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: honeydew;
 }
 
 .pronoms {
   height: 100px;
-  background-color: rgb(137, 137, 218);
   width: 100%;
   display: flex;
   align-items: center;
@@ -108,4 +105,465 @@ header p:nth-of-type(2) {
 }
 .hidden {
   display: none;
+}
+
+.nos_offres {
+  height: auto;
+  width: 100vw;
+  padding-bottom: 30px;
+}
+
+h2 {
+  font-family: 'GTWalsheimProBold', sans-serif;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 57px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+}
+
+
+
+.round {
+  height: 24px;
+  width: 24px;
+  border-radius: 100px;
+  background: #F9D7C8;
+  margin: 20px auto 20px auto;
+}
+
+.offre_desc {
+min-width: 320px;
+font-family: Montserrat;
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 160%;
+text-align: center;
+letter-spacing: 0.03em;
+}
+
+.list_offres {
+  padding-top: 30px;
+  width: 90%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width:980px) {
+  .list_offres {
+    width: 40%;
+  }
+  
+  .offres_items {
+    min-width: 170px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+.offres_items {
+  height: auto;
+  width:130px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.offres_items .items__title {
+  font-family: 'GTWalsheimProBold', sans-serif;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.offres_items .items__desc {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 160%;
+  /* or 22px */
+  text-align: center;
+  letter-spacing: 0.03em;
+  width: 130px;
+}
+
+/* stats */
+
+.stats {
+  width: 100vw;
+  background: #040028;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  flex-wrap: wrap;
+}
+
+.stats_items {
+  height: auto;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 20px;
+  min-width: 180px;
+}
+
+.stats__number {
+  font-family: 'GTWalsheimProBold', sans-serif;
+  font-size: 68px;
+  line-height: 97px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  color: #F9D7C8;
+  font-weight: bold;
+}
+
+.stats__def {
+  color: white;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 160%;
+  /* or 22px */
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.turquoise {
+  color: #A3FFD3;
+}
+/* portrait */
+
+.portraits {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.forme_design {
+  position: absolute;
+  top: 0;
+
+}
+.communication {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.communication img {
+  margin-bottom: 30px;
+}
+
+.communication p {
+  margin-top: 30px;
+}
+
+.paragraph  {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 160%;
+  /* or 22px */
+  letter-spacing: 0.03em;
+  padding: 30px;
+}
+
+
+/* realisations */
+
+.realisations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.realisations__list {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: column;
+  width: calc(100vw - 50px);
+  height: auto;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 980px) {
+  .realisations__list {
+    width: 800px;
+    flex-direction: row;
+  }
+} 
+.realisations__items {
+  display: flex;
+  align-items: center;
+  width: 341.37px;
+  height: 175.44px;
+  background: #040028;
+  box-shadow: 0px -1px 114px rgba(4, 0, 40, 0.06);
+  flex-direction: column;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+
+.realisations__items--turquoise {
+  background: #A3FFD3;
+  color: black;
+}
+
+.item_title {
+  font-family: GT Walsheim Pro;
+  font-size: 25px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  font-variant: small-caps;
+  color: white;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.item_desc {
+  font-family: Montserrat;
+  font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 160%;
+    /* or 22px */
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: white;
+}
+
+.item_title--dark {
+  color: black
+}
+
+.item_desc--dark {
+  color: black;
+}
+
+
+.button {
+  margin-top: 30px;
+}
+.button > a {
+  text-decoration: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+  /* or 26px */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: black;
+  font-weight: bold;
+}
+
+/* references */
+
+.references {
+  height: auto;
+  width: 100vw;
+  margin-top: 45px;
+  
+}
+
+.list_references {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+.references_logos {
+  height: auto;
+}
+
+.two_items {
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  font-weight: bold;
+  margin: 20px auto 20px auto;
+}
+
+@media screen and (min-width: 980px) {
+  .list_references {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  h3 {
+    text-align: initial;
+  }
+
+  .list_references p {
+    width: 600px;
+  }
+  .references_txt {
+    margin-left: 80px;
+  }
+
+  .paragraph {
+    padding: 0;
+  }
+}
+
+/* last new */
+
+.news {
+  background: #040028;
+  height: auto;
+  padding: 30px 0 70px 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.news h1 {
+  font-family: GT Walsheim Pro;
+  font-size: 26px;
+  line-height: 57px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  color: white;
+  font-weight: bold;
+}
+
+.news_container {
+  display: flex;
+  width: calc(100% - 100px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.news_item {
+  width: calc(100vw - 30px);
+  height: auto;
+  margin-top: 20px;
+}
+@media screen and (min-width:980px) {
+
+  .news {
+    justify-content: center;
+  }
+  .news_item {
+    width: 500px;
+    margin-right: 40px;
+  }
+  .news_container {
+    display: flex;
+    width: calc(100% - 100px);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .news h1 {
+    font-size: 30px;
+  }
+}
+.header_new {
+  height: 248px;
+}
+
+.header_new img {
+  width: 100%;
+  height: 100%;
+}
+
+.news_item h3 {
+  font-family: GT Walsheim Pro;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  font-variant: small-caps;
+  color: #A3FFD3;
+  text-align: left;
+
+}
+
+.news_item p {
+  color: white;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 160%;
+  /* or 22px */
+  letter-spacing: 0.03em;
+}
+
+.share{
+  margin-top: 20px;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.share img {
+  margin-right:10px;
+  height: 20px;
+}
+
+.date {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 160%;
+  /* or 22px */
+  letter-spacing: 0.03em;
+  color: white;
 }
