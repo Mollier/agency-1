@@ -1,0 +1,52 @@
+h2 {
+    color: #040028;
+    font-weight: bold;
+    font-size: 4rem !important;
+
+}
+
+h4 {
+    color: #040028;
+    margin: 2em 0em;
+}
+
+.header img {
+    text-align: center;
+    align-items: center;
+}
+
+
+.introservice {
+    text-align: center;
+}
+
+.introservice img {
+    margin: 2em 0em;
+}
+
+.introservice p {
+    margin: 2em 0em;
+    line-height: 1.8;
+}
+
+.choixadmin ul {
+    margin: 0 0 1.75em 1.25em;
+    padding: 0;
+    line-height: 1.8em;
+}
+
+.choixadmin ul li {
+    list-style-type: none;
+    text-align: center;
+}
+
+.choixadmin ul li:before {
+    content: "•";
+    font-size: 2em;
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    padding-right: 5px;
+    color: #F9D7C8;
+    position: absolute;
+    left: 100px;
+}
