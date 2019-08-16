@@ -330,9 +330,9 @@ h2 {
 .realisations__list {
     display: flex;
     justify-content: space-around;
-    align-content: center;
+    align-items: center;
     flex-direction: column;
-    width: calc(100vw - 50px);
+    width: 100%;
     height: auto;
     flex-wrap: wrap;
 }
@@ -341,7 +341,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: calc(100vw - 40px);
+    width: calc(100vw - 60px);
     height: 175.44px;
     background: #040028;
     box-shadow: 0px -1px 114px rgba(4, 0, 40, 0.06);
@@ -428,11 +428,11 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 350px;
+    width: 100%;
 }
 
 .two_items img {
-    max-width: 55%;
+    max-width: 40%;
 }
 
 h3 {
