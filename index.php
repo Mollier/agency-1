@@ -44,7 +44,7 @@
     <div class="nos_offres">
       <h2>Nos offres</h2>
       <div class="round"></div>
-      <p class="offre_desc">
+      <p class="paragraph">
         Baï-Bao est une agence de communication digitale et print indépendante basée à Paris. De la conception au développement de sites internet en passant par un suivi social media et e-réputation, nous vous accompagnons dans la création et le déploiement de votre stratégie de branding sur l'ensemble de vos territoires de communication.
       </p>
       <div class="list_offres">

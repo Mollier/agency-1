@@ -114,6 +114,10 @@ header p:nth-of-type(2) {
     height: auto;
     width: 100vw;
     padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 h2 {
