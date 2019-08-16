@@ -5,45 +5,40 @@
 @import './parts/team.css';
 @import './parts/realisations.css';
 @import './parts/footer.css';
-
 @font-face {
-  font-family: "GTWalsheimProBold";
-  src: url("../../assets/fonts/GTWalsheimProBold.ttf") format("ttf");
- }
- 
+    font-family: "GTWalsheimProBold";
+    src: url("../../assets/fonts/GTWalsheimProBold.ttf") format("ttf");
+}
 
- body {
-   background-color:#040028; 
- }
+body {
+    background-color: #040028;
+}
 
- section {
-   height: auto;
-   background-color: white;
-   padding-top: 100px;
-   padding-bottom: 60px;
-   width: 100vw;
- }
+section {
+    height: auto;
+    background-color: white;
+    padding-top: 100px;
+    width: 100vw;
+}
 
+.button {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 176px;
+    height: 49px;
+    font-weight: bold;
+    font-family: Montserrat;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+    line-height: 160%;
+    margin: 30px 0 30px 0;
+}
 
- .button {
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 176px;
-  height: 49px;
-  font-weight: bold;
-  font-family: Montserrat;
-  font-style: normal;
-  letter-spacing: 0.03em;
-  font-size: 16px;
-  line-height: 160%;
-  margin: 30px 0 30px 0;
- }
-
-a  {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
- }
-
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}

@@ -1,131 +1,211 @@
 .realisations_top {
-  height: auto;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 30px;
+    height: auto;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
 }
 
 .realisations_filter {
-  height: 300px;
-  width: 100vw;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
+    height: 300px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .filter_item {
-  border: 1px solid #040028;
-  width: 176px;
-  height: 49px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 116%;
-  letter-spacing: 0.03em;
+    border: 1px solid #040028;
+    width: 176px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 116%;
+    letter-spacing: 0.03em;
 }
 
 .realisations__items--beige {
-  background: #F9D7C8;
-  color: black;
+    background: #F9D7C8;
+    color: black;
 }
 
 .round__turquoise {
-  display: none;
+    display: none;
 }
 
 .round__beige {
-  background: url('../../../assets/round_beige--mobile.svg');
-  height:163px;
-  width: 81.25px;
-  position: absolute;
-  left:0;
-  top:10px;
+    background: url('../../../assets/round_beige--mobile.svg');
+    height: 163px;
+    width: 81.25px;
+    position: absolute;
+    left: 0;
+    top: 10px;
 }
-
 
 .round__beige--right {
-  background: url('../../../assets/round_beige--mobile.svg');
-  transform: rotate(180deg);
-  height:163px;
-  width: 81.25px;
-  position: absolute;
-  right:0;
-  top:300px;
+    background: url('../../../assets/round_beige--mobile.svg');
+    transform: rotate(180deg);
+    height: 163px;
+    width: 81.25px;
+    position: absolute;
+    right: 0;
+    top: 300px;
 }
+
 .container__ref {
-  width: 80vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .partenaires {
-  width: 100vw;
-  height: auto;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 30px;
 }
 
 .partenaires_list {
-  width: auto;
-  height: auto;
-  display: flex;
-  justify-content: center;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .partenaires_item {
-  height:147.87px;
-  width:287.73px;
-  background: #A3FFD3;
-  box-shadow: 0px -1px 114px rgba(4, 0, 40, 0.06);
-  display: flex;
-  flex-direction: column;
-  color: black;
-  align-items: center;
-  justify-content: center;
+    height: 147.87px;
+    width: 287.73px;
+    background: #A3FFD3;
+    box-shadow: 0px -1px 114px rgba(4, 0, 40, 0.06);
+    display: flex;
+    flex-direction: column;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.coups_de_coeur {
+    background: #040028;
+    height: auto;
+    padding: 30px 0 70px 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.coups_de_coeur h1 {
+    font-family: 'GTWalsheimProBold', sans-serif;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    font-variant: small-caps;
+    color: #F9D7C8;
+    padding-top: 30px;
+}
+
+.coeur {
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+}
+
+.coups_de_coeur_list {
+    width: 336px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.coups_de_coeur_item {
+    width: 286px;
+    height: 147px;
+    background: #A3FFD3;
+    box-shadow: 0px -1px 114px rgba(4, 0, 40, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.round__beige__coups {
+    background: url('../../../assets/round_beige--mobile.svg');
+    height: 163px;
+    width: 81.25px;
+    position: absolute;
+    right: 43px;
+    transform: rotate(-90deg);
+    bottom: -50px;
 }
 
 @media screen and (min-width:980px) {
-  .realisations_filter { 
-    width: 600px;
-  }
-  .round__turquoise {
-    display: initial;
-    width: 176px;
-    height: 325px;
-    background-image: url('../../../assets/round_turquoise.svg');
-    position: absolute;
-    right:0;
-    bottom: -100px;
-  }
-
-  .round__beige {
-    background: url('../../../assets/round_beige.svg');
-    height:325px;
-    width: 162px;
-    position: absolute;
-    left:0;
-    top:10px;
-  }
-  
-  .round__beige--right {
-    background: url('../../../assets/round_beige.svg');
-    transform: rotate(180deg);
-    height:325px;
-    width: 162px;
-    position: absolute;
-    right:0;
-    top:300px;
-  }
-
-  .partenaires_item {
-    width: 395px;
-    height: 203px;
-  }
+    .realisations_filter {
+        width: 600px;
+    }
+    .round__turquoise {
+        display: initial;
+        width: 176px;
+        height: 325px;
+        background-image: url('../../../assets/round_turquoise.svg');
+        position: absolute;
+        right: 0;
+        bottom: -100px;
+    }
+    .round__beige {
+        background: url('../../../assets/round_beige.svg');
+        height: 325px;
+        width: 162px;
+        position: absolute;
+        left: 0;
+        top: 10px;
+    }
+    .round__beige--right {
+        background: url('../../../assets/round_beige.svg');
+        transform: rotate(180deg);
+        height: 325px;
+        width: 162px;
+        position: absolute;
+        right: 0;
+        top: 300px;
+    }
+    .partenaires_item {
+        width: 395px;
+        height: 203px;
+    }
+    .coups_de_coeur {
+        min-height: 450px;
+    }
+    .coups_de_coeur_list {
+        flex-direction: row;
+        width: 70vw;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .coups_de_coeur_item {
+        width: 286px;
+        height: 147px;
+    }
+    .round__beige__coups {
+        background: url('../../../assets/round_beige.svg');
+        height: 325px;
+        width: 162px;
+        position: absolute;
+        right: 280px;
+        transform: rotate(-90deg);
+        bottom: -113px;
+    }
 }
