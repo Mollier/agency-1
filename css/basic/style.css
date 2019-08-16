@@ -8,23 +8,23 @@
 @font-face {
   font-family: "GTWalsheimProBold";
   src: url("../../assets/fonts/GTWalsheimProBold.ttf") format("ttf");
- }
- 
-
- body {
-   background-color:#040028; 
- }
-
- section {
-   height: auto;
-   background-color: white;
-   padding-top: 100px;
-   padding-bottom: 60px;
-   width: 100vw;
- }
+}
 
 
- .button {
+body {
+  background-color: #040028;
+}
+
+section {
+  height: auto;
+  background-color: white;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  width: 100vw;
+}
+
+
+.button {
   border: 1px solid black;
   display: flex;
   align-items: center;
@@ -38,11 +38,25 @@
   font-size: 16px;
   line-height: 160%;
   margin: 30px 0 30px 0;
- }
+}
 
-a  {
+a {
   text-decoration: none;
   color: black;
   font-weight: bold;
- }
+}
 
+h2 {
+  color: #040028;
+  font-weight: bold;
+
+}
+
+.choixadmin .blocintroserv .choix ul li:before {
+  content: ".";
+  color: #F9D7C8;
+  width: 13px;
+  height: 13px;
+  left: 78.3px;
+  top: 1665.16px;
+}
