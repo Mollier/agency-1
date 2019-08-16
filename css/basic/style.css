@@ -6,6 +6,7 @@
 @import './parts/realisations.css';
 @import './parts/footer.css';
 @font-face {
+<<<<<<< HEAD
     font-family: "GTWalsheimProBold";
     src: url("../../assets/fonts/GTWalsheimProBold.ttf") format("ttf");
 }
@@ -41,4 +42,68 @@ a {
     text-decoration: none;
     color: black;
     font-weight: bold;
+=======
+  font-family: "GTWalsheimProBold";
+  src: url("../../assets/fonts/GTWalsheimProBold.ttf") format("ttf");
+}
+
+
+body {
+  background-color: #040028;
+}
+
+section {
+  height: auto;
+  background-color: white;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  width: 100vw;
+}
+
+
+.button {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 176px;
+  height: 49px;
+  font-weight: bold;
+  font-family: Montserrat;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  font-size: 16px;
+  line-height: 160%;
+  margin: 30px 0 30px 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+h2 {
+  color: #040028;
+  font-weight: bold;
+
+}
+
+h4 {
+  color: #040028;
+}
+
+.header img {
+  text-align: center;
+  align-items: center;
+}
+
+.choixadmin .blocintroserv .choix ul li:before {
+  content: ".";
+  color: #F9D7C8;
+  width: 13px;
+  height: 13px;
+  left: 78.3px;
+  top: 1665.16px;
+>>>>>>> 4f23f54638ab4164a1943efdcd8a38555c36f893
 }
