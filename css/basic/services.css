@@ -1,0 +1,23 @@
+h2 {
+    color: #040028;
+    font-weight: bold;
+
+}
+
+h4 {
+    color: #040028;
+}
+
+.header img {
+    text-align: center;
+    align-items: center;
+}
+
+.choixadmin .blocintroserv .choix ul li:before {
+    content: ".";
+    color: #F9D7C8;
+    width: 13px;
+    height: 13px;
+    left: 78.3px;
+    top: 1665.16px;
+}
