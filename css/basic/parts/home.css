@@ -39,7 +39,7 @@
     position: relative;
 }
 
-header p:nth-of-type(1) {
+.big__title {
     font-size: 23px;
     line-height: 34px;
     text-align: center;
@@ -211,8 +211,9 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 300px;
+    height: auto;
     flex-wrap: wrap;
+    padding-bottom: 20px;
 }
 
 .stats_items {
@@ -222,8 +223,13 @@ h2 {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    margin-right: 20px;
     min-width: 180px;
+}
+
+@media screen and (min-width:980px) {
+    .stats_items {
+        margin-right: 20px;
+    }
 }
 
 .stats__number {
@@ -327,18 +333,11 @@ h2 {
     flex-wrap: wrap;
 }
 
-@media screen and (min-width: 980px) {
-    .realisations__list {
-        width: 800px;
-        flex-direction: row;
-    }
-}
-
 .realisations__items {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 341.37px;
+    width: calc(100vw - 40px);
     height: 175.44px;
     background: #040028;
     box-shadow: 0px -1px 114px rgba(4, 0, 40, 0.06);
@@ -347,6 +346,17 @@ h2 {
     padding-left: 10px;
     margin-bottom: 30px;
     z-index: 100;
+}
+
+@media screen and (min-width: 980px) {
+    .realisations__items {
+        width: 395px;
+        height: 203px;
+    }
+    .realisations__list {
+        width: calc(100vw - 100px);
+        flex-direction: row;
+    }
 }
 
 .realisations__items--turquoise {
@@ -411,6 +421,14 @@ h2 {
 
 .two_items {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+}
+
+.two_items img {
+    max-width: 55%;
 }
 
 h3 {
@@ -446,123 +464,8 @@ h3 {
     }
 }
 
-
-/* last new */
-
-.news {
-    background: #040028;
-    height: auto;
-    padding: 30px 0 70px 0;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.news h1 {
-    font-family: 'GTWalsheimProBold', sans-serif;
-    font-size: 26px;
-    line-height: 57px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    font-variant: small-caps;
-    color: white;
-    font-weight: bold;
-}
-
-.news_container {
-    display: flex;
-    width: calc(100% - 100px);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.news_item {
-    width: calc(100vw - 30px);
-    height: auto;
-    margin-top: 20px;
-}
-
-.header_new {
-    height: 248px;
-}
-
-.header_new img {
-    width: 100%;
-    height: 100%;
-}
-
-.news_item h3 {
-    font-family: 'GTWalsheimProBold', sans-serif;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    font-variant: small-caps;
-    color: #A3FFD3;
-    text-align: left;
-}
-
-.news_item p {
-    color: white;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 160%;
-    /* or 22px */
-    letter-spacing: 0.03em;
-}
-
-.share {
-    margin-top: 20px;
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-}
-
-.share img {
-    margin-right: 10px;
-    height: 20px;
-}
-
-.date {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 160%;
-    /* or 22px */
-    letter-spacing: 0.03em;
-    color: white;
-}
-
 .coups_de_coeur {
     height: 300px;
     width: 100vw;
     background: #040028;
-}
-
-@media screen and (min-width:980px) {
-    .news {
-        justify-content: center;
-    }
-    .news_item {
-        width: 500px;
-        margin-right: 40px;
-    }
-    .news_container {
-        display: flex;
-        width: calc(100% - 100px);
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .news h1 {
-        font-size: 30px;
-    }
 }

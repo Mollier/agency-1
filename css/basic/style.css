@@ -3,6 +3,8 @@
 @import './parts/home.css';
 @import './parts/menu.css';
 @import './parts/team.css';
+@import './parts/news.css';
+@import './parts/services.css';
 @import './parts/realisations.css';
 @import './parts/footer.css';
 @font-face {

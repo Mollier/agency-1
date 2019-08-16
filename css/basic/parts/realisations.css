@@ -8,7 +8,7 @@
 }
 
 .realisations_filter {
-    height: 300px;
+    height: auto;
     width: 100vw;
     display: flex;
     justify-content: space-around;
@@ -29,6 +29,7 @@
     font-size: 16px;
     line-height: 116%;
     letter-spacing: 0.03em;
+    margin-bottom: 20px;
 }
 
 .realisations__items--beige {
@@ -122,7 +123,7 @@
 }
 
 .coups_de_coeur_list {
-    width: 336px;
+    width: 100vw;
     height: auto;
     display: flex;
     align-items: center;
@@ -147,7 +148,7 @@
     height: 163px;
     width: 81.25px;
     position: absolute;
-    right: 43px;
+    right: 42px;
     transform: rotate(-90deg);
     bottom: -50px;
 }
