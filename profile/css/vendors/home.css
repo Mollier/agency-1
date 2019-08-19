@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "GTWalsheimProBold";
+    src: url("../../assets/fonts/GTWalsheimProBold.ttf") format("ttf");
+}
+
+header {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.header__logo svg {
+    height: 36px;
+    width: 24px;
+    margin-bottom: 20px;
+}
+
+.cls-1 {
+    fill: white;
+}
+
+header a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
+    /* or 29px */
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #F9D7C8;
+    text-decoration: none;
+}
+
+.selection {
+    width: 100vw;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+@media screen and (min-width: 980px) {
+    .selection {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+.selection_i-am {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 160%;
+    /* or 22px */
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin: 20px 0 20px 0;
+    color: white;
+}
+
+.selection h3 a {
+    font-family: GTWalsheimProBold, sans-serif;
+    font-size: 38px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: #F9D7C8;
+    padding-bottom: 30px;
+    text-decoration: none;
+}
+
+.selection__item {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.selection p {
+    width: 177px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 160%;
+    /* or 22px */
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: white;
+}
+
+.round {
+    background-color: #F9D7C8;
+    height: 24px;
+    width: 24px;
+    border-radius: 100px;
+    margin-top: 26px;
+}
+
+.selection_intro {
+    padding-top: 20px;
+}

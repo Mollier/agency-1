@@ -5,11 +5,17 @@
     justify-content: space-between;
     align-items: center;
     background-color: #040028;
+    padding-top: 20px;
 }
 
 .header__top__logo {
     margin-left: 20px;
     z-index: 100;
+}
+
+.header__top__logo svg {
+    height: 14px;
+    width: 60px;
 }
 
 .header__top__right {
@@ -429,6 +435,12 @@ h2 {
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+@media screen and (min-width:980px) {
+    .two_items {
+        width: 30%;
+    }
 }
 
 .two_items img {

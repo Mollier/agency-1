@@ -1,0 +1,13 @@
+/* FONT */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+/* CSS */
+
+@import './vendors/reset.css';
+@import './vendors/home.css';
+@import './vendors/connect.css';
+@import './vendors/connected.css';
+body {
+    background: #040028;
+}
