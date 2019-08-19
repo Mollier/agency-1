@@ -5,12 +5,13 @@
     justify-content: space-between;
     align-items: center;
     background-color: #040028;
-    padding-top: 20px;
+    padding-top: 10px;
+    z-index: 200;
 }
 
 .header__top__logo {
     margin-left: 20px;
-    z-index: 100;
+    z-index: 200;
 }
 
 .header__top__logo svg {
@@ -20,6 +21,7 @@
 
 .header__top__right {
     display: flex;
+    z-index: 200;
 }
 
 .header__top__profil {
@@ -43,6 +45,12 @@
     color: white;
     flex-direction: column;
     position: relative;
+}
+
+.header_secondary p {
+    z-index: 120;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.233);
+    margin-bottom: 10px;
 }
 
 .big__title {
@@ -100,6 +108,10 @@ header p:nth-of-type(2) {
     align-items: center;
     justify-content: space-around;
     margin-bottom: 30px;
+}
+
+.pronoms-img:hover {
+    cursor: pointer;
 }
 
 .pronoms span {

@@ -90,6 +90,7 @@ li a:hover {
     text-shadow: #F9D7C8 0 0 3px;
     font-weight: bold;
     font-size: 15px;
+    padding: 5px;
 }
 
 .is_in a {
@@ -198,7 +199,7 @@ li a:hover {
 }
 
 .menu__burger {
-    height: 20px;
+    height: 35px;
     width: auto;
     margin-right: 30px;
     z-index: 10;
@@ -238,6 +239,7 @@ li a:hover {
         width: auto;
     }
     .items-menu {
+        padding-top: 30px;
         height: 25px;
         display: flex;
         justify-content: center;
@@ -253,4 +255,5 @@ li a:hover {
 
 .menu-open {
     transform: translateX(0);
+    z-index: 130;
 }

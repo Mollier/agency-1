@@ -16,7 +16,10 @@
     <div class="header_secondary">
       <img src="./assets/logo_framboise.svg" alt="logo">
       <p class="big__title">
-        Baï-Bao - Agence de communication - Paris
+        Baï-Bao
+      </p>
+      <p>
+        Agence de communication - Paris
       </p>
       <p>
         création - web - conseil - production
@@ -28,14 +31,14 @@
   <section>
     <div class="menu_second">
       <div class="pronoms">
-        <img src="./assets/arrow_left.svg" alt="arrow">
-        <span>Je</span>
-        <span class="hidden">Je</span>
-        <span class="hidden">Je</span>
-        <span class="hidden">Je</span>
-        <span class="hidden">Je</span>
-        <span class="hidden">Je</span>
-        <img src="./assets/arrow_right.svg" alt="arrow">
+        <img class="pronoms-img" src="./assets/arrow_left.svg" alt="arrow" id="arrow_left">
+        <span id="je">Je</span>
+        <span id="tu" class="hidden">Tu</span>
+        <span id="il" class="hidden">Il/elle</span>
+        <span id="nous" class="hidden">Nous</span>
+        <span id="vous" class="hidden">Vous</span>
+        <span id="ils" class="hidden">Ils/elles</span>
+        <img class="pronoms-img" src="./assets/arrow_right.svg" alt="arrow" id="arrow_right">
       </div>
       <a href="">
         <div class="button">Accéder</div>
