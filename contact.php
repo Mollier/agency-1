@@ -32,7 +32,7 @@
           <textarea name="message" cols="30" rows="10" placeholder="Votre message"></textarea>
 
 
-          <input type="submit">
+          <input type="submit" value="envoyer">
         </form>
 
       </div>

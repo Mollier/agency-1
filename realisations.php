@@ -51,50 +51,68 @@
 			<div class="round__beige"></div>
 			<div class="round__beige--right"></div>
 			<div class="realisations__list">
-				<div class="realisations__items">
-					<p class="item_title">1990 Architectures</p>
-					<p class="item_desc">Très pratique si vous avez une église délabrée au fond du jardin.</p>
-				</div>
+				<a href="" target="_blank">
+					<div class="realisations__items">
+						<p class="item_title">1990 Architectures</p>
+						<p class="item_desc">Très pratique si vous avez une église délabrée au fond du jardin.</p>
+					</div>
+				</a>
 
-				<div class="realisations__items realisations__items--turquoise">
-					<p class="item_title item_title--dark">SFIL</p>
-					<p class="item_desc item_desc--dark">Rapport RSE</p>
-				</div>
+				<a href="https://sfil.fr" target="_blank">
+					<div class="realisations__items realisations__items--turquoise">
+						<p class="item_title item_title--dark">SFIL</p>
+						<p class="item_desc item_desc--dark">Rapport RSE</p>
+					</div>
+				</a>
 
-				<div class="realisations__items realisations__items--beige">
-					<p class="item_title item_title--dark">ARTHUR LUIZ PIZA</p>
-					<p class="item_desc item_desc--dark">catalogue raisonné</p>
-				</div>
+				<a href="" target="_blank">
+					<div class="realisations__items realisations__items--beige">
+						<p class="item_title item_title--dark">ARTHUR LUIZ PIZA</p>
+						<p class="item_desc item_desc--dark">catalogue raisonné</p>
+					</div>
+				</a>
 
-				<div class="realisations__items">
-					<p class="item_title">ADYTON</p>
-					<p class="item_desc">Très pratique si vous avez une église délabrée au fond du jardin.</p>
-				</div>
+				<a href="https://adytonconseil.com" target="_blank">
+					<div class="realisations__items">
+						<p class="item_title">ADYTON</p>
+						<p class="item_desc">Très pratique si vous avez une église délabrée au fond du jardin.</p>
+					</div>
+				</a>
 
-				<div class="realisations__items">
-					<p class="item_title">ALBERT MESLEY</p>
-					<p class="item_desc">calalogue raisonné</p>
-				</div>
+				<a href="http://albertmeslay.com" target="_blank">
+					<div class="realisations__items">
+						<p class="item_title">ALBERT MESLAY</p>
+						<p class="item_desc">calalogue raisonné</p>
+					</div>
+				</a>
 
-				<div class="realisations__items realisations__items--beige">
-					<p class="item_title item_title--dark">LE BRETON</p>
-					<p class="item_desc item_desc--dark">calalogue raisonné</p>
-				</div>
+				<a href="https://atelier-lebreton.fr" target="_blank">
+					<div class="realisations__items realisations__items--beige">
+						<p class="item_title item_title--dark">LE BRETON</p>
+						<p class="item_desc item_desc--dark">calalogue raisonné</p>
+					</div>
+				</a>
 
-				<div class="realisations__items">
-					<p class="item_title">BAZIN CAZELLES</p>
-					<p class="item_desc">calalogue raisonné</p>
-				</div>
+				<a href="http://bazin-cazelles.fr" target="_blank">
+					<div class="realisations__items">
+						<p class="item_title">BAZIN CAZELLES</p>
+						<p class="item_desc">calalogue raisonné</p>
+					</div>
+				</a>
 
-				<div class="realisations__items">
-					<p class="item_title">CAFFIL</p>
-					<p class="item_desc">calalogue raisonné</p>
-				</div>
+				<a href="https://caissefrancaisedefinancementlocal.fr" target="_blank">
+					<div class="realisations__items">
+						<p class="item_title">CAFFIL</p>
+						<p class="item_desc">calalogue raisonné</p>
+					</div>
+				</a>
 
-				<div class="realisations__items realisations__items--turquoise">
-					<p class="item_title item_title--dark">CODEH EXECUTIVE</p>
-					<p class="item_desc item_desc--dark">calalogue raisonné</p>
-				</div>
+				<a href="" target="_blank">
+					<div class="realisations__items realisations__items--turquoise">
+						<p class="item_title item_title--dark">CODEH EXECUTIVE</p>
+						<p class="item_desc item_desc--dark">calalogue raisonné</p>
+					</div>
+				</a>
 			</div>
 		</div>
 
@@ -190,20 +208,26 @@
 			<div class="coeur"> <img src="./assets/coeur.svg" alt="coeur"></div>
 			<p class="paragraph paragraph--white">petit paragraphe sur les clients qui nous suivent depuis des années.</p>
 			<div class="coups_de_coeur_list">
-				<div class="coups_de_coeur_item">
-					<p class="item_title item_title--dark">CAFFIL</p>
-					<p class="item_desc item_desc--dark">calalogue raisonné</p>
-				</div>
+				<a href="" target="_blank">
+					<div class="coups_de_coeur_item">
+						<p class="item_title item_title--dark">CAFFIL</p>
+						<p class="item_desc item_desc--dark">calalogue raisonné</p>
+					</div>
+				</a>
 
-				<div class="coups_de_coeur_item">
-					<p class="item_title item_title--dark">CAFFIL</p>
-					<p class="item_desc item_desc--dark">calalogue raisonné</p>
-				</div>
+				<a href="" target="_blank">
+					<div class="coups_de_coeur_item">
+						<p class="item_title item_title--dark">CAFFIL</p>
+						<p class="item_desc item_desc--dark">calalogue raisonné</p>
+					</div>
+				</a>
 
-				<div class="coups_de_coeur_item">
-					<p class="item_title item_title--dark">CAFFIL</p>
-					<p class="item_desc item_desc--dark">calalogue raisonné</p>
-				</div>
+				<a href="" target="_blank">
+					<div class="coups_de_coeur_item">
+						<p class="item_title item_title--dark">CAFFIL</p>
+						<p class="item_desc item_desc--dark">calalogue raisonné</p>
+					</div>
+				</a>
 			</div>
 			<div class="round__beige__coups"></div>
 		</div>

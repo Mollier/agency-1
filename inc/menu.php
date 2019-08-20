@@ -9,8 +9,8 @@
     <li><a href="profil.php">MON ESPACE</a></li>
     <li class="no-left">
       <div class="social">
-        <a href=""><img src="./assets/insta.svg" alt="instagram"></a>
-        <a href=""><img src="./assets/linkedin.svg" alt="linkedin"></a>
+        <a href="https://www.instagram.com/agence_baibao/" target="_blank"><img src="./assets/insta.svg" alt="instagram"></a>
+        <a href="https://www.linkedin.com/company/baï-bao/"><img src="./assets/linkedin.svg" alt="linkedin"></a>
         <div class="separation"></div>
         <a href="">FR</a>
         <div class="separation_point"></div>

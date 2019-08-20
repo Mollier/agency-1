@@ -41,13 +41,9 @@
     color: white;
 }
 
-.realisations__items--beige {
-    background: #F9D7C8;
-    color: black;
-}
-
 .round__turquoise {
     display: none;
+    animation: round_framb 3s alternate infinite;
 }
 
 .round__beige {
