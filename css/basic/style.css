@@ -10,6 +10,7 @@
 @import './parts/footer.css';
 body {
     background-color: #040028;
+    overflow-x: hidden;
 }
 
 section {
@@ -17,6 +18,14 @@ section {
     background-color: white;
     /* padding-top: 100px; */
     width: 100vw;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: "GTWalsheimProBold";
+    src: url("../../assets/fonts/GTWalsheimProBold.ttf") format("ttf");
 }
 
 .button {
@@ -40,12 +49,4 @@ section {
     background: #040028;
     transition: 500ms;
     color: white;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-family: "GTWalsheimProBold";
-    src: url("../../assets/fonts/GTWalsheimProBold.ttf") format("ttf");
 }

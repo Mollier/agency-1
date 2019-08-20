@@ -79,11 +79,21 @@
     margin-bottom: 30px;
 }
 
+@keyframes scrolling {
+    from {
+        transform: translateX(-60%);
+    }
+    to {
+        transform: translateX(40%);
+    }
+}
+
 .partenaires_list {
     width: auto;
     height: auto;
     display: flex;
     justify-content: center;
+    animation: scrolling 10s infinite alternate;
 }
 
 .partenaires_item {
@@ -97,6 +107,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    margin-right: 20px;
 }
 
 .coups_de_coeur {
@@ -187,10 +198,6 @@
         position: absolute;
         right: 0;
         top: 300px;
-    }
-    .partenaires_item {
-        width: 395px;
-        height: 203px;
     }
     .coups_de_coeur {
         min-height: 450px;

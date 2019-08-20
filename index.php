@@ -174,10 +174,10 @@
       <p class="paragraph">
         Le Baï-Bao, acronyme désopilant de « Boîte A Idées, Boîte A Outils », est un être paradoxal, aussi détendu et primesautier de nature que dynamique et sérieux dans l’exercice de ses missions.
         ...il vous en faut plus ?
-        <a href="">
-          <div class="button">Accéder</div>
-        </a>
       </p>
+      <a href="">
+        <div class="button">Accéder</div>
+      </a>
     </div>
 
     <!-- end of portrait -->

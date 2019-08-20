@@ -195,10 +195,42 @@
 			<h2>NOS PARTENAIRES</h2>
 			<div class="round"></div>
 			<div class="partenaires_list">
-				<div class="partenaires_item">
-					<p class="item_title item_title--dark">CAFFIL</p>
-					<p class="item_desc item_desc--dark">calalogue raisonné</p>
-				</div>
+				<a href="">
+					<div class="partenaires_item">
+						<p class="item_title item_title--dark">CAFFIL</p>
+						<p class="item_desc item_desc--dark">calalogue raisonné</p>
+					</div>
+				</a>
+				<a href="">
+					<div class="partenaires_item">
+						<p class="item_title item_title--dark">CAFFIL</p>
+						<p class="item_desc item_desc--dark">calalogue raisonné</p>
+					</div>
+				</a>
+				<a href="">
+					<div class="partenaires_item">
+						<p class="item_title item_title--dark">CAFFIL</p>
+						<p class="item_desc item_desc--dark">calalogue raisonné</p>
+					</div>
+				</a>
+				<a href="">
+					<div class="partenaires_item">
+						<p class="item_title item_title--dark">CAFFIL</p>
+						<p class="item_desc item_desc--dark">calalogue raisonné</p>
+					</div>
+				</a>
+				<a href="">
+					<div class="partenaires_item">
+						<p class="item_title item_title--dark">CAFFIL</p>
+						<p class="item_desc item_desc--dark">calalogue raisonné</p>
+					</div>
+				</a>
+				<a href="">
+					<div class="partenaires_item">
+						<p class="item_title item_title--dark">CAFFIL</p>
+						<p class="item_desc item_desc--dark">calalogue raisonné</p>
+					</div>
+				</a>
 			</div>
 		</div>
 		<!-- end partenaires -->

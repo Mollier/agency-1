@@ -81,17 +81,6 @@
     letter-spacing: 0.03em;
 }
 
-.button {
-    border: 0.25px solid #040028;
-    width: calc(100vw - 200px);
-    height: 49px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-bottom: 30px;
-}
-
 .options {
     widows: 100vw;
     display: flex;
@@ -106,9 +95,6 @@
     }
     .connected__item {
         margin-right: 30px;
-    }
-    .button {
-        width: calc(100vw - 80vw);
     }
 }
 

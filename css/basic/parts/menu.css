@@ -82,6 +82,7 @@ li a {
     color: white;
     text-decoration: none;
     transition: 500ms;
+    letter-spacing: .5pt;
 }
 
 li a:hover {
