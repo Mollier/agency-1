@@ -31,6 +31,14 @@
     line-height: 116%;
     letter-spacing: 0.03em;
     margin-bottom: 20px;
+    transition: 500ms;
+}
+
+.filter_item:hover {
+    cursor: pointer;
+    background: #040028;
+    transition: 500ms;
+    color: white;
 }
 
 .realisations__items--beige {

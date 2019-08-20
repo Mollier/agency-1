@@ -51,6 +51,10 @@
     justify-content: center;
     flex-direction: column;
     margin-top: 60px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: 3s appear__title forwards;
+    animation-delay: 1700ms;
 }
 
 .team__txt a {
@@ -74,25 +78,42 @@
 @keyframes swippe {
     0% {
         opacity: 0;
-        z-index: -10;
-        transform: translateX(-350px);
+        transform: translateX(-330px);
     }
-    50% {
+    70% {
         opacity: 1;
-        z-index: 1;
     }
     100% {
         opacity: 1;
-        z-index: 1;
         transform: translateX(0px);
     }
 }
 
+@keyframes swippe_reverse {
+    0% {
+        opacity: 0;
+        transform: translateY(330px);
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 .team__someone__infos {
+    opacity: 0;
     background: #F9D7C8;
     height: 284px;
     padding-bottom: 10px;
-    animation: swippe 1s forwards;
+    animation: swippe 2s forwards;
+}
+
+.team__someone__photo {
+    transform: translateY(330px);
+    animation: swippe_reverse 2s forwards;
 }
 
 .team__someone__infos--beige {
@@ -109,10 +130,13 @@
     margin-top: 30px;
     font-size: 38px;
     line-height: 101.7%;
-    /* or 39px */
+    opacity: 0;
+    transform: translateY(10px);
     text-align: center;
     letter-spacing: 0.03em;
     font-variant: small-caps;
+    animation: 3s appear__title forwards;
+    animation-delay: 1500ms;
 }
 
 .team__someone__infos h4 {
@@ -121,9 +145,13 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 160%;
+    opacity: 0;
+    transform: translateY(10px);
     text-align: center;
     letter-spacing: 0.03em;
     margin-top: 20px;
+    animation: 3s appear__title forwards;
+    animation-delay: 1700ms;
 }
 
 .round__black {
@@ -134,6 +162,10 @@
     margin: auto;
     margin-top: 44px;
     margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: 3s appear__title forwards;
+    animation-delay: 1700ms;
 }
 
 .team__txt--black {

@@ -167,8 +167,8 @@
         <img src="./assets/form.svg" alt="form">
       </div>
       <div class="communication">
-        <p><img src="./assets/logo_black.svg" alt="logo"></p>
-        <p><img src="./assets/linkedin_beige.svg" alt="linkedin"></p>
+        <p class="flotte"><img src="./assets/logo_black.svg" alt="logo"></p>
+        <p><a href="https://www.linkedin.com/company/baï-bao/"><img src="./assets/linkedin_beige.svg" alt="linkedin"></a></p>
       </div>
       <h2>PORTRAIT D'UN BAÏ-BAO</h2>
       <p class="paragraph">

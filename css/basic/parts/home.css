@@ -230,21 +230,51 @@ header p:nth-of-type(2) {
     font-size: 15px;
 }
 
+@keyframes round_framb {
+    from {
+        transform: translateY(-10px)
+    }
+    to {
+        transform: translateY(10px)
+    }
+}
+
 .round_framb {
-    height: 203px;
-    width: 57px;
+    height: 155.23px;
+    width: 78.81px;
     position: absolute;
     right: 0;
-    background-image: url('../../../assets/round_header.svg')
+    background-image: url('../../../assets/round_header-mobile.svg');
+    animation: round_framb 3s alternate infinite;
 }
 
 .round_green {
-    height: 100px;
-    width: 141px;
+    height: 162px;
+    width: 162px;
     position: absolute;
-    bottom: 0;
+    bottom: -64px;
     left: 0;
-    background-image: url('../../../assets/round_green.svg')
+    background-image: url('../../../assets/round_green.svg');
+    animation: round_framb 3s alternate infinite;
+}
+
+@media screen and (min-width:980px) {
+    .round_green {
+        height: 359px;
+        width: 363px;
+        position: absolute;
+        bottom: -93px;
+        left: 50px;
+        background-image: url('../../../assets/round__green-desktop.svg');
+    }
+    .round_framb {
+        height: 325px;
+        width: 162px;
+        position: absolute;
+        right: 0;
+        background-image: url('../../../assets/round_header.svg');
+        animation: round_framb 3s alternate infinite;
+    }
 }
 
 
@@ -265,7 +295,8 @@ header p:nth-of-type(2) {
     align-items: center;
     justify-content: space-around;
     margin-bottom: 30px;
-    /* animation: 700ms appear forwards; */
+    margin-top: 52px;
+    z-index: 100;
 }
 
 .pronoms-img:hover {
@@ -493,6 +524,10 @@ h2 {
     align-items: center;
     justify-content: center;
     z-index: 100;
+}
+
+.flotte {
+    animation: round_framb 3s alternate infinite;
 }
 
 .communication img {
