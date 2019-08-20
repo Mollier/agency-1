@@ -71,10 +71,28 @@
     padding-bottom: 30px;
 }
 
+@keyframes swippe {
+    0% {
+        opacity: 0;
+        z-index: -10;
+        transform: translateX(-350px);
+    }
+    50% {
+        opacity: 1;
+        z-index: 1;
+    }
+    100% {
+        opacity: 1;
+        z-index: 1;
+        transform: translateX(0px);
+    }
+}
+
 .team__someone__infos {
     background: #F9D7C8;
     height: 284px;
     padding-bottom: 10px;
+    animation: swippe 1s forwards;
 }
 
 .team__someone__infos--beige {

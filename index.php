@@ -18,10 +18,10 @@
       <p class="big__title">
         Baï-Bao
       </p>
-      <p>
+      <p class="appear_title">
         Agence de communication - Paris
       </p>
-      <p>
+      <p class="appear_title_second">
         création - web - conseil - production
       </p>
       <div class="round_framb"></div>
@@ -32,15 +32,11 @@
     <div class="menu_second">
       <div class="pronoms">
         <img class="pronoms-img" src="./assets/arrow_left.svg" alt="arrow" id="arrow_left">
-        <span id="je">Je</span>
-        <span id="tu" class="hidden">Tu</span>
-        <span id="il" class="hidden">Il/elle</span>
-        <span id="nous" class="hidden">Nous</span>
-        <span id="vous" class="hidden">Vous</span>
-        <span id="ils" class="hidden">Ils/elles</span>
+        <span id="pronom"></span>
+
         <img class="pronoms-img" src="./assets/arrow_right.svg" alt="arrow" id="arrow_right">
       </div>
-      <a href="">
+      <a href="" id="link">
         <div class="button">Accéder</div>
       </a>
     </div>

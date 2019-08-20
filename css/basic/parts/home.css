@@ -1,3 +1,44 @@
+@keyframes appear {
+    0% {
+        transform: translate(-100vw);
+    }
+    20% {
+        transform: translateX(0vw);
+    }
+    70% {
+        transform: translateX(0vw);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes go_back {
+    0% {
+        transform: translate(0vw);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes appear_last {
+    0% {
+        transform: translate(-100vw);
+    }
+    100% {
+        transform: translateX(0vw);
+    }
+}
+
+.appear {
+    animation: appear 4s;
+}
+
+.appear_last {
+    animation: appear_last 2s forwards;
+}
+
 .header__top {
     height: 10vh;
     width: 100vw;
@@ -62,6 +103,7 @@
     text-transform: uppercase;
     margin-top: 50px;
     margin-bottom: 30px;
+    animation: appear__title 2s;
 }
 
 header p:nth-of-type(2) {
@@ -71,6 +113,29 @@ header p:nth-of-type(2) {
     font-size: 16px;
     line-height: 20px;
     text-align: center;
+}
+
+@keyframes appear__title {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.appear_title {
+    opacity: 0;
+    animation: appear__title 700ms forwards;
+    animation-delay: 500ms;
+}
+
+.appear_title_second {
+    opacity: 0;
+    animation: appear__title 700ms forwards;
+    animation-delay: 900ms;
 }
 
 .round_framb {
@@ -108,6 +173,7 @@ header p:nth-of-type(2) {
     align-items: center;
     justify-content: space-around;
     margin-bottom: 30px;
+    /* animation: 700ms appear forwards; */
 }
 
 .pronoms-img:hover {
@@ -122,6 +188,12 @@ header p:nth-of-type(2) {
     line-height: 63px;
     text-align: center;
     color: #040028;
+}
+
+.largePronoms {
+    width: 800px;
+    background-color: red;
+    height: 100px;
 }
 
 .hidden {
@@ -198,6 +270,22 @@ h2 {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    transition: 500ms;
+}
+
+.offres_items:hover {
+    color: #F9D7C8;
+    text-shadow: 0 0 1px #F9D7C8;
+    transition: 500ms;
+}
+
+.offres_items img {
+    transition: 500ms;
+}
+
+.offres_items img:hover {
+    transform: scale(1.2);
+    transition: 500ms;
 }
 
 .offres_items .items__title {
@@ -266,6 +354,11 @@ h2 {
     font-variant: small-caps;
     color: #F9D7C8;
     font-weight: bold;
+}
+
+.stats__number:hover {
+    color: #A3FFD3;
+    transition: 500ms;
 }
 
 .stats__def {
