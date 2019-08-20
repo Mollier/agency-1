@@ -14,7 +14,15 @@
   <header>
     <?php include('./inc/header.php') ?>
     <div class="header_secondary">
-      <img src="./assets/logo_framboise.svg" alt="logo">
+      <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.95 87.81">
+        <defs>
+
+        </defs>
+        <path class="round" d="M32.88,88.67H31.76V71a5.35,5.35,0,0,0,.79.06,6.67,6.67,0,0,0,0-13.31l-.79.06V40.32h1.12c14.71,0,26.63,8.81,26.63,24.19S47.59,88.67,32.88,88.67Z" transform="translate(-0.57 -0.86)" />
+        <path class="point_left" d="M7.69,15.1A7.12,7.12,0,1,1,14.81,8,7.12,7.12,0,0,1,7.69,15.1Z" transform="translate(-0.57 -0.86)" />
+        <path class="point_right" d="M27.87,15.1A7.12,7.12,0,1,1,35,8a7.12,7.12,0,0,1-7.12,7.12Z" transform="translate(-0.57 -0.86)" />
+        <path class="barre" d="M26.16,31.47v57.2c-11.71-2-20.5-10.17-20.71-23.18h0V20.67H26.16Z" transform="translate(-0.57 -0.86)" />
+      </svg>
       <p class="big__title">
         Baï-Bao
       </p>

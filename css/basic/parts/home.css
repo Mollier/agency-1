@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "GTWalsheimProBold";
+    src: url("../../assets/fonts/GTWalsheimProBold.ttf") format("ttf");
+}
+
 @keyframes appear {
     0% {
         transform: translate(-100vw);
@@ -82,10 +87,94 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'GTWalsheimProBold', sans-serif;
+    font-size: 27px;
     color: white;
     flex-direction: column;
     position: relative;
+}
+
+
+/* LOGO */
+
+@keyframes round {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes barre {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+        ;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes point_right {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes point_left {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.round {
+    fill: #f9d7c8;
+    animation: round 2s forwards;
+    opacity: 0;
+    animation-delay: 1300ms;
+}
+
+.point_left {
+    opacity: 0;
+    fill: #f9d7c8;
+    transform: translateX(10px);
+    animation: point_left 1500ms forwards;
+    animation-delay: 1100ms;
+}
+
+.point_right {
+    opacity: 0;
+    fill: #f9d7c8;
+    transform: translateX(-10px);
+    animation: point_right 2s forwards;
+    animation-delay: 1100ms;
+}
+
+.barre {
+    opacity: 0;
+    fill: #f9d7c8;
+    animation: barre 1100ms forwards;
+    transform: translateY(-100px);
+    animation-delay: 1s;
+}
+
+.header_secondary svg {
+    height: 174px;
+    width: 150px;
 }
 
 .header_secondary p {
@@ -95,7 +184,7 @@
 }
 
 .big__title {
-    font-size: 23px;
+    font-size: 30px;
     line-height: 34px;
     text-align: center;
     letter-spacing: 0.03em;
@@ -104,15 +193,16 @@
     margin-top: 50px;
     margin-bottom: 30px;
     animation: appear__title 2s;
+    font-family: 'GTWalsheimProBold', sans-serif;
+    font-weight: bold;
 }
 
 header p:nth-of-type(2) {
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
+    font-size: 19px;
     line-height: 20px;
     text-align: center;
+    font-family: 'GTWalsheimProBold', sans-serif;
+    font-weight: bold;
 }
 
 @keyframes appear__title {
@@ -136,6 +226,8 @@ header p:nth-of-type(2) {
     opacity: 0;
     animation: appear__title 700ms forwards;
     animation-delay: 900ms;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
 }
 
 .round_framb {
