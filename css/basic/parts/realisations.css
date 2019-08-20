@@ -96,6 +96,10 @@
     animation: scrolling 10s infinite alternate;
 }
 
+.partenaires_list:hover {
+    animation-play-state: paused;
+}
+
 .partenaires_item {
     height: 147.87px;
     width: 287.73px;
