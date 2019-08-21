@@ -50,10 +50,17 @@ form {
     margin-top: 30px;
     background: white;
     font-size: 18px;
+    transition: background 1s;
+}
+
+.contact_bloc input[type="submit"]:hover {
+    background: #040028;
+    color: white;
+    transition: background 1s;
 }
 
 textarea {
-    border: 1pt solid #04002861;
+    border: 1pt solid #040028;
     width: calc(100% - 60px);
     font-size: 16px;
 }

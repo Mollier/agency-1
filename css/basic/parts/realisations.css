@@ -93,7 +93,7 @@
     height: auto;
     display: flex;
     justify-content: center;
-    animation: scrolling 10s infinite alternate;
+    animation: scrolling 20s infinite alternate linear;
 }
 
 .partenaires_list:hover {

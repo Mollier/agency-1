@@ -8,9 +8,9 @@ header {
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    padding-top: 30px;
+    position: relative;
+    padding-top: 20px;
 }
 
 .header__logo svg {

@@ -1,6 +1,5 @@
 .connect {
     display: flex;
-    align-items: center;
     justify-content: center;
     height: 400px;
 }
@@ -22,6 +21,7 @@ form {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    color: white;
 }
 
 .connect input[type="text"],
@@ -31,6 +31,12 @@ input[type="password"] {
     background: transparent;
     color: #F9D7C8;
     width: calc(100vw - 100px);
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.03em;
 }
 
 .connect input[type="text"]:placeholder-shown,

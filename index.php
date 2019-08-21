@@ -235,7 +235,7 @@
 
         <div class="news_item">
           <div class="header_new">
-            <img src="./assets/article.png" alt="new">
+            <a href="read.php"> <img src="./assets/article.png" alt="new"></a>
           </div>
           <h3>Speed Update : les sites les plus lents désormais pénalisés en référencement naturel par Google...</h3>
           <p>Début 2018, Google a présenté une mise à jour de son algorithme Speed Update destinée à pénaliser les sites jugés trop lents sur mobile. Devenue effective sur toute la toile en juillet 2018, il convient de relativiser la portée de cette initiative de Google sur les sites les moins performants en la matière. [...]</p>

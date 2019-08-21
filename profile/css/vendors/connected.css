@@ -1,6 +1,7 @@
 .header__connected {
     height: 25vh;
     width: 100vw;
+    padding-top: 20px;
 }
 
 .header__connected p {
@@ -12,6 +13,20 @@
     letter-spacing: 0.03em;
     color: #F9D7C8;
 }
+
+.disconnect {
+    position: absolute;
+
+    top:0;
+    right:0;
+}
+.disconnect svg {
+    margin-right: 30px;
+    padding-top: 20px;
+    height: 20px;
+    width: 20px;
+}
+
 
 .bold {
     font-weight: 600;
