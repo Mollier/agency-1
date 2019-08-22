@@ -1,3 +1,4 @@
+<?php require './profile/assets/config/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,68 +52,35 @@
 			<div class="round__beige"></div>
 			<div class="round__beige--right"></div>
 			<div class="realisations__list">
-				<a href="" target="_blank">
-					<div class="realisations__items">
-						<p class="item_title">1990 Architectures</p>
-						<p class="item_desc">Très pratique si vous avez une église délabrée au fond du jardin.</p>
-					</div>
-				</a>
+			<?php
+            foreach ($realisations->getAll($pdo) as $realisation) {
+                if($realisation['color'] == '#040028') {?>
+                    <a href="<?= $realisation['link'];?>" target="_blank">
+                        <div class="realisations__items" style="background-color:<?= $realisation['color'];?>">
+                            <p class="item_title"><?= $realisation['title'];?></p>
+                            <p class="item_desc"><?= $realisation['abstract'];?></p>
+                        </div>
+                    </a>
+              <?php   } else {?>
+                    <a href="<?= $realisation['link'];?>" target="_blank">
+                        <div class="realisations__items" style="background-color:<?= $realisation['color'];?>">
+                            <p class="item_title item_title--dark"><?= $realisation['title'];?></p>
+                            <p class="item_desc item_desc--dark"><?= $realisation['abstract'];?></p>
+                        </div>
+                    </a>
+            <?php    }
 
-				<a href="https://sfil.fr" target="_blank">
-					<div class="realisations__items realisations__items--turquoise">
-						<p class="item_title item_title--dark">SFIL</p>
-						<p class="item_desc item_desc--dark">Rapport RSE</p>
-					</div>
-				</a>
+                ?>
 
-				<a href="" target="_blank">
-					<div class="realisations__items realisations__items--beige">
-						<p class="item_title item_title--dark">ARTHUR LUIZ PIZA</p>
-						<p class="item_desc item_desc--dark">catalogue raisonné</p>
-					</div>
-				</a>
 
-				<a href="https://adytonconseil.com" target="_blank">
-					<div class="realisations__items">
-						<p class="item_title">ADYTON</p>
-						<p class="item_desc">Très pratique si vous avez une église délabrée au fond du jardin.</p>
-					</div>
-				</a>
 
-				<a href="http://albertmeslay.com" target="_blank">
-					<div class="realisations__items">
-						<p class="item_title">ALBERT MESLAY</p>
-						<p class="item_desc">calalogue raisonné</p>
-					</div>
-				</a>
 
-				<a href="https://atelier-lebreton.fr" target="_blank">
-					<div class="realisations__items realisations__items--beige">
-						<p class="item_title item_title--dark">LE BRETON</p>
-						<p class="item_desc item_desc--dark">calalogue raisonné</p>
-					</div>
-				</a>
 
-				<a href="http://bazin-cazelles.fr" target="_blank">
-					<div class="realisations__items">
-						<p class="item_title">BAZIN CAZELLES</p>
-						<p class="item_desc">calalogue raisonné</p>
-					</div>
-				</a>
+           <?php
+            }
+            ?>
 
-				<a href="https://caissefrancaisedefinancementlocal.fr" target="_blank">
-					<div class="realisations__items">
-						<p class="item_title">CAFFIL</p>
-						<p class="item_desc">calalogue raisonné</p>
-					</div>
-				</a>
 
-				<a href="" target="_blank">
-					<div class="realisations__items realisations__items--turquoise">
-						<p class="item_title item_title--dark">CODEH EXECUTIVE</p>
-						<p class="item_desc item_desc--dark">calalogue raisonné</p>
-					</div>
-				</a>
 			</div>
 		</div>
 

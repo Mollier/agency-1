@@ -1,3 +1,4 @@
+<?php require './profile/assets/config/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -233,68 +234,25 @@
       <h1>DERNIÈRES ACTUALITÉS</h1>
       <div class="news_container">
 
-        <div class="news_item">
-          <div class="header_new">
-            <a href="read.php"> <img src="./assets/article.png" alt="new"></a>
-          </div>
-          <h3>Speed Update : les sites les plus lents désormais pénalisés en référencement naturel par Google...</h3>
-          <p>Début 2018, Google a présenté une mise à jour de son algorithme Speed Update destinée à pénaliser les sites jugés trop lents sur mobile. Devenue effective sur toute la toile en juillet 2018, il convient de relativiser la portée de cette initiative de Google sur les sites les moins performants en la matière. [...]</p>
-          <div class="share">
-            <img src="./assets/twitter.svg" alt="twitter">
-            <img src="./assets/fb.svg" alt="fb">
-            <span class="date">
-              posté le 23 janvier 2019
+        <?php
+        foreach ($news->getAllLessFive($pdo) as $lastNews) {?>
+            <div class="news_item">
+                <div class="header_new">
+                    <a href="read.php?id=<?= $lastNews['id_news']; ?>"> <img src="./assets/upload/news/<?= $lastNews['image'];?>" alt="<?= $lastNews['title']; ?>"></a>
+                </div>
+                <h3><?= $lastNews['title']; ?></h3>
+                <p><?= $lastNews['content']; ?></p>
+                <div class="share">
+                    <img src="./assets/twitter.svg" alt="twitter">
+                    <img src="./assets/fb.svg" alt="fb">
+                    <span class="date">
+              posté le <?= $lastNews['date']; ?>
             </span>
-          </div>
-        </div>
-        <!--  -->
-        <div class="news_item">
-          <div class="header_new">
-            <img src="./assets/article.png" alt="new">
-          </div>
-          <h3>Speed Update : les sites les plus lents désormais pénalisés en référencement naturel par Google...</h3>
-          <p>Début 2018, Google a présenté une mise à jour de son algorithme Speed Update destinée à pénaliser les sites jugés trop lents sur mobile. Devenue effective sur toute la toile en juillet 2018, il convient de relativiser la portée de cette initiative de Google sur les sites les moins performants en la matière. [...]</p>
-          <div class="share">
-            <img src="./assets/twitter.svg" alt="twitter">
-            <img src="./assets/fb.svg" alt="fb">
-            <span class="date">
-              posté le 23 janvier 2019
-            </span>
-          </div>
-        </div>
+                </div>
+            </div>
 
-        <!--  -->
-        <div class="news_item">
-          <div class="header_new">
-            <img src="./assets/article.png" alt="new">
-          </div>
-          <h3>Speed Update : les sites les plus lents désormais pénalisés en référencement naturel par Google...</h3>
-          <p>Début 2018, Google a présenté une mise à jour de son algorithme Speed Update destinée à pénaliser les sites jugés trop lents sur mobile. Devenue effective sur toute la toile en juillet 2018, il convient de relativiser la portée de cette initiative de Google sur les sites les moins performants en la matière. [...]</p>
-          <div class="share">
-            <img src="./assets/twitter.svg" alt="twitter">
-            <img src="./assets/fb.svg" alt="fb">
-            <span class="date">
-              posté le 23 janvier 2019
-            </span>
-          </div>
-        </div>
-
-        <!--  -->
-        <div class="news_item">
-          <div class="header_new">
-            <img src="./assets/article.png" alt="new">
-          </div>
-          <h3>Speed Update : les sites les plus lents désormais pénalisés en référencement naturel par Google...</h3>
-          <p>Début 2018, Google a présenté une mise à jour de son algorithme Speed Update destinée à pénaliser les sites jugés trop lents sur mobile. Devenue effective sur toute la toile en juillet 2018, il convient de relativiser la portée de cette initiative de Google sur les sites les moins performants en la matière. [...]</p>
-          <div class="share">
-            <img src="./assets/twitter.svg" alt="twitter">
-            <img src="./assets/fb.svg" alt="fb">
-            <span class="date">
-              posté le 23 janvier 2019
-            </span>
-          </div>
-        </div>
-
+        <?php }
+        ?>
 
       </div>
     </div>

@@ -53,9 +53,9 @@ class User
 
   public function checkingRank() {
       if($_SESSION['user']['rights'] == 10) {
-          require('./assets/pannels/admin.php');
+          require('./inc/pannels/admin.php');
       } else {
-         require('./assets/pannels/client.php');
+         require('./inc/pannels/client.php');
       }
   }
 }

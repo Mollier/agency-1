@@ -1,3 +1,15 @@
+<?php require 'assets/config/bootstrap.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Baï-Bao - Ajout d'un réalisation</title>
+</head>
+<body>
 <header class="header__connected">
     <div class="disconnect">
         <a href="connect.php?disconnect"> <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.15 12"><defs><style>.cls-3{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;}  .cls-4{fill:#fff;fill-rule:evenodd;}</style></defs><title>Sans titre - 1</title><line class="cls-3" x1="5.12" y1="0.5" x2="5.12" y2="6.88"/><path class="cls-4" d="M13.61,370.78a5.07,5.07,0,1,0,3,.07v1.07a4.08,4.08,0,1,1-3-.09Z" transform="translate(-9.92 -368.74)"/></svg>
@@ -19,35 +31,33 @@
     <p class="username"><?= $_SESSION['user']['first_name'] . " " . $_SESSION['user']['last_name'] . " (" . $_SESSION['user']['customer_name'] . ")";?></p>
 
 </header>
+<section class="connected write">
+    <h1>Ajouter une réalisation</h1>
 
-<section class="connected">
-    <div class="options">
-        <?php
-        $user->checkingRank();
-        ?>
-    </div>
+    <form action="#" method="post" enctype="multipart/form-data">
 
-    <a href="">
-        <div class="button">accéder à mes identifiants</div>
-    </a>
-
-    <a href="">
-        <div class="button">accéder à mon Google Analytics</div>
-    </a>
-
-    <span class="need_help--paragraph">Les Baï-Bao qui
-      s’occupent de vous</span>
-    <div class="round"></div>
-    <div class="need_help">
-        <div class="need_help_item">
-            <img src="../assets/profile/yves.png" alt="yves">
-            <span class="bold">Yves</span>
-            <p> <span>yves.milon@bai-bao.fr</span></p>
-        </div>
-        <div class="need_help_item">
-            <img src="../assets/profile/zeo.png" alt="zoe">
-            <p> <span class="bold">Zoé</span></p>
-            <p> <span>zoe.franch@bai-bao.fr</span></p>
-        </div>
-    </div>
+        <p><label for="title">Titre </label>
+            <input type="text" name="title" required></p>
+        <p>  <label for="abstract">Sous-texte </label>
+            <input type="text" name="abstract" required></p>
+        <p>  <label for="link">Lien </label>
+            <input type="text" name="link" value="http://www."required></p>
+        </p>
+        <label for="color">Couleur</label>
+        <select name="color" required>
+            <option value="">--Choisissez une couleur--</option>
+            <option value="#040028">Bleu nuit</option>
+            <option value="#F9D7C8">Beige</option>
+            <option value="#A3FFD3">Turquoise</option>
+        </select>
+        <input type="submit" value="Envoyer" name="send">
+    </form>
+    <?php
+    if(isset($_POST['send'])) {
+        $realisations->add($pdo);
+    }
+    ?>
 </section>
+</body>
+
+</html>

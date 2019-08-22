@@ -8,6 +8,7 @@
 @import './vendors/home.css';
 @import './vendors/connect.css';
 @import './vendors/connected.css';
+@import './vendors/write.css';
 body {
     background: #040028;
 }
