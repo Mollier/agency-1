@@ -19,3 +19,11 @@
     <p>factures de votre site</p>
 
 </div>
+
+<a href="">
+    <div class="button">accéder à mes identifiants</div>
+</a>
+
+<a href="">
+    <div class="button">accéder à mon Google Analytics</div>
+</a>

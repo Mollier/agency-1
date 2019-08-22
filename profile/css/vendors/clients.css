@@ -1,0 +1,17 @@
+.container__tab {
+    width: calc(100vw - 200px);
+    height: auto;
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.container__tab a {
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.container__tab a:hover{
+    color: #7b7b7b;
+}

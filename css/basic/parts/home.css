@@ -217,6 +217,7 @@ header p:nth-of-type(2) {
 }
 
 .appear_title {
+    margin-top: 30px;
     opacity: 0;
     animation: appear__title 700ms forwards;
     animation-delay: 500ms;
@@ -228,14 +229,24 @@ header p:nth-of-type(2) {
     animation-delay: 900ms;
     font-family: Montserrat, sans-serif;
     font-size: 15px;
+    margin-top: 5px;
 }
 
 @keyframes round_framb {
     from {
-        transform: translateY(-10px)
+        transform: translateY(-20px)
     }
     to {
-        transform: translateY(10px)
+        transform: translateY(20px)
+    }
+}
+
+@keyframes round_green {
+    from {
+        transform: translateY(20px)
+    }
+    to {
+        transform: translateY(-20px)
     }
 }
 
@@ -255,7 +266,7 @@ header p:nth-of-type(2) {
     bottom: -64px;
     left: 0;
     background-image: url('../../../assets/round_green.svg');
-    animation: round_framb 3s alternate infinite;
+    animation: round_green 3s alternate infinite;
 }
 
 @media screen and (min-width:980px) {

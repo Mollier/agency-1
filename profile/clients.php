@@ -6,57 +6,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Baï-Bao - Ajout d'un réalisation</title>
+
+    <title>Baï-Bao - Gestion des clients</title>
 </head>
 <body>
-<header class="header__connected">
-    <div class="disconnect">
-        <a href="connect.php?disconnect"> <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.15 12"><defs><style>.cls-3{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;}  .cls-4{fill:#fff;fill-rule:evenodd;}</style></defs><title>Sans titre - 1</title><line class="cls-3" x1="5.12" y1="0.5" x2="5.12" y2="6.88"/><path class="cls-4" d="M13.61,370.78a5.07,5.07,0,1,0,3,.07v1.07a4.08,4.08,0,1,1-3-.09Z" transform="translate(-9.92 -368.74)"/></svg>
-        </a>
-    </div>
-    <div class="header__logo">
-        <a href="../index.php">
-            <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.08 89.53">
-                <defs>
-                </defs>
-                <title>Logo</title>
-                <g id="Calque_1-2" data-name="Calque 1-2">
-                    <path class="cls-1" d="M0,7.12a7.12,7.12,0,1,1,7.12,7.12A7.12,7.12,0,0,1,0,7.12ZM27.38,31.8V89C15.67,87,6.88,78.83,6.67,65.82h0V21H27.38Zm.2-17.56A7.12,7.12,0,1,1,34.7,7.12a7.12,7.12,0,0,1-7.12,7.12Zm6.87,75.29H33.33V71.81a5.25,5.25,0,0,0,.79.06,6.67,6.67,0,0,0,0-13.31,5.25,5.25,0,0,0-.79.06V41.18h1.12c14.71,0,26.63,8.81,26.63,24.19S49.16,89.53,34.45,89.53Z" transform="translate(0 0)" />
-                </g>
-            </svg></a>
-    </div>
-    <p class="bold">Bienvenue</p>
-    <div class="line"></div>
-    <p class="username"><?= $_SESSION['user']['first_name'] . " " . $_SESSION['user']['last_name'] . " (" . $_SESSION['user']['customer_name'] . ")";?></p>
-
-</header>
+<?php include('./inc/header.php') ?>
 <section class="connected write">
-    <h1>Ajouter une réalisation</h1>
+    <h1>Gestion des clients</h1>
+    <a href="clients.php?add">Ajouter un client</a> <br>
+   <div class="container__tab">
 
-    <form action="#" method="post" enctype="multipart/form-data">
+       <table class="table table-striped table-dark">
+           <thead>
+           <tr>
+               <th scope="col">#</th>
+               <th scope="col">Nom du client</th>
+               <th scope="col">Numéro de téléphone</th>
+               <th scope="col">E-mail</th>
+           </tr>
+           </thead>
+           <tbody>
 
-        <p><label for="title">Titre </label>
-            <input type="text" name="title" required></p>
-        <p>  <label for="abstract">Sous-texte </label>
-            <input type="text" name="abstract" required></p>
-        <p>  <label for="link">Lien </label>
-            <input type="text" name="link" value="http://www."required></p>
-        </p>
-        <label for="color">Couleur</label>
-        <select name="color" required>
-            <option value="">--Choisissez une couleur--</option>
-            <option value="#040028">Bleu nuit</option>
-            <option value="#F9D7C8">Beige</option>
-            <option value="#A3FFD3">Turquoise</option>
-        </select>
-        <input type="submit" value="Envoyer" name="send">
-    </form>
-    <?php
-    if(isset($_POST['send'])) {
-        $realisations->add($pdo);
-    }
-    ?>
+           <?php
+           foreach ($clients->getAll($pdo) as $client) {?>
+               <tr>
+                   <th scope="row"><?= $client['id_client'];?></th>
+                   <td><a href="clients.php?view=<?= $client['id_client'];?>"><?= $client['name'];?></a></td>
+                   <td><?= $client['phone'];?></td>
+                   <td><a href="mailto:<?= $client['email']; ?>"><?= $client['email'];?></a></td>
+               </tr>
+           <?php }
+           ?>
+           </tbody>
+       </table>
+
+       <?php
+       if(isset($_GET['add'])) {?>
+           <form action="#" method="post">
+               <p><label for="name">Nom du client </label>
+                   <input type="text" name="name" required></p>
+               <p>  <label for="phone">Numéro du client </label>
+                   <input type="tel" name="phone" required></p>
+               <p>  <label for="email">E-mail du client </label>
+                   <input type="email" name="email">
+               </p>
+               <input type="submit" value="Ajouter le client" name="send">
+               <?php
+               if(isset($_POST['send'])) {
+                   $clients->add($pdo);
+               }?>
+           </form>
+
+
+      <?php
+       }
+
+       if(isset($_GET['view']) AND is_numeric($_GET['view'])) {
+           ?>
+           <form action="#" method="post">
+               <p><label for="name">Nom du client </label>
+                   <input type="text" name="name" value="<?= $clients->getOne($pdo, $_GET['view'])['name']; ?>" required></p>
+               <p>  <label for="phone">Numéro du client </label>
+                   <input type="tel" name="phone" value="<?= $clients->getOne($pdo, $_GET['view'])['phone']; ?>" required></p>
+               <p>  <label for="email">E-mail du client </label>
+                   <input type="email" name="email" value="<?= $clients->getOne($pdo, $_GET['view'])['email']; ?>">
+               </p>
+               <input type="submit" value="Modifier le client" name="send">
+               <?php
+               if(isset($_POST['send'])) {
+                   $clients->add($pdo);
+               }?>
+           </form>
+      <?php }
+       ?>
+   </div>
+
 </section>
 </body>
 

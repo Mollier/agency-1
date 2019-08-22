@@ -11,7 +11,7 @@
 </div>
 
 <div class="connected__item">
-    <a href="members.php"><img src="../assets/profile/factures.svg" alt="factures"></a>
+    <a href="clients.php"><img src="../assets/profile/factures.svg" alt="factures"></a>
     <h4>PANNEL DE LISTE DES CLIENTS</h4>
     <p>gérer la liste des clients (infos, mot de passe etc...)</p>
 </div>

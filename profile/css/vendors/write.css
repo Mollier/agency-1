@@ -14,7 +14,7 @@
     color: black;
 }
 
-.write input[type="text"] {
+.write input[type="text"],input[type="tel"],input[type="email"] {
     width: 200px;
     border:0;
     border-bottom: 1px #04002830 solid;
