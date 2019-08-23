@@ -45,7 +45,7 @@ class Clients {
         $charte_file = $_FILES['charte_file']['name'];
 
 
-        if($_FILES['charte_file']['error'] == 4) {
+        if($_FILES['charte_file']['error'] == 4 AND $_FILES['tutoriel']['error'] == 4) {
 
             if(!empty($name) AND !empty($phone) AND !empty($email)) {
                 $req = $con->prepare('
@@ -60,8 +60,8 @@ class Clients {
                 echo 'Veuillez remplir tout les champs';
             }
 
-        } elseif(!empty($_FILES['charte_file'])) { // si le fichier charte_file n'est pas vide
-            echo '2';
+        } elseif(!empty($_FILES['charte_file']) AND !empty($_FILES['charte_file'])) { // si le fichier charte_file n'est pas vide
+
 
             if(!empty($name) AND !empty($phone) AND !empty($email)) {
 
@@ -138,15 +138,24 @@ class Clients {
 
     //tutoriel
 
+
+
+    public function getTutoriel(PDO $con, $id)
+    {
+        $req = $con->query('SELECT * FROM tutoriels WHERE id_client ='.$id);
+        return $req->fetch(PDO::FETCH_ASSOC);
+    }
+
+
     public function uploadTutoriel() {
 
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Vérifie si le fichier a été uploadé sans erreur.
-            if(isset($_FILES["charte_file"]) && $_FILES["charte_file"]["error"] == 0){
+            if(isset($_FILES["tutoriel"]) && $_FILES["tutoriel"]["error"] == 0){
                 $allowed = array("pdf" => "application/pdf");
-                $filename = $_FILES["charte_file"]["name"];
-                $filetype = $_FILES["charte_file"]["type"];
-                $filesize = $_FILES["charte_file"]["size"];
+                $filename = $_FILES["tutoriel"]["name"];
+                $filetype = $_FILES["tutoriel"]["type"];
+                $filesize = $_FILES["tutoriel"]["size"];
 
                 // Vérifie l'extension du fichier
                 $ext = pathinfo($filename, PATHINFO_EXTENSION);
@@ -159,11 +168,11 @@ class Clients {
                 // Vérifie le type MIME du fichier
                 if(in_array($filetype, $allowed)){
                     // Vérifie si le fichier existe avant de le télécharger.
-                    if(file_exists("../assets/upload/chartes/" . $_FILES["charte_file"]["name"])){
-                        echo($_FILES["charte_file"]["name"] . " existe déjà.");
+                    if(file_exists("../assets/upload/tutoriels/" . $_FILES["tutoriel"]["name"])){
+                        echo($_FILES["tutoriel"]["name"] . " existe déjà.");
                         die();
                     } else{
-                        move_uploaded_file($_FILES["charte_file"]["tmp_name"], "../assets/upload/chartes/" . $_FILES["charte_file"]["name"]);
+                        move_uploaded_file($_FILES["tutoriel"]["tmp_name"], "../assets/upload/tutoriels/" . $_FILES["tutoriel"]["name"]);
                         // echo('Votre fichier a été téléchargé avec succès.');
                     }
                 } else{
@@ -171,7 +180,7 @@ class Clients {
 
                 }
             } else{
-                echo "Error: " . $_FILES["charte_file"]["error"];
+                echo "Error: " . $_FILES["tutoriel"]["error"];
             }
         }
     }

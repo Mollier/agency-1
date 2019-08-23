@@ -79,11 +79,15 @@ if($_SESSION['user']['rights'] != 10) {
                <p>  <label for="charte">Charte graphique actuelle</label>
                    <a href="../assets/upload/chartes/<?= $clients->getCharte($pdo, $_GET['view'])['link'];?>" target="_blank"><?= $clients->getCharte($pdo, $_GET['view'])['link'];?></a>
                </p>
-
+               <p>  <label for="charte">Tutoriel actuel</label>
+                   <a href="../assets/upload/tutoriels/<?= $clients->getTutoriel($pdo, $_GET['view'])['link'];?>" target="_blank"><?= $clients->getTutoriel($pdo, $_GET['view'])['link'];?></a>
+               </p>
                <br>
                <p>  <label for="charte_file">Changer la charte graphique</label></p>
                    <input type="file" name="charte_file"">
 
+               <p>  <label for="charte_file">Changer le tutoriel</label></p>
+               <input type="file" name="tutoriel"">
 
                <input type="submit" value="Modifier le client" name="send">
                <?php
