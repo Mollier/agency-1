@@ -32,6 +32,7 @@ class User
       // On enregistre l'utilisateur en session
       unset($user['mdp']); // le hash du mdp n'est pas à stocker en session
       $_SESSION['user'] = $user;
+      $_SESSION['time'] = time();
       header('Location: connect.php');
 
 

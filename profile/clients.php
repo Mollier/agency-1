@@ -1,4 +1,8 @@
-<?php require 'assets/config/bootstrap.php'; ?>
+<?php require 'assets/config/bootstrap.php';
+if($_SESSION['user']['rights'] != 10) {
+    header('Location: index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,10 +29,11 @@
                <th scope="col">Nom du client</th>
                <th scope="col">Numéro de téléphone</th>
                <th scope="col">E-mail</th>
+               <th scope="col">Tutoriel</th>
+               <th scope="col">Charte graphique</th>
            </tr>
            </thead>
            <tbody>
-
            <?php
            foreach ($clients->getAll($pdo) as $client) {?>
                <tr>
@@ -36,12 +41,12 @@
                    <td><a href="clients.php?view=<?= $client['id_client'];?>"><?= $client['name'];?></a></td>
                    <td><?= $client['phone'];?></td>
                    <td><a href="mailto:<?= $client['email']; ?>"><?= $client['email'];?></a></td>
+                   <td><a href="#">[TUTORIEL DE <?= $client['name'];?>]</a></td>
+                   <td><a href="#">[CHARTE GRAPHIQUE DE <?= $client['name'];?>]</a></td>
                </tr>
-           <?php }
-           ?>
+           <?php } ?>
            </tbody>
        </table>
-
        <?php
        if(isset($_GET['add'])) {?>
            <form action="#" method="post">
@@ -58,14 +63,12 @@
                    $clients->add($pdo);
                }?>
            </form>
-
-
       <?php
        }
 
        if(isset($_GET['view']) AND is_numeric($_GET['view'])) {
            ?>
-           <form action="#" method="post">
+           <form action="#" method="post" enctype="multipart/form-data">
                <p><label for="name">Nom du client </label>
                    <input type="text" name="name" value="<?= $clients->getOne($pdo, $_GET['view'])['name']; ?>" required></p>
                <p>  <label for="phone">Numéro du client </label>
@@ -73,11 +76,25 @@
                <p>  <label for="email">E-mail du client </label>
                    <input type="email" name="email" value="<?= $clients->getOne($pdo, $_GET['view'])['email']; ?>">
                </p>
+               <p>  <label for="charte">Charte graphique actuelle</label>
+                   <a href="../assets/upload/chartes/<?= $clients->getCharte($pdo, $_GET['view'])['link'];?>" target="_blank"><?= $clients->getCharte($pdo, $_GET['view'])['link'];?></a>
+               </p>
+               <p>  <label for="charte">Tutoriel actuel</label>
+                   <a href="../assets/upload/tutoriels/<?= $clients->getTutoriel($pdo, $_GET['view'])['link'];?>" target="_blank"><?= $clients->getTutoriel($pdo, $_GET['view'])['link'];?></a>
+               </p>
+               <br>
+               <p>  <label for="charte_file">Changer la charte graphique</label></p>
+                   <input type="file" name="charte_file"">
+
+               <p>  <label for="charte_file">Changer le tutoriel</label></p>
+               <input type="file" name="tutoriel"">
+
                <input type="submit" value="Modifier le client" name="send">
                <?php
                if(isset($_POST['send'])) {
-                   $clients->add($pdo);
-               }?>
+                  $clients->update($pdo, $_GET['view']);
+               }
+               ?>
            </form>
       <?php }
        ?>

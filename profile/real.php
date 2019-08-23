@@ -1,4 +1,8 @@
-<?php require 'assets/config/bootstrap.php'; ?>
+<?php require 'assets/config/bootstrap.php';
+if($_SESSION['user']['rights'] != 10) {
+    header('Location: index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

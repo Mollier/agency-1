@@ -1,5 +1,4 @@
 <?php
-
 class Realisations {
 
     function getAll(PDO $con)

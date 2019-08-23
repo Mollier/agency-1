@@ -1,3 +1,8 @@
+<?php
+if($_SESSION['user']['rights'] != 10) {
+    header('Location: index.php');
+}
+?>
 <div class="connected__item">
     <a href="write.php"><img src="../assets/profile/factures.svg" alt="factures"></a>
     <h4>AJOUT D'UN ARTICLE</h4>

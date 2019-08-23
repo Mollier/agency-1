@@ -16,7 +16,11 @@ $clients = new Clients();
 
 session_start();
 
-if(isset($_GET['disconnect'])) {
-    $user->disconnect();
-}
+if(isset($_SESSION['user'])) {
+    if(isset($_GET['disconnect'])) {
+        $user->disconnect();
+    }
 
+
+
+}
