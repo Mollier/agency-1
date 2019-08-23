@@ -45,7 +45,7 @@ class Clients {
         $charte_file = $_FILES['charte_file']['name'];
 
 
-        if(empty($_FILES['charte_file'] OR $_FILES['tutoriel'])) {
+        if(empty($_FILES['charte_file'])) {
             if (empty($name) and empty($phone) and empty($email)) {
 
                 echo("Veuillez remplir tout les champs");
@@ -80,7 +80,7 @@ class Clients {
             SET link = :charte_file WHERE id_client =' . $id);
             $req->bindParam(':charte_file', $charte_file);
             $req->execute();
-            echo"Client modifié";
+            echo"Données modifiées";
         }
     }
 
