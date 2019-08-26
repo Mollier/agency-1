@@ -37,3 +37,16 @@ body {
     color: white;
 }
 
+
+
+embed {
+    width: calc(100vw - 50px);
+    height: 500px;
+}
+
+@media screen and (min-width:980px) {
+   embed {
+       width: calc(100vw - 150px);
+       height: 900px;
+   }
+}

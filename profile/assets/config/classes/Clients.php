@@ -1,7 +1,7 @@
 <?php
 
 class Clients {
-
+        public $pdo;
 
     function getAll(PDO $con)
     {
@@ -32,61 +32,45 @@ class Clients {
               $req->bindParam(':phone', $phone);
               $req->bindParam(':email', $email);
               $req->execute();
-              echo 'Client ajouté.';
+
+              $name = $_POST['name'];
+              $req = $con->prepare('INSERT INTO chartes (name) VALUES (:name)');
+              $req->bindParam(':name', $name);
+              $req->execute();
+
+              $req = $con->prepare('INSERT INTO tutoriels (name) VALUES (:name)');
+              $req->bindParam(':name', $name);
+              $req->execute();
+
+              $req = $con->prepare('INSERT INTO devis (name) VALUES (:name)');
+              $req->bindParam(':name', $name);
+              $req->execute();
+
+            echo 'Client ajouté';
           }
         }
     }
+
 
     function update(PDO $con, $id)
     {
         $name = $_POST['name'];
         $phone = $_POST['phone'];
         $email = $_POST['email'];
-        $charte_file = $_FILES['charte_file']['name'];
 
 
-        if($_FILES['charte_file']['error'] == 4 AND $_FILES['tutoriel']['error'] == 4) {
-
-            if(!empty($name) AND !empty($phone) AND !empty($email)) {
-                $req = $con->prepare('
-                UPDATE clients
-                SET name = :name, phone = :phone, email = :email WHERE id_client =' . $id);
-                $req->bindParam(':name', $name);
-                $req->bindParam(':phone', $phone);
-                $req->bindParam(':email', $email);
-                $req->execute();
-                echo"Client modifié";
-            } else {
-                echo 'Veuillez remplir tout les champs';
-            }
-
-        } elseif(!empty($_FILES['charte_file']) AND !empty($_FILES['charte_file'])) { // si le fichier charte_file n'est pas vide
+        if(empty($name) OR empty($phone) OR empty($email)  ) {
+           die('Vide');
 
 
-            if(!empty($name) AND !empty($phone) AND !empty($email)) {
-
-                // ajout du fichier
-                $this->uploadCharte();
-                $req = $con->prepare('
-                UPDATE chartes
-                SET link = :charte_file WHERE id_client =' . $id);
-                $req->bindParam(':charte_file', $charte_file);
-                $req->execute();
-
-                // ajout des infos
-                $reqTwo = $con->prepare('
-                UPDATE clients
-                SET name = :name, phone = :phone, email = :email WHERE id_client =' . $id);
-                $reqTwo->bindParam(':name', $name);
-                $reqTwo->bindParam(':phone', $phone);
-                $reqTwo->bindParam(':email', $email);
-                $reqTwo->execute();
-                echo"Client modifié";
-            } else {
-                echo 'Veuillez remplir tout les champs';
-            }
+        } else {
+            $req = $con->prepare('UPDATE clients SET name = :name, phone = :phone, email = :email WHERE id_client =' . $id);
+            $req->bindParam(':name', $name);
+            $req->bindParam(':phone', $phone);
+            $req->bindParam(':email', $email);
+            $req->execute();
+            echo"Client modifié";
         }
-
     }
 
 
@@ -98,9 +82,11 @@ class Clients {
         return $req->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function uploadCharte() {
+    public function uploadCharte(PDO $con, $id) {
+        $charte_file = $_FILES['charte_file']['name'];
 
-           if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
                // Vérifie si le fichier a été uploadé sans erreur.
                if(isset($_FILES["charte_file"]) && $_FILES["charte_file"]["error"] == 0){
                    $allowed = array("pdf" => "application/pdf");
@@ -124,15 +110,18 @@ class Clients {
                            die();
                        } else{
                            move_uploaded_file($_FILES["charte_file"]["tmp_name"], "../assets/upload/chartes/" . $_FILES["charte_file"]["name"]);
-                           // echo('Votre fichier a été téléchargé avec succès.');
+
+                           $req = $con->prepare('UPDATE chartes SET link = :charte_file WHERE id_client =' . $id);
+                           $req->bindParam(':charte_file', $charte_file);
+                           $req->execute();
                        }
                    } else{
                        echo("Error: Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.");
 
                    }
-               } else{
-                   echo "Error: " . $_FILES["charte_file"]["error"];
-               }
+               } //else{
+                  // echo "Error: " . $_FILES["charte_file"]["error"];
+              // }
            }
     }
 
@@ -147,7 +136,9 @@ class Clients {
     }
 
 
-    public function uploadTutoriel() {
+    public function uploadTutoriel(PDO $con, $id) {
+        $tutoriel = $_FILES['tutoriel']['name'];
+
 
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Vérifie si le fichier a été uploadé sans erreur.
@@ -173,16 +164,40 @@ class Clients {
                         die();
                     } else{
                         move_uploaded_file($_FILES["tutoriel"]["tmp_name"], "../assets/upload/tutoriels/" . $_FILES["tutoriel"]["name"]);
-                        // echo('Votre fichier a été téléchargé avec succès.');
+
+                        $req = $con->prepare('UPDATE tutoriels SET link = :tutoriel WHERE id_client =' . $id);
+                        $req->bindParam(':tutoriel', $tutoriel);
+                        $req->execute();
                     }
                 } else{
                     echo("Error: Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.");
 
                 }
-            } else{
-                echo "Error: " . $_FILES["tutoriel"]["error"];
-            }
+            } //else{
+            // echo "Error: " . $_FILES["charte_file"]["error"];
+            // }
         }
     }
+
+    public function generateDocument() {
+if(isset($_GET['charte'])) {?>
+    <h1>Votre charte graphique</h1>
+    <embed src=../assets/upload/chartes/<?= $_SESSION['user']['customer_name'];?>.pdf type='application/pdf'/>
+    <?php
+}
+if(isset($_GET['tutoriel'])) {?>
+    <h1>Votre tutoriel</h1>
+    <embed src=../assets/upload/tutoriels/<?= $_SESSION['user']['customer_name'];?>.pdf type='application/pdf'/>
+    <?php
+}
+
+if(isset($_GET['facture'])) {?>
+    <h1>Votre facture</h1>
+    <embed src=../assets/upload/factures/<?= $_SESSION['user']['customer_name'];?>.pdf type='application/pdf'/>
+    <?php
+}
+
+    }
+
 
 }
