@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbdae4f1-ea58-46c7-8562-f1f21416af21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/profile/viewFiles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/chartes/avis.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/chartes/cv-teddy-boirin.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/upload/chartes/SFPO.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/upload/tutoriels/SFPO.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile/assets/config/classes/Clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile/assets/config/classes/Clients.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile/clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile/clients.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/profile/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile/inc/pannels/client.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile/inc/pannels/client.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,23 +39,14 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.1">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/profile/inc/pannels/client.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/profile/viewFiles.php">
+            <entry file="file://$PROJECT_DIR$/profile/clients.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+                <state relative-caret-position="210">
+                  <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
                 </state>
               </provider>
             </entry>
@@ -67,20 +55,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/profile/clients.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="31" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="31" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/profile/assets/config/classes/Clients.php">
+            <entry file="file://$PROJECT_DIR$/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="472">
-                  <caret line="184" column="110" lean-forward="true" selection-start-line="184" selection-start-column="3" selection-end-line="184" selection-end-column="110" />
+                <state relative-caret-position="742">
+                  <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
                 </state>
               </provider>
             </entry>
@@ -99,6 +78,7 @@
       <find>round_green</find>
       <find>Error:</find>
       <find>addChart</find>
+      <find>name</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,11 +122,12 @@
         <option value="$PROJECT_DIR$/profile/assets/config/classes/User.php" />
         <option value="$PROJECT_DIR$/profile/assets/config/bootstrap.php" />
         <option value="$PROJECT_DIR$/profile/css/vendors/clients.css" />
-        <option value="$PROJECT_DIR$/profile/clients.php" />
         <option value="$PROJECT_DIR$/profile/css/styles.css" />
         <option value="$PROJECT_DIR$/profile/viewFiles.php" />
         <option value="$PROJECT_DIR$/profile/inc/pannels/client.php" />
         <option value="$PROJECT_DIR$/profile/assets/config/classes/Clients.php" />
+        <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/profile/clients.php" />
       </list>
     </option>
   </component>
@@ -167,6 +148,11 @@
             <path>
               <item name="agency" type="b2602c69:ProjectViewProjectNode" />
               <item name="agency" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agency" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="agency" type="b2602c69:ProjectViewProjectNode" />
@@ -225,12 +211,12 @@
       <workItem from="1566461761602" duration="15362000" />
       <workItem from="1566548962500" duration="13396000" />
       <workItem from="1566568287757" duration="3966000" />
-      <workItem from="1566822160584" duration="2817000" />
+      <workItem from="1566822160584" duration="7212000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51934000" />
+    <option name="totallyTimeSpent" value="56329000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="971" extended-state="0" />
@@ -511,13 +497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/profile/clients.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/profile/inc/pannels/client.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -534,8 +513,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/profile/assets/config/classes/Clients.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="184" column="110" lean-forward="true" selection-start-line="184" selection-start-column="3" selection-end-line="184" selection-end-column="110" />
+        <state relative-caret-position="454">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profile/clients.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>

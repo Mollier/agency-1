@@ -15,35 +15,52 @@ class Clients {
     }
 
     public function add(PDO $con) {
-        $name = $_POST['name'];
+        $customer_name = $_POST['customer_name'];
         $phone = $_POST['phone'];
         $email = $_POST['email'];
+        $password = $_POST['password'];
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $email_admin = $_POST['email_admin'];
+        $password_admin = $_POST['password_admin'];
 
-        if(empty($name) OR empty($phone) OR empty($email)) {
+        if(empty($customer_name) OR empty($phone) OR empty($email)) {
             echo 'error';
         } else {
 
           if(!is_numeric($phone)) {
               echo 'Le numéro de téléphone ne doit pas contenir de lettres';
           } else {
-              $req = $con->prepare('INSERT INTO clients (name, phone, email) 
-            VALUES ( :name, :phone, :email)');
-              $req->bindParam(':name', $name);
+              $req = $con->prepare('INSERT INTO clients (customer_name, phone, email, email_admin, password_admin) 
+            VALUES ( :customer_name, :phone, :email, :email_admin, :password_admin)');
+              $req->bindParam(':customer_name', $customer_name);
               $req->bindParam(':phone', $phone);
               $req->bindParam(':email', $email);
+              $req->bindParam(':email_admin', $email_admin);
+              $req->bindParam(':password_admin', $password_admin);
               $req->execute();
 
-              $name = $_POST['name'];
-              $req = $con->prepare('INSERT INTO chartes (name) VALUES (:name)');
-              $req->bindParam(':name', $name);
+              $customer_name = $_POST['customer_name'];
+
+              $req = $con->prepare('INSERT INTO users (first_name, last_name, password, email, customer_name) 
+            VALUES ( :first_name, :last_name, :password, :email, :customer_name)');
+              $req->bindParam(':first_name', $first_name);
+              $req->bindParam(':last_name', $last_name);
+              $req->bindParam(':password', $password);
+              $req->bindParam(':email', $email);
+              $req->bindParam(':customer_name', $customer_name);
               $req->execute();
 
-              $req = $con->prepare('INSERT INTO tutoriels (name) VALUES (:name)');
-              $req->bindParam(':name', $name);
+              $req = $con->prepare('INSERT INTO chartes (customer_name) VALUES (:customer_name)');
+              $req->bindParam(':customer_name', $customer_name);
               $req->execute();
 
-              $req = $con->prepare('INSERT INTO devis (name) VALUES (:name)');
-              $req->bindParam(':name', $name);
+              $req = $con->prepare('INSERT INTO tutoriels (customer_name) VALUES (:customer_name)');
+              $req->bindParam(':customer_name', $customer_name);
+              $req->execute();
+
+              $req = $con->prepare('INSERT INTO devis (customer_name) VALUES (:customer_name)');
+              $req->bindParam(':customer_name', $customer_name);
               $req->execute();
 
             echo 'Client ajouté';
@@ -54,20 +71,26 @@ class Clients {
 
     function update(PDO $con, $id)
     {
-        $name = $_POST['name'];
+        $customer_name = $_POST['customer_name'];
         $phone = $_POST['phone'];
         $email = $_POST['email'];
+        $email_admin = $_POST['email_admin'];
+        $password_admin = $_POST['password_admin'];
 
 
-        if(empty($name) OR empty($phone) OR empty($email)  ) {
+        if(empty($customer_name) OR empty($phone) OR empty($email)  ) {
            die('Vide');
 
 
         } else {
-            $req = $con->prepare('UPDATE clients SET name = :name, phone = :phone, email = :email WHERE id_client =' . $id);
-            $req->bindParam(':name', $name);
+            $req = $con->prepare('UPDATE clients 
+            SET customer_name = :customer_name, phone = :phone, email = :email, email_admin = :email_admin, password_admin = :password_admin
+             WHERE id_client =' . $id);
+            $req->bindParam(':customer_name', $customer_name);
             $req->bindParam(':phone', $phone);
             $req->bindParam(':email', $email);
+            $req->bindParam(':email_admin', $email_admin);
+            $req->bindParam(':password_admin', $password_admin);
             $req->execute();
             echo"Client modifié";
         }
@@ -83,7 +106,7 @@ class Clients {
     }
 
     public function uploadCharte(PDO $con, $id) {
-        $charte_file = $_FILES['charte_file']['name'];
+        $charte_file = $_POST['customer_name'] .'.pdf';
 
 
         if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -105,11 +128,11 @@ class Clients {
                    // Vérifie le type MIME du fichier
                    if(in_array($filetype, $allowed)){
                        // Vérifie si le fichier existe avant de le télécharger.
-                       if(file_exists("../assets/upload/chartes/" . $_FILES["charte_file"]["name"])){
+                       if(file_exists("../assets/upload/chartes/" . $_POST['customer_name'])){
                            echo($_FILES["charte_file"]["name"] . " existe déjà.");
                            die();
                        } else{
-                           move_uploaded_file($_FILES["charte_file"]["tmp_name"], "../assets/upload/chartes/" . $_FILES["charte_file"]["name"]);
+                           move_uploaded_file($_FILES["charte_file"]["tmp_name"], "../assets/upload/chartes/" . $charte_file);
 
                            $req = $con->prepare('UPDATE chartes SET link = :charte_file WHERE id_client =' . $id);
                            $req->bindParam(':charte_file', $charte_file);
@@ -137,7 +160,7 @@ class Clients {
 
 
     public function uploadTutoriel(PDO $con, $id) {
-        $tutoriel = $_FILES['tutoriel']['name'];
+        $tuto_file = $_POST['customer_name'] .'.pdf';
 
 
         if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -159,14 +182,14 @@ class Clients {
                 // Vérifie le type MIME du fichier
                 if(in_array($filetype, $allowed)){
                     // Vérifie si le fichier existe avant de le télécharger.
-                    if(file_exists("../assets/upload/tutoriels/" . $_FILES["tutoriel"]["name"])){
+                    if(file_exists("../assets/upload/tutoriels/" . $_POST['customer_name'])){
                         echo($_FILES["tutoriel"]["name"] . " existe déjà.");
                         die();
                     } else{
-                        move_uploaded_file($_FILES["tutoriel"]["tmp_name"], "../assets/upload/tutoriels/" . $_FILES["tutoriel"]["name"]);
+                        move_uploaded_file($_FILES["tutoriel"]["tmp_name"], "../assets/upload/tutoriels/" . $tuto_file);
 
                         $req = $con->prepare('UPDATE tutoriels SET link = :tutoriel WHERE id_client =' . $id);
-                        $req->bindParam(':tutoriel', $tutoriel);
+                        $req->bindParam(':tutoriel', $tuto_file);
                         $req->execute();
                     }
                 } else{
