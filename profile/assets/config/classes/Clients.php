@@ -18,7 +18,7 @@ class Clients {
         $customer_name = $_POST['customer_name'];
         $phone = $_POST['phone'];
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $password = password_hash($_POST['password'], PASSWORD_ARGON2I);
         $first_name = $_POST['first_name'];
         $last_name = $_POST['last_name'];
         $email_admin = $_POST['email_admin'];
@@ -202,25 +202,60 @@ class Clients {
         }
     }
 
-    public function generateDocument() {
-if(isset($_GET['charte'])) {?>
-    <h1>Votre charte graphique</h1>
-    <embed src=../assets/upload/chartes/<?= $_SESSION['user']['customer_name'];?>.pdf type='application/pdf'/>
-    <?php
-}
-if(isset($_GET['tutoriel'])) {?>
-    <h1>Votre tutoriel</h1>
-    <embed src=../assets/upload/tutoriels/<?= $_SESSION['user']['customer_name'];?>.pdf type='application/pdf'/>
-    <?php
-}
+    public function uploadFacture(PDO $con) {
+        $facture = $_FILES['facture']['name'];
+        $customer_name = $_POST['customer_name'];
+        $date = date("Y/m/d");
 
-if(isset($_GET['facture'])) {?>
-    <h1>Votre facture</h1>
-    <embed src=../assets/upload/factures/<?= $_SESSION['user']['customer_name'];?>.pdf type='application/pdf'/>
-    <?php
-}
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            // Vérifie si le fichier a été uploadé sans erreur.
+            if(isset($_FILES["facture"]) && $_FILES["facture"]["error"] == 0){
+                $allowed = array("pdf" => "application/pdf");
+                $filename = $_FILES["facture"]["name"];
+                $filetype = $_FILES["facture"]["type"];
+                $filesize = $_FILES["facture"]["size"];
 
+                // Vérifie l'extension du fichier
+                $ext = pathinfo($filename, PATHINFO_EXTENSION);
+                if(!array_key_exists($ext, $allowed)) die("Erreur : Veuillez sélectionner un format de fichier valide.");
+
+                // Vérifie la taille du fichier - 5Mo maximum
+                $maxsize = 5 * 1024 * 1024;
+                if($filesize > $maxsize) die("Error: La taille du fichier est supérieure à la limite autorisée.");
+
+                // Vérifie le type MIME du fichier
+                if(in_array($filetype, $allowed)){
+                    // Vérifie si le fichier existe avant de le télécharger.
+                    if(file_exists("../assets/upload/factures/" . $facture)){
+                        echo($_FILES["facture"]["name"] . " existe déjà.");
+                        die();
+                    } else{
+                        move_uploaded_file($_FILES["facture"]["tmp_name"], "../assets/upload/factures/" . $facture);
+
+                        $req = $con->prepare('INSERT INTO factures (facture, customer_name, date) VALUES (:facture, :customer_name, :date)');
+                        $req->bindParam(':facture', $facture);
+                        $req->bindParam(':customer_name', $customer_name);
+                        $req->bindParam(':date', $date);
+                        $req->execute();
+                    }
+                } else{
+                    echo("Error: Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.");
+
+                }
+            } //else{
+            // echo "Error: " . $_FILES["charte_file"]["error"];
+            // }
+        }
     }
 
+    public function getFactures(PDO $con, $user) {
+        $req = $con->query('SELECT * FROM factures WHERE customer_name = "'.$user.'"');
+        return $req->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getIdentifiants(PDO $con, $user) {
+        $req = $con->query('SELECT * FROM clients WHERE customer_name = "'.$user.'"');
+        return $req->fetch(PDO::FETCH_ASSOC);
+    }
 
 }

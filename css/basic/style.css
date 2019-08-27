@@ -28,6 +28,10 @@ a {
     src: url("../../assets/fonts/GTWalsheimProBold.ttf") format("ttf");
 }
 
+html {
+    cursor: url('../../assets/cursor.svg'), auto;
+}
+
 .button {
     border: 1px solid black;
     display: flex;

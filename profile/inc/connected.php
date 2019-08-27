@@ -8,8 +8,6 @@
         ?>
     </div>
 
-
-
     <span class="need_help--paragraph">Les Baï-Bao qui
       s’occupent de vous</span>
     <div class="round"></div>

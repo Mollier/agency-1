@@ -80,47 +80,61 @@ if($_SESSION['user']['rights'] != 10) {
       <?php
        }
 
-       if(isset($_GET['view']) AND is_numeric($_GET['view'])) {
-           ?>
-           <form action="#" method="post" enctype="multipart/form-data">
-               <p><label for="customer_name">Nom du client </label>
-                   <input type="text" name="customer_name" value="<?= $clients->getOne($pdo, $_GET['view'])['customer_name']; ?>" required></p>
-               <p>  <label for="phone">Numéro du client </label>
-                   <input type="tel" name="phone" value="<?= $clients->getOne($pdo, $_GET['view'])['phone']; ?>" required></p>
-               <p>  <label for="email">E-mail du client </label>
-                   <input type="email" name="email" value="<?= $clients->getOne($pdo, $_GET['view'])['email']; ?>">
-               </p>
-               <p>  <label for="email_admin">Identifiant</label>
-                   <input type="email" name="email_admin" value="<?= $clients->getOne($pdo, $_GET['view'])['email_admin']; ?>">
-               </p>
-               <p>  <label for="password_admin">Mot de passe</label>
-                   <input type="text" name="password_admin" value="<?= $clients->getOne($pdo, $_GET['view'])['password_admin']; ?>">
-               </p>
-               <p>  <label for="charte">Charte graphique actuelle</label>
-                   <a href="../assets/upload/chartes/<?= $clients->getCharte($pdo, $_GET['view'])['link'];?>" target="_blank">[VOIR]</a>
-               </p>
+       if(isset($_GET['view'])) {
+           if (is_numeric($_GET['view'])) {
+               ?>
+               <form action="#" method="post" enctype="multipart/form-data">
+                   <p><label for="customer_name">Nom du client </label>
+                       <input type="text" name="customer_name"
+                              value="<?= $clients->getOne($pdo, $_GET['view'])['customer_name']; ?>" required></p>
+                   <p><label for="phone">Numéro du client </label>
+                       <input type="tel" name="phone" value="<?= $clients->getOne($pdo, $_GET['view'])['phone']; ?>"
+                              required></p>
+                   <p><label for="email">E-mail du client </label>
+                       <input type="email" name="email" value="<?= $clients->getOne($pdo, $_GET['view'])['email']; ?>">
+                   </p>
+                   <p><label for="email_admin">Identifiant</label>
+                       <input type="email" name="email_admin"
+                              value="<?= $clients->getOne($pdo, $_GET['view'])['email_admin']; ?>">
+                   </p>
+                   <p><label for="password_admin">Mot de passe</label>
+                       <input type="text" name="password_admin"
+                              value="<?= $clients->getOne($pdo, $_GET['view'])['password_admin']; ?>">
+                   </p>
+                   <p>
+                       <a href="../assets/upload/chartes/<?= $clients->getCharte($pdo, $_GET['view'])['link']; ?>"
+                          target="_blank">Charte graphique actuelle</a>
+                   </p>
+                   <br>
+                   <p>
+                       <a href="../assets/upload/tutoriels/<?= $clients->getTutoriel($pdo, $_GET['view'])['link']; ?>"
+                          target="_blank">Tutoriel actuel</a>
+                   </p>
 
-               <p>  <label for="tutoriel">Tutoriel actuel</label>
-                       <a href="../assets/upload/tutoriels/<?= $clients->getTutoriel($pdo, $_GET['view'])['link'];?>" target="_blank">[VOIR]</a>
-               </p>
-
-               <br>
-               <p>  <label for="charte_file">Changer la charte graphique</label></p>
+                   <br>
+                   <p><label for="charte_file">Changer la charte graphique</label></p>
                    <input type="file" name="charte_file"">
 
-               <p>  <label for="charte_file">Changer le tutoriel</label></p>
-               <input type="file" name="tutoriel"">
+                   <p><label for="charte_file">Changer le tutoriel</label></p>
+                   <input type="file" name="tutoriel"">
 
-               <input type="submit" value="Modifier le client" name="send">
-               <?php
-               if(isset($_POST['send'])) {
-                  $clients->update($pdo, $_GET['view']);
-                   $clients->uploadCharte($pdo, $_GET['view']);
-                   $clients->uploadTutoriel($pdo, $_GET['view']);
-               }
-               ?>
-           </form>
-      <?php }
+                   <p><label for="charte_file">Ajouter une facture</label></p>
+                   <input type="file" name="facture"">
+                   <input type="submit" value="Modifier le client" name="send">
+                   <?php
+                   if (isset($_POST['send'])) {
+                       $clients->update($pdo, $_GET['view']);
+                       $clients->uploadCharte($pdo, $_GET['view']);
+                       $clients->uploadTutoriel($pdo, $_GET['view']);
+                       $clients->uploadFacture($pdo);
+                   }
+                   ?>
+               </form>
+           <?php } else {
+               echo 'error 89';
+           }
+       }
+
        ?>
    </div>
 
