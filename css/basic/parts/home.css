@@ -36,6 +36,8 @@
     }
 }
 
+
+
 .appear {
     animation: appear 4s;
 }
@@ -111,7 +113,7 @@
     from {
         opacity: 0;
         transform: translateY(-100px);
-        ;
+    ;
     }
     to {
         transform: translateY(0px);
@@ -256,27 +258,43 @@ header p:nth-of-type(2) {
     position: absolute;
     right: 0;
     background-image: url('../../../assets/round_header-mobile.svg');
-    animation: round_framb 3s alternate infinite;
+    /*animation: round_framb 3s alternate infinite;*/
 }
 
 .round_green {
-    height: 162px;
-    width: 162px;
+    height: 100px;
+    width: 142px;
     position: absolute;
     bottom: -64px;
     left: 0;
     background-image: url('../../../assets/round_green.svg');
-    animation: round_green 3s alternate infinite;
+    /*animation: round_green 3s alternate infinite;*/
+    display: none;
+}
+
+.round_green__mobile {
+    height: 100px;
+    width: 142px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background-image: url('../../../assets/round_green.svg');
+    /*animation: round_green 3s alternate infinite;*/
 }
 
 @media screen and (min-width:980px) {
     .round_green {
+        display: initial;
         height: 359px;
         width: 363px;
         position: absolute;
         bottom: -93px;
         left: 50px;
         background-image: url('../../../assets/round__green-desktop.svg');
+    }
+
+    .round_green__mobile {
+        display: none;
     }
     .round_framb {
         height: 325px;
@@ -324,7 +342,7 @@ header p:nth-of-type(2) {
 }
 
 .pronoms span {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 52px;
@@ -334,9 +352,8 @@ header p:nth-of-type(2) {
 }
 
 .pronoms span.menu_second--subText {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
     font-size: 22px;
     line-height: 27px;
     text-align: center;

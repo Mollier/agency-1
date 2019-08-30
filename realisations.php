@@ -22,29 +22,42 @@
 			</div>
 	</header>
 	<section>
-		<div class="realisations_top">
+		<div class="realisations_top" id="realisations">
 			<p class="paragraph">
 				Des banques, des fonds, des associations, des entreprises, grandes et moins grandes… de la holding à la TPE, il règne une joyeuse diversité dans notre éventail de références. Autant de problématiques de communication qui renouvellent les sensations et réchauffent nos méninges pour cogiter ZE solution of ZE solution.
 			</p>
-			<div class="realisations_filter">
+			<tut class="realisations_filter">
+                <a href="realisations.php?filter=Artistes&#realisations">
 				<div class="filter_item">
-					<span>Artistes</span>
+
+                    <span>Artistes</span>
 				</div>
+                </a>
+                <a href="realisations.php?filter=Institutions&#realisations">
 				<div class="filter_item">
-					<span>Institutions</span>
+                    <span>Institutions</span>
 				</div>
+                </a>
+                <a href="realisations.php?filter=Éducation&#realisations">
 				<div class="filter_item">
-					<span>Éducation</span>
+                    <span>Éducation</span>
 				</div>
+                </a>
+                <a href="realisations.php?filter=IT&#realisations">
 				<div class="filter_item">
-					<span>IT</span>
+                   <span>IT</span>
 				</div>
+                </a>
+                <a href="realisations.php?filter=Associations&#realisations">
 				<div class="filter_item">
-					<span>Associations</span>
+                    <span>Associations</span>
 				</div>
+                </a>
+                <a href="realisations.php?filter=Cabinets&#realisations">
 				<div class="filter_item">
-					<span>Cabinets</span>
+                    <span>Cabinets</span>
 				</div>
+                </a>
 			</div>
 		</div>
 
@@ -53,31 +66,45 @@
 			<div class="round__beige--right"></div>
 			<div class="realisations__list">
 			<?php
-            foreach ($realisations->getAll($pdo) as $realisation) {
-                if($realisation['color'] == '#040028') {?>
-                    <a href="<?= $realisation['link'];?>" target="_blank">
-                        <div class="realisations__items" style="background-color:<?= $realisation['color'];?>">
-                            <p class="item_title"><?= $realisation['title'];?></p>
-                            <p class="item_desc"><?= $realisation['abstract'];?></p>
-                        </div>
-                    </a>
-              <?php   } else {?>
-                    <a href="<?= $realisation['link'];?>" target="_blank">
-                        <div class="realisations__items" style="background-color:<?= $realisation['color'];?>">
-                            <p class="item_title item_title--dark"><?= $realisation['title'];?></p>
-                            <p class="item_desc item_desc--dark"><?= $realisation['abstract'];?></p>
-                        </div>
-                    </a>
-            <?php    }
+           if(isset($_GET['filter'])) {
+               foreach ($realisations->filter($pdo, $_GET['filter']) as $realisation) {
+                   if($realisation['color'] == '#040028') {?>
+                       <a href="<?= $realisation['link'];?>" target="_blank">
+                           <div class="realisations__items" style="background-color:<?= $realisation['color'];?>">
+                               <p class="item_title"><?= $realisation['title'];?></p>
+                               <p class="item_desc"><?= $realisation['abstract'];?></p>
+                           </div>
+                       </a>
+                   <?php   } else {?>
+                       <a href="<?= $realisation['link'];?>" target="_blank">
+                           <div class="realisations__items" style="background-color:<?= $realisation['color'];?>">
+                               <p class="item_title item_title--dark"><?= $realisation['title'];?></p>
+                               <p class="item_desc item_desc--dark"><?= $realisation['abstract'];?></p>
+                           </div>
+                       </a>
+                   <?php    }
 
-                ?>
+               }
+           } else {
+               foreach ($realisations->getAll($pdo) as $realisation) {
+                   if($realisation['color'] == '#040028') {?>
+                       <a href="<?= $realisation['link'];?>" target="_blank">
+                           <div class="realisations__items" style="background-color:<?= $realisation['color'];?>">
+                               <p class="item_title"><?= $realisation['title'];?></p>
+                               <p class="item_desc"><?= $realisation['abstract'];?></p>
+                           </div>
+                       </a>
+                   <?php   } else {?>
+                       <a href="<?= $realisation['link'];?>" target="_blank">
+                           <div class="realisations__items" style="background-color:<?= $realisation['color'];?>">
+                               <p class="item_title item_title--dark"><?= $realisation['title'];?></p>
+                               <p class="item_desc item_desc--dark"><?= $realisation['abstract'];?></p>
+                           </div>
+                       </a>
+                   <?php    }
 
-
-
-
-
-           <?php
-            }
+               }
+           }
             ?>
 
 

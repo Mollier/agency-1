@@ -9,9 +9,16 @@
   <title>Baï-Bao - Agence de communication à Paris</title>
   <link rel="stylesheet" href="./css/basic/style.css">
   <script defer src="./js/app.js"></script>
+  <script defer src="./js/change.js"></script>
+
+
+
 </head>
 
 <body>
+
+
+
   <header>
     <?php include('./inc/header.php') ?>
     <div class="header_secondary">
@@ -34,7 +41,8 @@
         création - web - conseil - production
       </p>
       <div class="round_framb"></div>
-      <div class="round_green"></div>
+      <div class="round_green rellax" data-rellax-speed="-3"></div>
+      <div class="round_green__mobile"></div>
     </div>
   </header>
   <section>
@@ -258,7 +266,22 @@
 
       </div>
     </div>
-  </section>
+
+
+
+      <script src="./js/rellax.min.js"></script>
+
+      <script>
+          var rellax = new Rellax('.rellax', {
+              speed: -5,
+              center: false,
+              wrapper: null,
+              round: true,
+              vertical: true,
+              horizontal: false
+          });
+      </script>
+
   <?php include('./inc/footer.php') ?>
 </body>
 

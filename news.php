@@ -24,36 +24,87 @@
   <section>
 
     <div class="news_filter">
-      <form action="#" method="post">
-        <input type="text" name="search" placeholder="rechercher">
+      <form action="#news" method="post">
+        <input type="text" name="search" placeholder="rechercher" value="<?= $_POST['search']?>">
+          <?php
+          if(isset($_POST['search'])) {
+              $post = strip_tags($_POST['search']);
+              echo  "<p class='paragraph'>" . $news->count($pdo, $post)['nb'] . ' news trouvées pour : ' . $_POST['search'] ."</p>";
+          }
+          ?>
       </form>
+
       <span>Filtres</span>
       <div class="filters_clef">
-        <div class="button">Vie de l’agence</div>
-        <div class="button">Actualités</div>
-        <div class="button">Projets</div>
+          <a href="news.php?filter=Agence&#news"><div class="button">Vie de l’agence</div></a>
+          <a href="news.php?filter=Actualités&#news"><div class="button">Actualités</div></a>
+          <a href="news.php?filter=Projets&#news"> <div class="button">Projets</div></a>
+          <a href="news.php#news"> <div class="button">Toutes</div></a>
       </div>
     </div>
-    <div class="news">
+    <div class="news" id="news">
       <h1>DERNIÈRES ACTUALITÉS</h1>
       <div class="news_container">
       <?php
-      foreach ($news->getAll($pdo) as $new) {?>
-          <div class="news_item">
-              <div class="header_new">
-                  <a href="read.php?id=<?= $new['id_news']; ?>"><img src="./assets/upload/news/<?= $new['image'] ?>" alt="new"></a>
-              </div>
-              <h3><?= $new['title'] ?></h3>
-              <p><?= substr($new['content'], 0, 20) ?></p>
-              <div class="share">
-                  <img src="./assets/twitter.svg" alt="twitter">
-                  <img src="./assets/fb.svg" alt="fb">
-                  <span class="date">
+     if(isset($_GET['filter'])) {
+         foreach ($news->filter($pdo, $_GET['filter']) as $new) {?>
+             <div class="news_item">
+                 <div class="header_new">
+                     <a href="read.php?id=<?= $new['id_news']; ?>"><img src="./assets/upload/news/<?= $new['image'] ?>" alt="new"></a>
+                 </div>
+                 <h3><?= $new['title'] ?></h3>
+                 <p><?= substr($new['content'], 0, 20) ?></p>
+                 <div class="share">
+                     <img src="./assets/twitter.svg" alt="twitter">
+                     <img src="./assets/fb.svg" alt="fb">
+                     <span class="date">
+              posté le <?= $new['date']; ?>
+            </span>
+                 </div>
+             </div>
+         <?php }
+     }
+
+     else if(isset($_POST['search'])) {
+         $post = strip_tags($_POST['search']);
+         foreach ($news->search($pdo, $post) as $new) {
+             ?>
+             <div class="news_item">
+                 <div class="header_new">
+                     <a href="read.php?id=<?= $new['id_news']; ?>"><img src="./assets/upload/news/<?= $new['image'] ?>" alt="new"></a>
+                 </div>
+                 <h3><?= $new['title'] ?></h3>
+                 <p><?= substr($new['content'], 0, 20) ?></p>
+                 <div class="share">
+                     <img src="./assets/twitter.svg" alt="twitter">
+                     <img src="./assets/fb.svg" alt="fb">
+                     <span class="date">
+              posté le <?= $new['date']; ?>
+            </span>
+                 </div>
+             </div>
+         <?php }
+     }
+     else {
+         foreach ($news->getAll($pdo) as $new) {?>
+             <div class="news_item">
+                 <div class="header_new">
+                     <a href="read.php?id=<?= $new['id_news']; ?>"><img src="./assets/upload/news/<?= $new['image'] ?>" alt="new"></a>
+                 </div>
+                 <h3><?= $new['title'] ?></h3>
+                 <p><?= substr($new['content'], 0, 20) ?></p>
+                 <div class="share">
+                     <img src="./assets/twitter.svg" alt="twitter">
+                     <img src="./assets/fb.svg" alt="fb">
+                     <span class="date">
               posté le <?= $new['date'] ?>
             </span>
-              </div>
-          </div>
-     <?php }
+                 </div>
+             </div>
+         <?php }
+     }
+
+
       ?>
 
 

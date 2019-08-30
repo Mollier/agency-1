@@ -35,6 +35,17 @@ if($_SESSION['user']['rights'] != 10) {
             <option value="#F9D7C8">Beige</option>
             <option value="#A3FFD3">Turquoise</option>
         </select>
+
+        <label for="category">Catégorie</label>
+        <select name="category" required>
+            <option value="">--Choisissez une catégorie--</option>
+            <option value="Artistes">Artistes</option>
+            <option value="Institutions">Institutions</option>
+            <option value="#A3FFD3">Éducation</option>
+            <option value="Éducation">IT</option>
+            <option value="Associations">Associations</option>
+            <option value="Cabinets">Cabinets</option>
+        </select>
         <input type="submit" value="Envoyer" name="send">
     </form>
     <?php

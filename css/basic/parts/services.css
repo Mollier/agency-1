@@ -91,7 +91,7 @@ section h3 {
 .choixadmin li:before ,
 .listeseo li:before,
 .choixtech li:before{
-    content: "•";
+    content: "â€¢";
     font-size: 2em;
     font-family: "Font Awesome 5 Free";
     color: #F9D7C8;
@@ -206,4 +206,34 @@ span .brbleu{
 .right{
     margin: 0;
     width: 100%;
+}
+
+
+/* page services */
+
+section.services {
+    background-color: #040028;
+    height: auto;
+    width: 100vw;
+    color: white;
+}
+
+.list_services {
+    height: auto;
+    width: calc(100vw - 50px);
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 65px;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width:980px) {
+    .list_services {
+        width: 600px;
+        margin-top: 0px;
+
+    }
 }

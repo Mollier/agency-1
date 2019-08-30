@@ -73,7 +73,34 @@ class News {
     }
 
     public function getAllLessFive(PDO $con) {
-        $req = $con->query('SELECT * FROM news order by date DESC');
+        $req = $con->query('SELECT * FROM news order by date DESC LIMIT 0,4');
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function filter(PDO $con, $filtre) {
+        if($filtre == "Agence" OR $filtre == "Actualités" OR $filtre == "Projets") {
+            $req = $con->query("SELECT * FROM news WHERE category ='$filtre' order by date DESC");
+            return $req->fetchAll(PDO::FETCH_ASSOC);
+        }
+        else {
+            die();
+            echo "Error2";
+        }
+
+    }
+
+    public function search(PDO $con, $search)
+    {
+
+        $req = $con->query("SELECT * FROM news WHERE title LIKE '$search' order by date DESC");
+        return $req->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+
+    public function count(PDO $con, $search) {
+        $req = $con->query("SELECT count(*) as nb FROM news WHERE title LIKE '$search'");
+        return $req->fetch(PDO::FETCH_ASSOC);
+    }
+
+
 }

@@ -36,35 +36,7 @@ let links = [
     'realisations.php'
 ]
 
-function change() {
-    pronom.innerHTML = pronoms[0];
-    link.setAttribute('href', links[0]);
-    arrow_right.addEventListener('click', () => {
-        compteur++;
 
-        if (pronom.innerHTML === pronoms[5]) {
-            console.log('stop')
-        } else {
-            pronom.innerHTML = pronoms[compteur - 1];
-            link.setAttribute('href', links[compteur - 1]);
-        }
-    })
-
-    // left
-    arrow_left.addEventListener('click', () => {
-        compteur--;
-        console.log(compteur);
-
-        if (pronom.innerHTML === pronoms[0]) {
-            console.log('stop')
-        } else {
-            pronom.innerHTML = pronoms[compteur - 1];
-            link.setAttribute('href', links[compteur - 1])
-        }
-    })
-
-}
-change();
 
 // 
 
@@ -85,4 +57,12 @@ function autoChange() {
 
 autoChange();
 
+let loader = document.getElementById('loader');
+document.addEventListener('DOMContentLoaded', (e) => {
+    console.log("DOM entièrement chargé et analysé");
+    loader.style.transition = "3s";
+    loader.style.opacity = "0";
+    loader.style.zIndex = "-10";
+    document.body.style.overflowY = "initial";
 
+})

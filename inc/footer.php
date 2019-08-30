@@ -55,7 +55,7 @@
     <div class="container__signature container__signature--logo">
     <p><img src="./assets/logo_b.svg" alt="logo"></p> 
     <p>
-     © 2019 Baï-Bao site réalisé avec tendresse
+     © 2019 Baï-Bao site réalisé avec tendresse 🐼
     </p>
      </div>
     <div class="container__signature">
