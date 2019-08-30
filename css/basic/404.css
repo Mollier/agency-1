@@ -1,0 +1,331 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@font-face {
+    font-family: "GTWalsheimProBold";
+    src: url("../../assets/fonts/GTWalsheimProBold.ttf") format("ttf");
+}
+
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: #040028;
+    overflow: hidden;
+}
+
+html {
+    cursor: url('../../assets/cursor.svg'), auto;
+    width: 100vw;
+}
+.container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+
+.bohnomme {
+    height: 680.11px;
+    width: 304.1px;
+    position: absolute;
+    left:80%;
+    transform: translateX(-90%);
+    z-index:10;
+}
+
+
+.bohnomme svg {
+    position: absolute;
+    top: 70px;
+}
+
+.lune {
+    height: 154px;
+    width: 240px;
+    position: absolute;
+    left: 50px;
+    z-index:5;
+    top:-40px;
+}
+
+.lune svg {
+    text-shadow: #ffffff 0 0 10px;
+
+}
+
+@media screen and (min-width: 980px) {
+    .bohnomme {
+        height: 980.11px;
+        width: 604.1px;
+        left:45%;
+        bottom: -60px;
+    }
+
+    .lune {
+        height: 154px;
+        width: 540px;
+    }
+}
+
+@keyframes brouillard {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(30vw);
+    }
+}
+.brouillard {
+    display: none;
+}
+
+.brouillardTwo {
+    left: 60%;
+
+}
+
+.feuille {
+    width: 60px;
+    height: 175px;
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+
+}
+
+.rotate {
+    transform: rotateY(180deg);
+    bottom: 50px;
+
+}
+
+.feuilleTwo {
+    position: absolute;
+    left:0;
+}
+
+.feuilleThree {
+    position: absolute;
+    left:30%;
+    transform: rotateY(360deg) rotateX(0deg) rotateZ(20deg);
+    z-index: 10;
+}
+
+.feuilleThree {
+    position: absolute;
+    left:30%;
+    transform: rotateY(360deg) rotateX(0deg) rotateZ(20deg);
+    z-index: 10;
+}
+
+.feuilleFour {
+    position: absolute;
+    left:80%;
+    transform: rotateY(180deg);
+    z-index: 10;
+}
+
+.coline {
+    width: 670px;
+    height: 200px;
+    position: absolute;
+    right:0;
+    bottom: 0;
+    object-fit: cover;
+    display: none;
+}
+
+
+.text {
+    width: 300px;
+    height: auto;
+    position: relative;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text--top {
+    font-family: Montserrat, sans-serif;
+    width: 100%;
+    height: 50px;
+    font-size: 38px;
+    color: #F9D7C8;
+    padding-bottom: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-shadow: #00000047 0 0 7px;
+    z-index: 100;
+    text-align: center;
+    justify-content: center;
+}
+
+.text--bottom {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+    color: white;
+    font-size: 14px;
+    z-index: 100;
+    font-size:  12px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    text-shadow: #0000007a 0 0 3px;
+}
+
+.round {
+    height: 24px;
+    width: 24px;
+    background: #F9D7C8;
+    border-radius: 100Px;
+    margin-right: 30px;
+}
+
+
+.back {
+    z-index:200;
+    margin-top: 100px;
+    text-align: center;
+}
+.back a{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
+    /* or 29px */
+    letter-spacing: 0.03em;
+    color: #F9D7C8;
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 980px) {
+    .text {
+
+        left: 50%;
+        top: 50%;
+
+    }
+
+    .text--top {
+        font-family: Montserrat, sans-serif;
+        width: 100%;
+        height: 50px;
+        font-size: 38px;
+        color: #F9D7C8;
+        padding-bottom: 10px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+    }
+
+    .text--bottom {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 160%;
+        letter-spacing: 0.03em;
+        color: white;
+        font-size: 14px;
+    }
+
+    .round {
+        height: 24px;
+        width: 24px;
+        background: #F9D7C8;
+        border-radius: 100Px;
+        margin-right: 30px;
+    }
+
+
+    .back {
+        z-index:200;
+        margin-top: 100px;
+    }
+    .back a{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 160%;
+        /* or 29px */
+        letter-spacing: 0.03em;
+        color: #F9D7C8;
+        text-decoration: none;
+    }
+
+    .brouillard {
+        width: 789px;
+        height: 385px;
+        display: initial;
+        z-index: 10;
+        position: absolute;
+        bottom: 50px;
+        animation: brouillard 10s forwards infinite alternate;
+        filter: blur(85px);
+    }
+
+    .brouillard svg {
+        filter: blur(50px);
+    }
+
+
+    .feuille {
+        width: 130px;
+        height: 215px;
+        position: absolute;
+        bottom: 0;
+        left: 150px;
+
+    }
+
+    .rotate {
+        transform: rotateY(180deg);
+        bottom: 50px;
+
+    }
+
+    .feuilleTwo {
+        position: absolute;
+        left:0;
+    }
+
+    .feuilleThree {
+        position: absolute;
+        left:30%;
+        transform: rotateY(360deg) rotateX(0deg) rotateZ(20deg);
+        z-index: 10;
+    }
+
+    .feuilleThree {
+        position: absolute;
+        left:30%;
+        transform: rotateY(360deg) rotateX(0deg) rotateZ(20deg);
+        z-index: 10;
+    }
+
+    .feuilleFour {
+        position: absolute;
+        left:80%;
+        transform: rotateY(180deg);
+        z-index: 10;
+    }
+
+    .coline {
+        width: 1070px;
+        height: 600px;
+        position: absolute;
+        right:0;
+        bottom: 0;
+        display: initial;
+    }
+
+
+}

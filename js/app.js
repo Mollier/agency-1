@@ -19,12 +19,12 @@ let pronom = document.getElementById('pronom');
 
 let compteur = 1;
 let pronoms = [
-    '<div class="appear"><span>Je</span></div>',
-    '<div class="appear"><span>Tu</span></div>',
-    '<div class="appear"><span>Il</span>/elle</div>',
-    '<div class="appear"><span>No</span>us</div>',
-    '<div class="appear"><span>Vo</span>us</div>',
-    '<div class="appear_last"><span>Il</span>s/elles</div>'
+    '<div class="appear"><span>Je</span> <span class="menu_second menu_second--subText">suis client / un Baï-Bao </span></div> ',
+    '<div class="appear"><span>Tu</span><span class="menu_second menu_second--subText">souhaites nous rejoindre ? </span></div>',
+    '<div class="appear"><span>Il/elle</span> <span class="menu_second menu_second--subText">travaille chez nous </span></div>',
+    '<div class="appear"><span>Nous</span> <span class="menu_second menu_second--subText">sommes polyvalents</span></div>',
+    '<div class="appear"><span>Vous</span> <span class="menu_second menu_second--subText">avez une question ? un projet ? une idée ?</span></div>',
+    '<div class="appear_last"><span>Ils/elles</span> <span class="menu_second menu_second--subText">nous font confiance</span></div>'
 ];
 
 let links = [

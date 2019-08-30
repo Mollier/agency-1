@@ -43,7 +43,7 @@
         <img class="pronoms-img" src="./assets/arrow_left.svg" alt="arrow" id="arrow_left">
         <span id="pronom"></span>
 
-        <img class="pronoms-img" src="./assets/arrow_right.svg" alt="arrow" id="arrow_right">
+        <img class="pronoms-img--right" src="./assets/arrow_right.svg" alt="arrow" id="arrow_right">
       </div>
       <a href="" id="link">
         <div class="button">Accéder</div>
@@ -56,87 +56,89 @@
         Baï-Bao est une agence de communication digitale et print indépendante basée à Paris. De la conception au développement de sites internet en passant par un suivi social media et e-réputation, nous vous accompagnons dans la création et le déploiement de votre stratégie de branding sur l'ensemble de vos territoires de communication.
       </p>
       <div class="list_offres">
-        <div class="offres_items">
-          <img src="./assets/pictos/site.svg" alt="site">
-          <p class="items__title">
-            SITE INTERNET
-          </p>
-          <p class="items__desc">
-            Photo, vidéo & texte Illustration & animation
-          </p>
-        </div>
-        <div class="offres_items">
-          <img src="./assets/pictos/print.svg" alt="print">
-          <p class="items__title">
-            PRINT
-          </p>
-          <p class="items__desc">
-            Édition Événementiel
-          </p>
-        </div>
-        <div class="offres_items">
-          <img src="./assets/pictos/referencement.svg" alt="referencement">
-          <p class="items__title">
-            RÉFÉRENCEMENT
-          </p>
-          <p class="items__desc">
-            Naturel (SEO) Payant (SEA)
-          </p>
-        </div>
-        <div class="offres_items">
-          <img src="./assets/pictos/branding.svg" alt="branding">
-          <p class="items__title">
-            BRANDING
-          </p>
-          <p class="items__desc">
-            Identité visuelle Création de marque
-          </p>
-        </div>
-        <div class="offres_items">
-          <img src="./assets/pictos/production.svg" alt="production">
-          <p class="items__title">
-            PRODUCTION
-          </p>
-          <p class="items__desc">
-            Photo, vidéo & texte Illustration & animation
-          </p>
-        </div>
-        <div class="offres_items">
-          <img src="./assets/pictos/socialMedia.svg" alt="socialMedia">
-          <p class="items__title">
-            SOCIAL MEDIA
-          </p>
-          <p class="items__desc">
-            Community managment Blogs et forums
-          </p>
-        </div>
-        <div class="offres_items">
-          <img src="./assets/pictos/webdesign.svg" alt="webdesign">
-          <p class="items__title">
-            WEBDESIGN
-          </p>
-          <p class="items__desc">
-            Full responsive Web marketing
-          </p>
-        </div>
-        <div class="offres_items">
-          <img src="./assets/pictos/ereputation.svg" alt="e-reputation">
-          <p class="items__title">
-            E-REPUTATION
-          </p>
-          <p class="items__desc">
-            Audit & veille Conseil & création
-          </p>
-        </div>
-        <div class="offres_items">
-          <img src="./assets/pictos/creationgraphique.svg" alt="creation_graphique">
-          <p class="items__title">
-            CRÉATION GRAPHIQUE
-          </p>
-          <p class="items__desc">
-            Inspiration Déclinaison
-          </p>
-        </div>
+          <a href="sites.php">  <div class="offres_items">
+                  <img src="./assets/pictos/site.svg" alt="site">
+                  <p class="items__title">
+                      SITE INTERNET
+                  </p>
+                  <p class="items__desc">
+                      Photo, vidéo & texte Illustration & animation
+                  </p>
+              </div></a>
+          <a href="print.php"><div class="offres_items">
+                  <img src="./assets/pictos/print.svg" alt="print">
+                  <p class="items__title">
+                      PRINT
+                  </p>
+                  <p class="items__desc">
+                      Édition Événementiel
+                  </p>
+              </div></a>
+          <a href="referencement.php"><div class="offres_items">
+                  <img src="./assets/pictos/referencement.svg" alt="referencement">
+                  <p class="items__title">
+                      RÉFÉRENCEMENT
+                  </p>
+                  <p class="items__desc">
+                      Naturel (SEO) Payant (SEA)
+                  </p>
+              </div></a>
+          <a href="branding.php"><div class="offres_items">
+                  <img src="./assets/pictos/branding.svg" alt="branding">
+                  <p class="items__title">
+                      BRANDING
+                  </p>
+                  <p class="items__desc">
+                      Identité visuelle Création de marque
+                  </p>
+              </div></a>
+          <a href="production.php"><div class="offres_items">
+                  <img src="./assets/pictos/production.svg" alt="production">
+                  <p class="items__title">
+                      PRODUCTION
+                  </p>
+                  <p class="items__desc">
+                      Photo, vidéo & texte Illustration & animation
+                  </p>
+              </div></a>
+          <a href="socialmedia.php"> <div class="offres_items">
+                  <img src="./assets/pictos/socialMedia.svg" alt="socialMedia">
+                  <p class="items__title">
+                      SOCIAL MEDIA
+                  </p>
+                  <p class="items__desc">
+                      Community managment Blogs et forums
+                  </p>
+              </div></a>
+          <a href="webdesign.php">
+              <div class="offres_items">
+                  <img src="./assets/pictos/webdesign.svg" alt="webdesign">
+                  <p class="items__title">
+                      WEBDESIGN
+                  </p>
+                  <p class="items__desc">
+                      Full responsive Web marketing
+                  </p>
+              </div>
+          </a>
+          <a href="reputation.php"><div class="offres_items">
+                  <img src="./assets/pictos/ereputation.svg" alt="e-reputation">
+                  <p class="items__title">
+                      E-REPUTATION
+                  </p>
+                  <p class="items__desc">
+                      Audit & veille Conseil & création
+                  </p>
+              </div></a>
+          <div class="offres_items">
+              <img src="./assets/pictos/creationgraphique.svg" alt="creation_graphique">
+              <p class="items__title">
+                  CRÉATION GRAPHIQUE
+              </p>
+              <p class="items__desc">
+                  Inspiration Déclinaison
+              </p>
+          </div>
       </div>
     </div>
 

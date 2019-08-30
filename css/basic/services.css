@@ -2,7 +2,7 @@ h2 {
     color: #040028;
     font-weight: bold;
     font-size: 4rem !important;
-
+    margin-bottom: 30px;
 }
 
 h4 {
@@ -41,7 +41,7 @@ h4 {
 }
 
 .choixadmin ul li:before {
-    content: "•";
+    content: "â€¢";
     font-size: 2em;
     display: inline-block;
     font-family: "Font Awesome 5 Free";
