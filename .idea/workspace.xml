@@ -2,27 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbdae4f1-ea58-46c7-8562-f1f21416af21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/change.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/rellax.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/profil.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/profil.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/basic/parts/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/basic/parts/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/basic/parts/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/basic/parts/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/basic/parts/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/basic/parts/menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/basic/parts/services.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/basic/parts/services.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/basic/parts/team.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/basic/parts/team.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/basic/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/basic/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news.php" beforeDir="false" afterPath="$PROJECT_DIR$/news.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile/assets/config/classes/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile/assets/config/classes/News.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile/assets/config/classes/Realisations.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile/assets/config/classes/Realisations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile/real.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile/real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile/write.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile/write.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realisations.php" beforeDir="false" afterPath="$PROJECT_DIR$/realisations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/change.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/change.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,38 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="757">
-              <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inc/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/basic/style.css">
+        <entry file="file://$PROJECT_DIR$/js/change.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="336">
+              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -110,6 +69,8 @@
       <find>round_green</find>
       <find>round</find>
       <find>swippe</find>
+      <find>set</find>
+      <find>setInterval</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,8 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/basic/parts/realisations.css" />
-        <option value="$PROJECT_DIR$/profile/realisation.php" />
         <option value="$PROJECT_DIR$/profile/index.php" />
         <option value="$PROJECT_DIR$/profile/connect.php" />
         <option value="$PROJECT_DIR$/profile/css/vendors/connect.css" />
@@ -161,22 +120,23 @@
         <option value="$PROJECT_DIR$/css/basic/parts/services.css" />
         <option value="$PROJECT_DIR$/services.php" />
         <option value="$PROJECT_DIR$/css/basic/parts/menu.css" />
-        <option value="$PROJECT_DIR$/inc/footer.php" />
         <option value="$PROJECT_DIR$/profile/assets/config/classes/News.php" />
         <option value="$PROJECT_DIR$/js/rellax.js" />
         <option value="$PROJECT_DIR$/css/basic/parts/home.css" />
         <option value="$PROJECT_DIR$/css/basic/parts/footer.css" />
         <option value="$PROJECT_DIR$/css/basic/parts/team.css" />
-        <option value="$PROJECT_DIR$/js/change.js" />
-        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/inc/loader.php" />
+        <option value="$PROJECT_DIR$/inc/footer.php" />
         <option value="$PROJECT_DIR$/inc/header.php" />
-        <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/inc/menu.php" />
         <option value="$PROJECT_DIR$/css/basic/style.css" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/js/change.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="18" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="970" />
@@ -192,6 +152,11 @@
             <path>
               <item name="agency" type="b2602c69:ProjectViewProjectNode" />
               <item name="agency" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agency" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="agency" type="b2602c69:ProjectViewProjectNode" />
@@ -260,18 +225,20 @@
       <workItem from="1566822160584" duration="28752000" />
       <workItem from="1567092022697" duration="940000" />
       <workItem from="1567093639086" duration="865000" />
-      <workItem from="1567156754943" duration="11434000" />
+      <workItem from="1567156754943" duration="15659000" />
+      <workItem from="1567181076243" duration="62000" />
+      <workItem from="1567412413400" duration="4598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91108000" />
+    <option name="totallyTimeSpent" value="99993000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="970" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="970" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49544418" weight="0.2893773" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49544418" weight="0.2887668" />
       <window_info id="Structure" order="1" sideWeight="0.5045558" side_tool="true" weight="0.24969475" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -296,16 +263,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/cursor.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/profile/assets/config/classes/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="55" column="45" lean-forward="true" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/profile/connect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -431,7 +388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services.php" />
     <entry file="file://$PROJECT_DIR$/services copie.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -557,13 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/profile/assets/config/classes/News.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="691">
@@ -599,38 +548,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/change.js">
+    <entry file="file://$PROJECT_DIR$/inc/loader.php" />
+    <entry file="file://$PROJECT_DIR$/inc/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        <state relative-caret-position="621">
+          <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        <state relative-caret-position="340">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
+    <entry file="file://$PROJECT_DIR$/inc/menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="757">
-          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/basic/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        <state relative-caret-position="244">
+          <caret line="81" column="12" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/change.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
         </state>
       </provider>
     </entry>

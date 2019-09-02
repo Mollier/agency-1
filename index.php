@@ -10,15 +10,9 @@
   <link rel="stylesheet" href="./css/basic/style.css">
   <script defer src="./js/app.js"></script>
   <script defer src="./js/change.js"></script>
-
-
-
 </head>
 
 <body>
-
-
-
   <header>
     <?php include('./inc/header.php') ?>
     <div class="header_secondary">

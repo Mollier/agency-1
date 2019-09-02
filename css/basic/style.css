@@ -14,24 +14,6 @@ body {
     overflow-y: hidden;
 }
 
-.loader {
-    height: 100vh;
-    width:100vw;
-    background-color: #040028;
-    display: flex;
-    align-items: center;
-    overflow-y: hidden;
-    justify-content: center;
-    position: absolute;
-    z-index: 1000;
-}
-.loader svg {
-    height: 200px;
-    width: 200px;
-}
-.hidden {
-    display: none;
-}
 
 section {
     height: auto;
@@ -74,3 +56,71 @@ html {
     transition: 500ms;
     color: white;
 }
+
+.loader {
+    height: 100vh;
+    width:100vw;
+    background-color: #040028;
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+    justify-content: center;
+    position: absolute;
+    z-index: 1000;
+}
+.loader svg {
+    height: 200px;
+    width: 200px;
+}
+.hidden {
+    display: none;
+}
+
+
+.cursor {
+    height: 25px;
+    width: 25px;
+    border-radius: 100px;
+    border: 1px solid white;
+    position: absolute;
+    z-index: 1;
+    transition-duration: 100ms;
+    transition-timing-function: ease;
+    transition: 300ms;
+
+}
+
+.cursorClick {
+    animation: cursorAnimTwo 250ms;
+    transition: 300ms;
+
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+        border: 1px solid #A3FFD3;
+        box-shadow: 0 0 3px #A3FFD3;
+
+    }
+
+    to {
+        transform: scale(0.7);
+        border: 1px solid white;
+        box-shadow: 0 0 3px #A3FFD3;
+    }
+
+}
+@keyframes cursorAnimTwo {
+    from {
+        transform: scale(1);
+
+    }
+
+    to {
+        transform: scale(1.4);
+
+    }
+
+}
+

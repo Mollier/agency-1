@@ -3,7 +3,7 @@ let menuClose = document.getElementById('menu-close');
 let arrow = document.getElementById('arrow');
 let arrow2 = document.getElementById('arrow2');
 let arrow3 = document.getElementById('arrow3');
-let link = document.getElementById('link');
+
 menu.addEventListener('click', () => {
     menuClose.classList.toggle('menu-open');
     arrow.classList.toggle('menu__bar--open');
@@ -11,58 +11,32 @@ menu.addEventListener('click', () => {
     arrow3.classList.toggle('menu__bar--open');
 });
 
-// deuxieme menu
-
-let arrow_right = document.getElementById('arrow_right');
-let arrow_left = document.getElementById('arrow_left');
-let pronom = document.getElementById('pronom');
-
-let compteur = 1;
-let pronoms = [
-    '<div class="appear"><span>Je</span> <span class="menu_second menu_second--subText">suis client / un Baï-Bao </span></div> ',
-    '<div class="appear"><span>Tu</span><span class="menu_second menu_second--subText">souhaites nous rejoindre ? </span></div>',
-    '<div class="appear"><span>Il/elle</span> <span class="menu_second menu_second--subText">travaille chez nous </span></div>',
-    '<div class="appear"><span>Nous</span> <span class="menu_second menu_second--subText">sommes polyvalents</span></div>',
-    '<div class="appear"><span>Vous</span> <span class="menu_second menu_second--subText">avez une question ? un projet ? une idée ?</span></div>',
-    '<div class="appear_last"><span>Ils/elles</span> <span class="menu_second menu_second--subText">nous font confiance</span></div>'
-];
-
-let links = [
-    'profile/',
-    'contact.php',
-    'team.php',
-    'services.php',
-    'contact.php',
-    'realisations.php'
-]
 
 
-
-// 
-
-function autoChange() {
-    setInterval(() => {
-        if (pronom.innerHTML === pronoms[5]) {
-            console.log('stop');
-        } else {
-            compteur++;
-
-            console.log(compteur - 1)
-            pronom.innerHTML = pronoms[compteur - 1];
-            link.setAttribute('href', links[compteur - 1])
-        }
-
-    }, 4000);
-}
-
-autoChange();
 
 let loader = document.getElementById('loader');
 document.addEventListener('DOMContentLoaded', (e) => {
     console.log("DOM entièrement chargé et analysé");
-    loader.style.transition = "3s";
-    loader.style.opacity = "0";
-    loader.style.zIndex = "-10";
+    loader.style.transition = "2s";
+  loader.style.opacity = "0";
+   loader.style.zIndex = "-10";
     document.body.style.overflowY = "initial";
 
 })
+
+
+// souris
+
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', (e) => {
+    cursor.setAttribute("style", "top: " +(e.pageY + 5) +"px; left: "+(e.pageX + 5)+"px;")
+})
+
+document.addEventListener('click', () => {
+    cursor.classList.toggle('cursorClick');
+    cursor.classList.add('cursor');
+})
+
+
+

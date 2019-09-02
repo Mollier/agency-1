@@ -1,3 +1,4 @@
+<div class="cursor"></div>
 <nav class="menu-close" id="menu-close">
   <ul class="items-menu">
     <li class=""><a href="index.php">L'agence</a></li>
