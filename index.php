@@ -8,8 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Baï-Bao - Agence de communication à Paris</title>
   <link rel="stylesheet" href="./css/basic/style.css">
-  <script defer src="./js/app.js"></script>
-  <script defer src="./js/change.js"></script>
+
 </head>
 
 <body>

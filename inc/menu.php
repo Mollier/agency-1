@@ -13,9 +13,9 @@
         <a href="https://www.instagram.com/agence_baibao/" target="_blank"><img src="./assets/insta.svg" alt="instagram"></a>
         <a href="https://www.linkedin.com/company/baï-bao/"><img src="./assets/linkedin.svg" alt="linkedin"></a>
         <div class="separation"></div>
-        <a href="">FR</a>
+        <a href="" class="rose">Fr</a>
         <div class="separation_point"></div>
-        <a href="">EN</a>
+        <a href="">En</a>
       </div>
     </li>
   </ul>

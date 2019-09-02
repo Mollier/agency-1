@@ -6,6 +6,8 @@
 @import './parts/services.css';
 @import './parts/realisations.css';
 @import './parts/news.css';
+@import './parts/loader.css';
+@import './parts/cursor.css';
 @import './parts/contact.css';
 @import './parts/footer.css';
 body {
@@ -123,4 +125,5 @@ html {
     }
 
 }
+
 

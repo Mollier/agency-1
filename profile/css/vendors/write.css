@@ -6,7 +6,7 @@
     letter-spacing: 0.03em;
     font-variant: small-caps;
     text-transform: uppercase;
-     margin-bottom: 20px;
+    margin-bottom: 20px;
 
 }
 
@@ -49,7 +49,7 @@
 }
 
 .write textarea {
-    width: 500px;
+    width: calc(100vw - 50px);
     border:0;
     border: 1pt #04002830 solid;
     margin-bottom: 20px;

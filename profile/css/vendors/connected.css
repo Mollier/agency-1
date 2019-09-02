@@ -168,3 +168,18 @@
     text-align: center;
     letter-spacing: 0.03em;
 }
+
+
+select {
+    margin-bottom: 30px;
+    border:0;
+    background: #040028;
+    color: white;
+    font-family: Montserrat, sans-serif;
+}
+
+label {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 10px;
+
+}

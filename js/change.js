@@ -6,8 +6,6 @@ let pronom = document.getElementById('pronom');
 
 let compteur = 1;
 pronom.innerHTML = '<div class="appear"><span>Je</span> <span class="menu_second menu_second--subText">suis client / un Baï-Bao </span></div> ';
-
-
 let pronoms = [
     '<div class="appear"><span>Je</span> <span class="menu_second menu_second--subText">suis client / un Baï-Bao </span></div> ',
     '<div class="appear"><span>Tu</span><span class="menu_second menu_second--subText">souhaites nous rejoindre ? </span></div>',
@@ -42,14 +40,12 @@ function autoChange() {
             pronom.innerHTML = pronoms[compteur - 1];
             link.setAttribute('href', links[compteur - 1])
         }
-
     }, 4000);
 }
 
 if(stop === false) {
     autoChange();
 }
-
 
 function click() {
     arrow_right.addEventListener("click", () => {
@@ -59,9 +55,7 @@ function click() {
             pronom.innerHTML = pronoms[compteur - 1];
             link.setAttribute('href', links[compteur - 1])
         }
-
     })
-
     arrow_left.addEventListener("click", () => {
         if(pronom.innerHTML !== pronoms[0]) {
             compteur--;
@@ -69,10 +63,7 @@ function click() {
             pronom.innerHTML = pronoms[compteur - 1];
             link.setAttribute('href', links[compteur - 1])
         }
-
     })
-
-    //
 
 }
 

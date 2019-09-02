@@ -15,12 +15,12 @@
         <div class="need_help_item">
             <img src="../assets/profile/yves.png" alt="yves">
             <span class="bold">Yves</span>
-            <p> <span>yves.milon@bai-bao.fr</span></p>
+            <p> <span><a href="mailto:yves.milon@bai-bao.fr">yves.milon@bai-bao.fr</a></span></p>
         </div>
         <div class="need_help_item">
             <img src="../assets/profile/zeo.png" alt="zoe">
             <p> <span class="bold">Zoé</span></p>
-            <p> <span>zoe.franch@bai-bao.fr</span></p>
+            <p> <span><a href="mailto:zoe.franch@bai-bao.fr">zoe.franch@bai-bao.fr</a></span></p>
         </div>
     </div>
 </section>

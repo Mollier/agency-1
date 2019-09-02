@@ -1,3 +1,4 @@
+<?php require './profile/assets/config/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,8 +33,11 @@
           <textarea name="message" cols="30" rows="10" placeholder="Votre message"></textarea>
 
 
-          <input type="submit" value="envoyer">
+          <input type="submit" value="envoyer" name="send">
         </form>
+          <?php if(isset($_POST['send'])) {
+              $mail->sendMail();
+          }?>
 
       </div>
   </header>
@@ -41,6 +45,8 @@
     <div class="contact">
 
     </div>
+
+
   </section>
   <?php include('./inc/footer.php') ?>
 </body>

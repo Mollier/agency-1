@@ -7,11 +7,13 @@ require __DIR__ . '/classes/User.php';
 require __DIR__ . '/classes/News.php';
 require __DIR__ . '/classes/Realisations.php';
 require __DIR__ . '/classes/Clients.php';
+require __DIR__ . '/classes/Mail.php';
 
 $user = new User();
 $news = new News();
 $realisations = new Realisations();
 $clients = new Clients();
+$mail = new Mail();
 
 
 session_start();

@@ -1,3 +1,7 @@
+<script defer src="./js/app.js"></script>
+<script defer src="./js/change.js"></script>
+<script defer src="./js/loader.js"></script>
+<script defer src="./js/souris.js"></script>
 <div class="loader" id="loader">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 217.85 48.33">
         <defs>
