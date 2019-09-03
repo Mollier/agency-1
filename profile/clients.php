@@ -128,6 +128,7 @@ if($_SESSION['user']['rights'] != 10) {
                        $clients->uploadTutoriel($pdo, $_GET['view']);
                        $clients->uploadFacture($pdo);
                    }
+                   $alert->showAlert();
                    ?>
                </form>
            <?php } else {

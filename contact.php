@@ -37,6 +37,7 @@
         </form>
           <?php if(isset($_POST['send'])) {
               $mail->sendMail();
+              $mail->message->showAlert();
           }?>
 
       </div>

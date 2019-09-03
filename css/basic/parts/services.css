@@ -91,7 +91,7 @@ section h3 {
 .choixadmin li:before ,
 .listeseo li:before,
 .choixtech li:before{
-    content: "â€¢";
+    content: "Ã¢â‚¬Â¢";
     font-size: 2em;
     font-family: "Font Awesome 5 Free";
     color: #F9D7C8;
@@ -232,8 +232,12 @@ section.services {
 
 @media screen and (min-width:980px) {
     .list_services {
-        width: 600px;
+        width: 800px;
         margin-top: 0px;
-
     }
+}
+
+
+.services a {
+    color: white;
 }

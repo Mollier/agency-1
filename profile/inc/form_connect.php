@@ -28,6 +28,7 @@
         <p> <input type="text" name="email" placeholder="email"></p>
         <p><input type="password" name="password" placeholder="mot de passe"></p>
         <p><input type="submit" name="send" value="accéder"></p>
+        <?php  $alert->showAlert(); ?>
     </form>
 
 </section>

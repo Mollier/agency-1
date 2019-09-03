@@ -47,6 +47,7 @@ if($_SESSION['user']['rights'] != 10) {
             <option value="Cabinets">Cabinets</option>
         </select>
         <input type="submit" value="Envoyer" name="send">
+        <?php $alert->showAlert();?>
     </form>
     <?php
     if(isset($_POST['send'])) {

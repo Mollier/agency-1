@@ -41,6 +41,7 @@ if($_SESSION['user']['rights'] != 10) {
     <?php
     if(isset($_POST['send'])) {
         $news->add($pdo);
+        $alert->showAlert();
     }
     ?>
 </section>

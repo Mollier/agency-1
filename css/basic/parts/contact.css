@@ -20,7 +20,7 @@ form {
 
 .contact_bloc {
     position: absolute;
-    width: calc(100vw - 250px);
+    width: calc(100vw - 50px);
     background: white;
     height: auto;
     bottom: -270px;
@@ -35,13 +35,19 @@ form {
     font-family: Montserrat, sans-serif;
 }
 
+@media screen and (min-width: 980px) {
+    .contact_bloc {
+        width: calc(100vw - 600px);
+    }
+}
+
 .contact_bloc p {
     margin-bottom: 30px;
 }
 
 .contact_bloc input[type="text"] {
     border: 0;
-    border-bottom: 1px solid #040028;
+    border-bottom: 1px solid #0400286b;
     width: calc(100% - 60px);
     margin-bottom: 30px;
     font-size: 16px;

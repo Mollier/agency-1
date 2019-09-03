@@ -12,6 +12,7 @@
 <body>
 
 <?php
+
 if(isset($_SESSION['user'])) {
     require('inc/connected.php');
 } else {

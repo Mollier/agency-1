@@ -52,6 +52,7 @@ if(isset($_GET['facture'])) {
         </table>
     </div>
     <?php
+    $alert->showAlert();
 } ?>
 </section>
 </body>

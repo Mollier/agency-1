@@ -3,7 +3,10 @@
 
 class Mail
 {
-
+    public function __construct()
+    {
+        $this->message = new Alert();
+    }
     function sendMail() {
 
      // Plusieurs destinataires
@@ -43,8 +46,7 @@ class Mail
 
      // Envoi
      mail($to, $subject, $message, implode("\r\n", $headers));
-        echo 'Votre message a été envoyé !';
-        header("Location : contact.php");
+        $this->message->createAlert("Votre message a été envoyé !", 'green');
     }
 
 

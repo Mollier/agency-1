@@ -1,6 +1,10 @@
 <?php
 class Realisations {
 
+    public function __construct()
+    {
+        $this->message = new Alert();
+    }
     function getAll(PDO $con)
     {
         $req = $con->query('SELECT * FROM realisations');
@@ -31,7 +35,8 @@ class Realisations {
                    $req->bindParam(':category', $category);
                    $req->bindParam(':color', $color);
                    $req->execute();
-                   echo 'Envoyé !';
+
+                   $this->message->createAlert("Envoyé !", 'red');
                } else {
                    die('Error2');
                    header("Location: index.php");

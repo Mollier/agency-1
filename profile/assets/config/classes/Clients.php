@@ -3,6 +3,11 @@
 class Clients {
         public $pdo;
 
+    public function __construct()
+    {
+        $this->message = new Alert();
+    }
+
     function getAll(PDO $con)
     {
         $req = $con->query('SELECT * FROM clients ');
@@ -25,11 +30,11 @@ class Clients {
         $password_admin = $_POST['password_admin'];
 
         if(empty($customer_name) OR empty($phone) OR empty($email)) {
-            echo 'error';
+            $this->message->createAlert("Veuillez remplir tout les champs", 'red');
         } else {
 
           if(!is_numeric($phone)) {
-              echo 'Le numéro de téléphone ne doit pas contenir de lettres';
+              $this->message->createAlert("Le numéro de téléphone ne doit pas contenir de lettres", 'red');
           } else {
               $req = $con->prepare('INSERT INTO clients (customer_name, phone, email, email_admin, password_admin) 
             VALUES ( :customer_name, :phone, :email, :email_admin, :password_admin)');
@@ -63,7 +68,8 @@ class Clients {
               $req->bindParam(':customer_name', $customer_name);
               $req->execute();
 
-            echo 'Client ajouté';
+              $this->message->createAlert("Client ajouté", 'green');
+
           }
         }
     }
@@ -92,7 +98,8 @@ class Clients {
             $req->bindParam(':email_admin', $email_admin);
             $req->bindParam(':password_admin', $password_admin);
             $req->execute();
-            echo"Client modifié";
+            $this->message->createAlert("Client modifié", 'green');
+
         }
     }
 
@@ -193,7 +200,8 @@ class Clients {
                         $req->execute();
                     }
                 } else{
-                    echo("Error: Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.");
+                    $this->message->createAlert("Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.", 'red');
+
 
                 }
             } //else{
@@ -239,7 +247,7 @@ class Clients {
                         $req->execute();
                     }
                 } else{
-                    echo("Error: Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.");
+                    $this->message->createAlert("Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.", 'red');
 
                 }
             } //else{

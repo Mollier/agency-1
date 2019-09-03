@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require 'assets/config/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +30,7 @@ if(isset($_SESSION['user'])) {
       <h3><a href="connect.php">UN BAÏ-BAO</a></h3>
       <p class="selection_intro">Coactique aliquotiens persequendos scandere clivos sublimes</p>
     </div>
+   <?php $alert->showAlert(); ?>
   </section>
 </body>
 

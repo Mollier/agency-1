@@ -1,6 +1,10 @@
 <?php
 class News {
 
+    public function __construct()
+    {
+        $this->message = new Alert();
+    }
     public function add(PDO $con)
     {
         $title = $_POST['title'];
@@ -9,7 +13,7 @@ class News {
         $category = $_POST['category'];
 
         if(empty($title) OR empty($content) OR empty($category)) {
-            echo 'error';
+            $this->message->createAlert("Erreur, veuillez recommencer", 'red');
         } else {
 
             $req = $con->prepare('INSERT INTO news (title, image, content, category) 
@@ -19,7 +23,7 @@ class News {
             $req->bindParam(':content', $content);
             $req->bindParam(':category', $category);
             $req->execute();
-            echo $_FILES['image']['name'];
+            $this->message->createAlert("Article ajouté", 'green');
 
             // if all is good => upload
 
@@ -43,18 +47,21 @@ class News {
                     if(in_array($filetype, $allowed)){
                         // Vérifie si le fichier existe avant de le télécharger.
                         if(file_exists("../assets/upload/news/" . $_FILES["image"]["name"])){
-                            addFlash('danger', $_FILES["image"]["name"] . " existe déjà.");
-                            die(viewFlashes() . '<a href="add_picture.php">[RETOUR]</a>');
+                            $this->message->createAlert("Désolé, le fichier existe déjà", 'red');
+
+                            die('<a href="index.php">[RETOUR]</a>');
                         } else{
                             move_uploaded_file($_FILES["image"]["tmp_name"], "../assets/upload/news/" . $_FILES["image"]["name"]);
-                            addFlash('success', 'Votre fichier a été téléchargé avec succès.');
+                            $this->message->createAlert("Veuillez remplir tout les champs", 'red');
+
+
                         }
                     } else{
-                        addFlash('danger', "Error: Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.");
+                        $this->message->createAlert("Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.", 'red');
 
                     }
                 } else{
-                    echo "Error: " . $_FILES["image"]["error"];
+                    $this->message->createAlert("Error: " . $_FILES["image"]["error"], 'red');
                 }
             }
         }
@@ -84,7 +91,8 @@ class News {
         }
         else {
             die();
-            echo "Error2";
+            $this->message->createAlert("Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.", 'red');
+
         }
 
     }

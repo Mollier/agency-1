@@ -48,4 +48,5 @@
     <p class="username"><?= $_SESSION['user']['first_name'] . " " . $_SESSION['user']['last_name'] . " (" . $_SESSION['user']['customer_name'] . ")";?></p>
     <br>
     <p><a href="index.php">[RETOUR]</a></p>
+    <?php $alert->showAlert(); ?>
 </header>

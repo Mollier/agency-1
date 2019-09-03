@@ -3,6 +3,7 @@
 
 <section class="connected">
     <div class="options">
+
         <?php
         $user->checkingRank();
         ?>

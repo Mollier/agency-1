@@ -44,6 +44,8 @@
 
 .appear_last {
     animation: appear_last 2s forwards;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .header__top {
@@ -58,9 +60,8 @@
 }
 
 .header__top__logo {
-    margin-left: 90px;
+    margin-left: 20px;
     z-index: 200;
-    margin-top: 25px;
 }
 
 .header__top__logo svg {
@@ -74,13 +75,10 @@
 }
 
 .header__top__profil {
-    margin-right: 90px;
+    margin-right: 20px;
     z-index: 100;
 }
 
-.header__top__right {
-    display: initial;
-}
 .header__top__profil img {
     height: 20px;
     width: 20px;
@@ -308,18 +306,13 @@ header p:nth-of-type(2) {
         background-image: url('../../../assets/round_header.svg');
         animation: round_framb 3s alternate infinite;
     }
-
-    .header__top__right {
-        opacity: 1;
-        margin-top: 25px;
-    }
 }
 
 
 /* second menu */
 
 .menu_second {
-    height: 600px;
+    height: auto;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -358,6 +351,7 @@ header p:nth-of-type(2) {
     line-height: 63px;
     text-align: center;
     color: #040028;
+    /* margin-bottom: -59px; */
 }
 
 .pronoms span.menu_second--subText {
@@ -369,6 +363,7 @@ header p:nth-of-type(2) {
     height: 100px;
     max-width: 300px;
     margin-top: 20px;
+    width: 180px;
 }
 
 .largePronoms {
@@ -389,6 +384,7 @@ header p:nth-of-type(2) {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 60px;
 }
 
 h2 {
@@ -433,7 +429,7 @@ h2 {
 
 @media screen and (min-width:980px) {
     .list_offres {
-        width: 40%;
+        width: 60%;
     }
     .offres_items {
         min-width: 170px;
@@ -446,12 +442,13 @@ h2 {
 .offres_items {
     height: auto;
     width: 130px;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     transition: 500ms;
+    margin-right: 96px;
 }
 
 .offres_items:hover {
@@ -801,6 +798,10 @@ h3 {
         padding: 0;
         max-width: 613px;
         margin-bottom: 30px;
+    }
+
+    .pronoms span.menu_second--subText {
+        width: 230px;
     }
 }
 

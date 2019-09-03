@@ -33,7 +33,7 @@
             }
 
         }
-
+    $alert->showAlert();
     ?>
 </section>
 </body>

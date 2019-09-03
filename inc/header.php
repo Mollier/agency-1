@@ -1,5 +1,4 @@
 <script defer src="./js/app.js"></script>
-<script defer src="./js/change.js"></script>
 <script defer src="./js/loader.js"></script>
 <script defer src="./js/souris.js"></script>
 <div class="loader" id="loader">
@@ -54,7 +53,7 @@
   <?php include('./inc/menu.php'); ?>
   <div class="header__top__right">
     <div class="header__top__profil">
-      <a href="profile/"><img src="./assets/profil.svg" alt="profil"></a>
+
     </div>
     <div class="menu__burger" id="menu">
       <div id="arrow" class="menu__bar"></div>
