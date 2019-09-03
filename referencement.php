@@ -42,24 +42,23 @@
                     </ul>
                 </div>
                 <div class="pp">
-                    <p class="middle paragraph"> <span>full responsive</span> (dont le <span class="design">web design</span> est adapté aux différents formats de visionnage)</h3>
+                    <p class="middle paragraph"> <span>full responsive</span> (dont le <span class="design">web design</span> est adapté aux différents formats de visionnage)</h3></p>
                     <p class="paragraph">Vient ensuite un vrai travail d’optimisation, qui repose aussi bien sur la création de liens pertinents que la fourniture régulière de contenus pour faire vivre votre marque et votre actualité sur la toile, toujours dans l’optique d’optimiser votre <span class="green_text">e-réputation</span>.</p>
 
                 </div>
-                <div>
-            <img class="img_serv" src="assets/services/seo.png" alt="seo">
-        </div>
+
+            <img src="assets/services/seo.png" alt="seo">
+
         </div>
         <div class="ref_sea">
             <h2>PAYANT (sea)</h2>
             <p class="paragraph">Pour tester à moindre frais l’efficacité de Google Adwords sur votre activité, il est possible de créer et lancer une campagne sur-mesure de référencement payant pour obtenir le meilleur retour sur investissement possible (ROI).
 <br>  Baï-Bao vous accompagne pas-à-pas sur ce chemin, un travail au long cours souvent jonché de bonnes surprises.</p>
-        </div>
+          <div class="right__div">
+              <img class="right" src="assets/services/sea.png" alt="sea">
 
-        <div>
-            <img class="img_serv right" src="assets/services/sea.png" alt="sea">
+          </div>
         </div>
-
                 <div class="round__beige__coups"></div>
     </section>
     <?php include('./inc/footer.php') ?>

@@ -67,7 +67,7 @@ li {
         justify-content: center;
         align-items: center;
     }
-    li {
+    .header__top li {
         display: inline-block;
         margin-left: 85px;
     }

@@ -598,10 +598,11 @@ h2 {
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
-    line-height: 160%;
+    line-height: 210%;
     /* or 22px */
     letter-spacing: 0.03em;
     padding: 30px;
+    margin-top: 30px;
 }
 
 .paragraph--white {
@@ -796,7 +797,7 @@ h3 {
     }
     .paragraph {
         padding: 0;
-        max-width: 613px;
+        max-width: 755px;
         margin-bottom: 30px;
     }
 

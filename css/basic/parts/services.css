@@ -4,7 +4,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-size: 11px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 154.1%;
+    /* or 25px */
+    text-align: center;
 }
 
 .logo_service img {
@@ -37,8 +43,21 @@ section h3 {
 }
 .services_content {
     padding-top: 20%;
-    height: 400px;
+    height: auto;
     width: 100vw;
+}
+
+@media screen and (min-width: 980px) {
+    .img_serv {
+        width: 40%;
+        margin:auto;
+    }
+}
+
+
+.img_serv {
+    margin:auto;
+    text-align: center;
 }
 .services_content p {
     margin-top: 50px;
@@ -54,10 +73,7 @@ section h3 {
     letter-spacing: 0.03em;
     text-decoration-line: underline;
 }
-.img_serv{
-    width: 100%;
-    margin-top: 50px;
-}
+
 .choixadmin,
 .seo{
     margin: auto;
@@ -79,23 +95,25 @@ section h3 {
 .choixtech li
 .listeseo li {
     list-style-type: none;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     font-family: Montserrat;
     font-size: 15px;
     line-height: 160%;
     letter-spacing: 0.03em;
-
 }
 
 .choixadmin li:before ,
 .listeseo li:before,
 .choixtech li:before{
-    content: "Ã¢â‚¬Â¢";
-    font-size: 2em;
-    font-family: "Font Awesome 5 Free";
-    color: #F9D7C8;
-    margin-right: 10px;
+    content: ''; /* on affiche une chaÃ®ne de caractÃ¨re */
+    color:#F9D7C8;
+    width: 13px;
+    height: 13px;
+    background-color: #F9D7C8;
+    border-radius: 100%;
+    margin-right: 20px;
+    display: inline-block;
 }
 
 
@@ -125,20 +143,15 @@ section h3 {
     .blocta{
         display: flex;
     }
-    .img_serv{
-        width: 80%;
-        margin: 0 150px;
-        height: 600px;
-    }
+
     .img_web{
         margin: 210px 150px;
     }
     .services_content {
         height: 300px;
-        padding-top: 10%;
+        padding-top: 5%;
     }
     .img_print {
-        display: flex;
         width: 80%;
         margin: auto;
     }
@@ -182,7 +195,7 @@ span .brbleu{
     letter-spacing: 0.03em;
 }
 .ref_content{
-    padding-top: 15%;
+    padding-top: 2%;
     height: auto;
     width: 100vw;
 }
@@ -200,12 +213,16 @@ span .brbleu{
 .brand {
     padding: 10% 0;
 }
+
+.brand img {
+    width: 40%;
+    margin: auto;
+}
 .brandp p {
     text-align:left!important;
 }
 .right{
     margin: 0;
-    width: 100%;
 }
 
 
@@ -241,3 +258,5 @@ section.services {
 .services a {
     color: white;
 }
+
+

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Baï-Bao - Notre équipe</title>
+    <title>Baï-Bao - E-Reputation</title>
     <link rel="stylesheet" href="./css/basic/style.css">
     <link rel="stylesheet" href="./css/basic/services.css">
     <script defer src="./js/app.js"></script>
@@ -46,9 +46,7 @@
                     </ul>
                 </div>
 
-            <div>
-            <img class="img_serv" src="assets/services/e-reputation1.png" alt="seo">
-        </div>
+            <p class="paragraph"><img class="img_serv" src="assets/services/e-reputation1.png" alt="seo"></p>
         </div>
         <div class="ref_sea">
         <div class="guillemet">
@@ -65,8 +63,8 @@
                         <li>Vous bénéficiez d’un nouveau flux d’informations continu. Dans l’optique, par exemple, de détecter ou vérifier la réalité d’une opportunité; et savoir en permanence ce que vous récupérez en termes d’e-réputation.</li>
                     </ul>
                 </div>
-        <div class="img_right">
-        <img class="img_serv right" src="assets/services/e-reputation2.png" alt="seo">
+        <div class="right__div">
+        <img src="assets/services/e-reputation2.png" alt="seo">
         </div>
 
                 <div class="round__beige__coups"></div>

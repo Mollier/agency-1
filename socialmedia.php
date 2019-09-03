@@ -34,10 +34,10 @@
 
 Pêle-mêle, les objectifs sont d’animer les différentes communautés sur internet, de maîtriser votre e-réputation, d’accroître votre notoriété et de développer de nouveaux business en identifiant des prospects et en fidélisant vos clients.
 
-Si vous le souhaitez, nous gérons votre présence sur le web dans la durée en appliquant les bonnes pratiques dédiées à chaque réseau social : Facebook, Google+, Linkedin, Twitter, Instagram, Pinterest…</p>
-        </div>
-        <div >
-            <img class="img_serv" src="assets/services/socialmedia2.png" alt="socialmedia">
+Si vous le souhaitez, nous gérons votre présence sur le web dans la durée en appliquant les bonnes pratiques dédiées à chaque réseau social : Facebook, Google+, Linkedin, Twitter, Instagram, Pinterest…
+                <img src="assets/services/socialmedia1.png" alt="socialmedia">
+            </p>
+
         </div>
 
         <div class="ref_sea">
@@ -51,8 +51,8 @@ Indexé comme il se doit avec les bons mots-clefs, chaque contenu est un chemin 
 
 * pour une statistique plus fiable et récente, cliquer ici</p>
 
-<div >
-            <img class="img_serv right" src="assets/services/socialmedia2.png" alt="socialmedia">
+<div class="right__div">
+            <img src="assets/services/socialmedia2.png" alt="socialmedia">
         </div>
 </div>
                 <div class="round__beige__coups"></div>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Baï-Bao - Notre équipe</title>
+    <title>Baï-Bao - Webdesign</title>
     <link rel="stylesheet" href="./css/basic/style.css">
     <link rel="stylesheet" href="./css/basic/services.css">
     <script defer src="./js/app.js"></script>
@@ -39,11 +39,11 @@ Pour ce faire, toutes les performances de votre site sont mesurées :</p>
                         <li>En aval par Google Analytics et toute sa série de données précieuses.</li>
                     </ul>
                 </div>
-                <p class="paragraph">Et tout est pensé, adapté ou repensé pour coller aux exigences de votre public car c’est lui qui décide de tout dans l’affaire, et nous ne l’oublions jamais.</p>
+                <p class="paragraph">Et tout est pensé, adapté ou repensé pour coller aux exigences de votre public car c’est lui qui décide de tout dans l’affaire, et nous ne l’oublions jamais.
+                    <img class="img_serv" src="assets/services/webdesign1.png" alt="socialmedia">
+                </p>
         </div>
-        <div >
-            <img class="img_serv img_web" src="assets/services/webdesign1.png" alt="socialmedia">
-        </div>
+
 
         <div class="ref_sea">
             <h2> …VERSION RESPONSIVE ET FULL RESPONSIVE</h2>
@@ -51,8 +51,8 @@ Pour ce faire, toutes les performances de votre site sont mesurées :</p>
 La version responsive de votre site web est donc un enjeu stratégique qui doit tenir compte de toutes les contraintes liées à la réduction de format (ligne de flottaison d’une page, UI Design, UX Design…) pour permettre à l’internaute de satisfaire sa rehcerche en toute facilité. Sinon, vous serez juste éjecté de son téléphone ou de sa tablette en quelques secondes.
 Chez Baï-Bao, un site web est toujours full responsive et comprend 3 versions -desktop, tablette et mobile- possédant chacune leurs spécificités de contenus et de web design.</p>
 
-<div >
-            <img class="img_serv right" src="assets/services/webdesign2.png" alt="socialmedia">
+<div class="right__div">
+            <img src="assets/services/webdesign2.png" alt="socialmedia">
         </div>
 </div>
                 <div class="round__beige__coups"></div>

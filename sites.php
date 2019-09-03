@@ -18,7 +18,7 @@
             <div class="logo_service">
                 <img src="./assets/services/site.svg" alt="site">
                 <h3>site internet</h3>
-                <p class="paragraph">
+                <p>
                     Site Internet • Print • Référencement • Production • Création graphique • Social Media • E-Réputation • Web Design • Branding
                 </p>
                 <div class="round_middle"></div>
@@ -34,9 +34,9 @@
             <span> e-reputation</span>. Baï-Bao vous accompagne dans sa création, résolument dédiée à votre représentation et au développement de votre activité.
             </br>Dans notre démarche, nous tenons aussi bien compte de vos exigences de fiabilité et d’esthétisme que de celles de Google pour bien vous identifier et vous assurer la meilleure visibilité, grâce notamment au travail de <span class="green_text">référencement</span> naturel ou payant.</p>
         </div>
-        <div >
-            <img class="img_serv" src="assets/services/Rectangle.png" alt="site internet">
-        </div>
+
+
+
     <div class="blocta">
         <div class="tech">
             <h3>Nos choix technologiques</h3>
@@ -57,6 +57,7 @@
                     <li>un contrôle régulier de ses fonctionnalités,</li>
                     <li>une maintenance/SAV aussi réactive qu’efficace en toute circonstance.</li>
                  </ul>
+                <img class="img_serv" src="assets/services/site_picture_two.png" alt="site internet">
             </div>
                 <div class="round__beige__coups"></div>
     </div>
