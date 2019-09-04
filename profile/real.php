@@ -42,7 +42,7 @@ if($_SESSION['user']['rights'] != 10) {
             <option value="Artistes">Artistes</option>
             <option value="Institutions">Institutions</option>
             <option value="#A3FFD3">Éducation</option>
-            <option value="Éducation">IT</option>
+            <option value="Education">IT</option>
             <option value="Associations">Associations</option>
             <option value="Cabinets">Cabinets</option>
         </select>

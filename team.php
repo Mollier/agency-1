@@ -7,6 +7,7 @@
 		<title>Baï-Bao - Notre équipe</title>
 		<link rel="stylesheet" href="./css/basic/style.css">
 		<script defer src="./js/app.js"></script>
+		<script defer src="./js/tiri.js"></script>
 	</head>
 	<body>
 		<header>
@@ -93,7 +94,7 @@
 					<div class="team__someone__infos">
 						<h3>THIERRY GRELIER</h3>
 						<h4>Graphiste</h4>
-						<div class="round__black"></div>
+						<div id="tiri" class="round__black"></div>
 						<h4>thierry.grelier@bai-bao.fr</h4>
 					</div>
 				</div>

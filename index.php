@@ -15,17 +15,11 @@
   <header>
     <?php include('./inc/header.php') ?>
     <div class="header_secondary">
-        <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116.01 172.98">
-            <defs>
-                <style>
-
-                </style>
-            </defs>
-            <title>Sans titre - 1</title>
-            <path class="cls-1" d="M500.17,319.8V431.21c-22.83-3.94-39.93-19.85-40.34-45.18V298.79h40.34Z" transform="translate(-446 -258.23)" />
-            <path class="cls-1" d="M510.17,431.06H508v-34.4a9.77,9.77,0,0,0,1.53,0A13,13,0,0,0,508,370.74v-33.8h2.18c28.61,0,51.84,17.17,51.84,47.09S538.78,431.06,510.17,431.06Z" transform="translate(-446 -258.23)" />
-            <path class="cls-1" d="M459.66,286a13.89,13.89,0,0,1-9.51-23.79,13.87,13.87,0,0,1,21.3,2.24A13.87,13.87,0,0,1,459.91,286Z" transform="translate(-446 -258.23)" />
-            <path class="cls-1" d="M499.66,286a13.89,13.89,0,0,1-9.51-23.79,13.87,13.87,0,0,1,21.3,2.24A13.87,13.87,0,0,1,499.91,286Z" transform="translate(-446 -258.23)" />
+        <svg id="Calque_1"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116.01 172.98">
+            <path class="barre" d="M500.17,319.8V431.21c-22.83-3.94-39.93-19.85-40.34-45.18V298.79h40.34Z" transform="translate(-446 -258.23)" />
+            <path class="round" d="M510.17,431.06H508v-34.4a9.77,9.77,0,0,0,1.53,0A13,13,0,0,0,508,370.74v-33.8h2.18c28.61,0,51.84,17.17,51.84,47.09S538.78,431.06,510.17,431.06Z" transform="translate(-446 -258.23)" />
+            <path class="point_left" d="M459.66,286a13.89,13.89,0,0,1-9.51-23.79,13.87,13.87,0,0,1,21.3,2.24A13.87,13.87,0,0,1,459.91,286Z" transform="translate(-446 -258.23)" />
+            <path class="point_right" d="M499.66,286a13.89,13.89,0,0,1-9.51-23.79,13.87,13.87,0,0,1,21.3,2.24A13.87,13.87,0,0,1,499.91,286Z" transform="translate(-446 -258.23)" />
         </svg>
       <p class="big__title">
         Baï-Bao

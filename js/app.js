@@ -10,3 +10,7 @@ menu.addEventListener('click', () => {
     arrow2.classList.toggle('menu__bar--open');
     arrow3.classList.toggle('menu__bar--open');
 });
+
+
+
+

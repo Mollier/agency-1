@@ -102,12 +102,10 @@
 
 @keyframes round {
     from {
-        opacity: 0;
         transform: translateX(-30px);
     }
     to {
         transform: translateX(0px);
-        opacity: 1;
     }
 }
 
@@ -147,33 +145,22 @@
 
 .round {
     fill: #f9d7c8;
-    animation: round 2s forwards;
-    opacity: 0;
-    animation-delay: 1300ms;
+
 }
 
 .point_left {
-    opacity: 0;
     fill: #f9d7c8;
-    transform: translateX(10px);
-    animation: point_left 1500ms forwards;
-    animation-delay: 1100ms;
+
 }
 
 .point_right {
-    opacity: 0;
     fill: #f9d7c8;
-    transform: translateX(-10px);
-    animation: point_right 2s forwards;
-    animation-delay: 1100ms;
+
 }
 
 .barre {
-    opacity: 0;
     fill: #f9d7c8;
-    animation: barre 1100ms forwards;
-    transform: translateY(-100px);
-    animation-delay: 1s;
+
 }
 
 .header_secondary svg {
@@ -429,7 +416,7 @@ h2 {
 
 @media screen and (min-width:980px) {
     .list_offres {
-        width: 60%;
+        width: 55%;
     }
     .offres_items {
         min-width: 170px;

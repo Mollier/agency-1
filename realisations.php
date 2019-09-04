@@ -9,6 +9,7 @@
 	<title>Baï-Bao - Notre équipe</title>
 	<link rel="stylesheet" href="./css/basic/style.css">
 	<script defer src="./js/app.js"></script>
+	<script defer src="./js/changeButton.js"></script>
 </head>
 
 <body>
@@ -26,35 +27,35 @@
 			<p class="paragraph">
 				Des banques, des fonds, des associations, des entreprises, grandes et moins grandes… de la holding à la TPE, il règne une joyeuse diversité dans notre éventail de références. Autant de problématiques de communication qui renouvellent les sensations et réchauffent nos méninges pour cogiter ZE solution of ZE solution.
 			</p>
-			<tut class="realisations_filter">
+			<div class="realisations_filter">
                 <a href="realisations.php?filter=Artistes&#realisations">
-				<div class="filter_item">
+				<div id="Artistes" class="filter_item">
 
                     <span>Artistes</span>
 				</div>
                 </a>
                 <a href="realisations.php?filter=Institutions&#realisations">
-				<div class="filter_item">
+				<div id="Institutions" class="filter_item">
                     <span>Institutions</span>
 				</div>
                 </a>
-                <a href="realisations.php?filter=Éducation&#realisations">
-				<div class="filter_item">
+                <a href="realisations.php?filter=Education&#realisations">
+				<div id="Artistes" class="filter_item">
                     <span>Éducation</span>
 				</div>
                 </a>
                 <a href="realisations.php?filter=IT&#realisations">
-				<div class="filter_item">
+				<div id="IT" class="filter_item">
                    <span>IT</span>
 				</div>
                 </a>
                 <a href="realisations.php?filter=Associations&#realisations">
-				<div class="filter_item">
+				<div id="Associations" class="filter_item">
                     <span>Associations</span>
 				</div>
                 </a>
                 <a href="realisations.php?filter=Cabinets&#realisations">
-				<div class="filter_item">
+				<div id="Cabinets" class="filter_item">
                     <span>Cabinets</span>
 				</div>
                 </a>

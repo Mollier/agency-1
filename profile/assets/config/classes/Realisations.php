@@ -25,7 +25,7 @@ class Realisations {
 
            if($color == '#040028' OR $color == '#F9D7C8' OR $color == '#A3FFD3') {
 
-               if($category == "Artistes" OR $category == "Institutions" OR $category == "Éducation" OR $category == "IT"
+               if($category == "Artistes" OR $category == "Institutions" OR $category == "Education" OR $category == "IT"
                OR $category == "IT" OR $category == "Associations" OR $category == "Cabinets") {
                    $req = $con->prepare('INSERT INTO realisations (title, abstract, link, category, color) 
             VALUES ( :title, :abstract, :link, :category, :color)');
@@ -49,7 +49,7 @@ class Realisations {
     }
 
     public function filter(PDO $con, $filtre) {
-        if($filtre == "Artistes" OR $filtre == "Institutions" OR $filtre == "Éducation" OR $filtre == "IT"
+        if($filtre == "Artistes" OR $filtre == "Institutions" OR $filtre == "Education" OR $filtre == "IT"
             OR $filtre == "IT" OR $filtre == "Associations" OR $filtre == "Cabinets") {
             $req = $con->query("SELECT * FROM realisations WHERE category ='$filtre'");
             return $req->fetchAll(PDO::FETCH_ASSOC);

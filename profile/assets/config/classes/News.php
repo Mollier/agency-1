@@ -85,23 +85,30 @@ class News {
     }
 
     public function filter(PDO $con, $filtre) {
-        if($filtre == "Agence" OR $filtre == "Actualités" OR $filtre == "Projets") {
+        if($filtre == "Agence" OR $filtre == "Actualites" OR $filtre == "Projets") {
             $req = $con->query("SELECT * FROM news WHERE category ='$filtre' order by date DESC");
             return $req->fetchAll(PDO::FETCH_ASSOC);
         }
         else {
             die();
             $this->message->createAlert("Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.", 'red');
-
         }
-
     }
 
     public function search(PDO $con, $search)
     {
+        $mystring = $search;
+        $findme   = "'";
+        $pos = strpos($mystring, $findme);
 
-        $req = $con->query("SELECT * FROM news WHERE title LIKE '$search' order by date DESC");
-        return $req->fetchAll(PDO::FETCH_ASSOC);
+
+        if ($pos === false) {
+            $req = $con->query("SELECT * FROM news WHERE title LIKE '$search' order by date DESC");
+            return $req->fetchAll(PDO::FETCH_ASSOC);
+        } else {
+           header("Location: index.php");
+        }
+
 
     }
 

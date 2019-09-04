@@ -33,7 +33,7 @@ if($_SESSION['user']['rights'] != 10) {
         <select name="category" required>
             <option value="">--Choisissez une catégorie--</option>
             <option value="Agence">Vie de l'agence</option>
-            <option value="Actualités">Actualités</option>
+            <option value="Actualites">Actualités</option>
             <option value="Projets">Projets</option>
         </select>
         <input type="submit" value="Envoyer" name="send">
