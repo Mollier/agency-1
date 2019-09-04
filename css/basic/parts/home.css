@@ -286,7 +286,7 @@ header p:nth-of-type(2) {
         display: none;
     }
     .round_framb {
-        height: 325px;
+        height: 344px;
         width: 162px;
         position: absolute;
         right: 0;
@@ -414,17 +414,7 @@ h2 {
     flex-wrap: wrap;
 }
 
-@media screen and (min-width:980px) {
-    .list_offres {
-        width: 55%;
-    }
-    .offres_items {
-        min-width: 170px;
-    }
-    h2 {
-        font-size: 30px;
-    }
-}
+
 
 .offres_items {
     height: auto;
@@ -435,7 +425,21 @@ h2 {
     flex-direction: column;
     justify-content: center;
     transition: 500ms;
-    margin-right: 96px;
+}
+@media screen and (min-width:980px) {
+    .list_offres {
+        width: 40%;
+    }
+    .offres_items {
+        min-width: 170px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+
+    .offres_items {
+        /* margin-left: 96px; */
+    }
 }
 
 .offres_items:hover {
@@ -589,7 +593,7 @@ h2 {
     /* or 22px */
     letter-spacing: 0.03em;
     padding: 30px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 .paragraph--white {
@@ -778,6 +782,7 @@ h3 {
     }
     .list_references p {
         width: 600px;
+        margin-right: 30px;
     }
     .references_txt {
         margin-left: 80px;
