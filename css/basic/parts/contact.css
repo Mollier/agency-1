@@ -38,6 +38,7 @@ form {
 @media screen and (min-width: 980px) {
     .contact_bloc {
         width: calc(100vw - 600px);
+        margin-bottom: -40px;
     }
 }
 

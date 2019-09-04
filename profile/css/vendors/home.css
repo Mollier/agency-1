@@ -110,3 +110,12 @@ header a {
 .selection_intro {
     padding-top: 20px;
 }
+
+.back {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}

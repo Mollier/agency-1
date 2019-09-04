@@ -13,13 +13,14 @@ class Mail
      $to  = 'teddy.boirin@bai-bao.fr'; // notez la virgule
 
      // Sujet
-     $subject = strip_tags($_POST['object']);
-     $name = strip_tags($_POST['name']);
-     $mail = strip_tags($_POST['mail']);
+     $subject = strip_tags(trim($_POST['object']));
+     $name = strip_tags(trim($_POST['name']));
+     $mail = strip_tags(trim($_POST['mail']));
       $message = str_replace("\n", '<br/>', $_POST['message']);
 
-     // message
-     $message = '
+  if(!empty($subject) OR !empty($name) OR !empty($mail) OR !empty($message)) {
+      // message
+      $message = '
     <html>
         <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -36,17 +37,20 @@ class Mail
      ';
 
 
-     // Pour envoyer un mail HTML, l'en-tête Content-type doit être défini
-     $headers[] = 'MIME-Version: 1.0';
-     $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+      // Pour envoyer un mail HTML, l'en-tête Content-type doit être défini
+      $headers[] = 'MIME-Version: 1.0';
+      $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
-     // En-têtes additionnels
-     $headers[] = 'To: Baï-Bao <teddy.boirin@bai-bao.fr>';
-     $headers[] = 'From: '.$name.' <'.$mail.'>';
+      // En-têtes additionnels
+      $headers[] = 'To: Baï-Bao <teddy.boirin@bai-bao.fr>';
+      $headers[] = 'From: '.$name.' <'.$mail.'>';
 
-     // Envoi
-     mail($to, $subject, $message, implode("\r\n", $headers));
-        $this->message->createAlert("Votre message a été envoyé !", 'green');
+      // Envoi
+      mail($to, $subject, $message, implode("\r\n", $headers));
+      $this->message->createAlert("Votre message a été envoyé !", 'green');
+  } else {
+      $this->message->createAlert("Veuillez remplir tout les champs", 'red');
+  }
     }
 
 

@@ -23,14 +23,14 @@
       <div class="contact_bloc">
         <form action="#" method="post">
 
-          <input type="text" name="name" placeholder="Nom">
+          <input type="text" name="name" placeholder="Nom" required>
 
-          <input type="text" name="mail" placeholder="Mail">
+          <input type="text" name="mail" placeholder="Mail" required>
 
 
-          <input type="text" name="object" placeholder="Objet">
+          <input type="text" name="object" placeholder="Objet" required>
 
-          <textarea name="message" cols="30" rows="10" placeholder="Votre message"></textarea>
+          <textarea name="message" cols="30" rows="10" placeholder="Votre message" required></textarea>
 
 
           <input type="submit" value="envoyer" name="send">
