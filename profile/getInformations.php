@@ -18,21 +18,21 @@
     <h1>Vos identifiants</h1>
 
     <?php
-        if(isset($_GET['getIdentifiants'])) {
-            if (isset($_SESSION['user'])) {
+    if(isset($_GET['getIdentifiants'])) {
+        if (isset($_SESSION['user'])) {
 
 
-                ?>
+            ?>
 
-                <p>Identifiant : <?= $clients->getIdentifiants($pdo, $_SESSION['user']['customer_name'])['email_admin'] ?></p>
-                <hr>
-                <p>Mot de passe : <?= $clients->getIdentifiants($pdo, $_SESSION['user']['customer_name'])['password_admin'] ?></p>
-                <?php
-            } else {
-                header("Location :  ../index.php");
-            }
-
+            <p>Identifiant : <?= $clients->getIdentifiants($pdo, $_SESSION['user']['customer_name'])['email_admin'] ?></p>
+            <hr>
+            <p>Mot de passe : <?= $clients->getIdentifiants($pdo, $_SESSION['user']['customer_name'])['password_admin'] ?></p>
+            <?php
+        } else {
+            header("Location :  ../index.php");
         }
+
+    }
     $alert->showAlert();
     ?>
 </section>
