@@ -1,19 +1,9 @@
-<?php require './profile/assets/config/bootstrap.php'; ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Baï-Bao - Agence de communication à Paris</title>
-  <link rel="stylesheet" href="./css/basic/style.css">
-    <script defer src="./js/change.js"></script>
-</head>
+    <?php
+    $titlePage = "Baï-Bao - Agence de communication à Paris";
+    include('./inc/header.php');
 
-<body>
-  <header>
-    <?php include('./inc/header.php') ?>
+    ?>
     <div class="header_secondary">
         <svg id="Calque_1"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116.01 172.98">
             <path class="barre" d="M500.17,319.8V431.21c-22.83-3.94-39.93-19.85-40.34-45.18V298.79h40.34Z" transform="translate(-446 -258.23)" />
@@ -256,9 +246,7 @@
 
       </div>
     </div>
-
-
-
+  </section>
       <script src="./js/rellax.min.js"></script>
 
       <script>
@@ -273,6 +261,3 @@
       </script>
 
   <?php include('./inc/footer.php') ?>
-</body>
-
-</html>

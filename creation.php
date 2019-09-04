@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Baï-Bao - Création graphique</title>
-    <link rel="stylesheet" href="./css/basic/style.css">
-    <link rel="stylesheet" href="./css/basic/services.css">
-    <script defer src="./js/app.js"></script>
-</head>
-
-<body>
-<header>
-    <?php include('./inc/header.php') ?>
+<?php
+$titlePage = "Baï-Bao - Service créations";
+include('./inc/header.php') ?>
     <div class="header_secondary ">
         <div class="logo_service">
             <img src="./assets/services/e-reputation.png" alt="print">
@@ -57,6 +44,3 @@
     <div class="round__beige__coups"></div>
 </section>
 <?php include('./inc/footer.php') ?>
-<body>
-
-</html>

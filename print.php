@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Baï-Bao - Notre équipe</title>
-    <link rel="stylesheet" href="./css/basic/style.css">
-    <link rel="stylesheet" href="./css/basic/services.css">
-    <script defer src="./js/app.js"></script>
-</head>
-
-<body>
-    <header>
         <?php include('./inc/header.php') ?>
         <div class="header_secondary ">
             <div class="logo_service">
@@ -46,6 +32,3 @@ Selon vos objectifs et habitudes de communication, un large éventails de <span 
     </div>
     </section>
     <?php include('./inc/footer.php') ?>
-<body>
-
-</html>

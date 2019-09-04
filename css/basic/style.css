@@ -87,7 +87,7 @@ html {
     position: absolute;
     z-index: 1;
     transition-duration: 100ms;
-    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
     transition: 300ms;
 
 }
@@ -134,7 +134,6 @@ html {
     }
 
 }
-
 
 .container_alert {
     margin-top:10px;

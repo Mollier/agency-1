@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dbdae4f1-ea58-46c7-8562-f1f21416af21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/basic/parts/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/basic/parts/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/basic/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/basic/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,17 +36,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/basic/parts/home.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="801">
-              <caret line="804" column="1" selection-start-line="804" selection-start-column="1" selection-end-line="804" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -112,7 +102,6 @@
         <option value="$PROJECT_DIR$/profile/connect.php" />
         <option value="$PROJECT_DIR$/profile/inc/header.php" />
         <option value="$PROJECT_DIR$/profile/css/vendors/connected.css" />
-        <option value="$PROJECT_DIR$/css/basic/style.css" />
         <option value="$PROJECT_DIR$/profile/assets/config/classes/User.php" />
         <option value="$PROJECT_DIR$/profile/viewFiles.php" />
         <option value="$PROJECT_DIR$/profile/getInformations.php" />
@@ -150,6 +139,7 @@
         <option value="$PROJECT_DIR$/profile/index.php" />
         <option value="$PROJECT_DIR$/profile/css/vendors/home.css" />
         <option value="$PROJECT_DIR$/css/basic/parts/home.css" />
+        <option value="$PROJECT_DIR$/css/basic/style.css" />
       </list>
     </option>
   </component>
@@ -164,7 +154,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,9 +175,7 @@
             <path>
               <item name="agency" type="b2602c69:ProjectViewProjectNode" />
               <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-              <item name="parts" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="agency" type="b2602c69:ProjectViewProjectNode" />
@@ -198,6 +185,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -257,7 +245,8 @@
       <workItem from="1567412413400" duration="21868000" />
       <workItem from="1567584779712" duration="8212000" />
       <workItem from="1567599288904" duration="114000" />
-      <workItem from="1567605761666" duration="500000" />
+      <workItem from="1567605761666" duration="1036000" />
+      <workItem from="1567607309050" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="pagr services">
       <created>1567525069083</created>
@@ -266,17 +255,23 @@
       <option name="project" value="LOCAL" />
       <updated>1567525069083</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="change details">
+      <created>1567606719092</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567606719092</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132743000" />
+    <option name="totallyTimeSpent" value="133281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="970" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49430525" visible="true" weight="0.25946277" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49430525" visible="true" weight="0.26251528" />
       <window_info id="Structure" order="1" sideWeight="0.50569475" side_tool="true" weight="0.2887668" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -323,16 +318,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pagr services" />
-    <option name="LAST_COMMIT_MESSAGE" value="pagr services" />
+    <MESSAGE value="change details" />
+    <option name="LAST_COMMIT_MESSAGE" value="change details" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/profile/assets/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" lean-forward="true" selection-start-column="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/profile/assets/config/classes/Clients.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -588,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/basic/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.php" />
     <entry file="file://$PROJECT_DIR$/news.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -668,8 +650,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/basic/parts/home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="801">
+        <state relative-caret-position="741">
           <caret line="804" column="1" selection-start-line="804" selection-start-column="1" selection-end-line="804" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/basic/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="89" column="66" selection-start-line="89" selection-start-column="66" selection-end-line="89" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/souris.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
