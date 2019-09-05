@@ -11,7 +11,10 @@ include('./inc/header.php') ?>
 	<section class="realisations">
 		<div class="realisations_top" id="realisations">
 			<p class="paragraph">
-				Des banques, des fonds, des associations, des entreprises, grandes et moins grandes… de la holding à la TPE, il règne une joyeuse diversité dans notre éventail de références. Autant de problématiques de communication qui renouvellent les sensations et réchauffent nos méninges pour cogiter ZE solution of ZE solution.
+				Depuis 9  ans, les projets s’enchaînent et ne se ressemblent pas. 
+
+La diversité des solutions que nous proposons est à  l’image de celle de nos clients. 
+
 			</p>
 			<div class="realisations_filter">
                 <a href="realisations.php?filter=Artistes&#realisations">
