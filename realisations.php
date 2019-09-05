@@ -57,33 +57,32 @@ include('./inc/header.php') ?>
                foreach ($realisations->filter($pdo, $_GET['filter']) as $realisation) {
                    if($realisation['color'] == '#040028') {?>
                        <a href="<?= $realisation['link'];?>" target="_blank">
-                           <div class="realisations__items" style="background-color:<?= $realisation['color'];?>">
+                           <div class="realisations__items" style="background-color:<?= $realisation['color'];?>" id="realisations__items">
                                <p class="item_title"><?= $realisation['title'];?></p>
                                <p class="item_desc"><?= $realisation['abstract'];?></p>
                            </div>
                        </a>
                    <?php   } else {?>
                        <a href="<?= $realisation['link'];?>" target="_blank">
-                           <div class="realisations__items" style="background-color:<?= $realisation['color'];?>">
+                           <div class="realisations__items" id="realisations__items" style="background-color:<?= $realisation['color'];?>">
                                <p class="item_title item_title--dark"><?= $realisation['title'];?></p>
                                <p class="item_desc item_desc--dark"><?= $realisation['abstract'];?></p>
                            </div>
                        </a>
                    <?php    }
-
                }
            } else {
                foreach ($realisations->getAll($pdo) as $realisation) {
                    if($realisation['color'] == '#040028') {?>
                        <a href="<?= $realisation['link'];?>" target="_blank">
-                           <div class="realisations__items" style="background-color:<?= $realisation['color'];?>">
+                           <div class="realisations__items" id="realisations__items" style="background-color:<?= $realisation['color'];?>">
                                <p class="item_title"><?= $realisation['title'];?></p>
                                <p class="item_desc"><?= $realisation['abstract'];?></p>
                            </div>
                        </a>
                    <?php   } else {?>
                        <a href="<?= $realisation['link'];?>" target="_blank">
-                           <div class="realisations__items" style="background-color:<?= $realisation['color'];?>">
+                           <div class="realisations__items" id="realisations__items" style="background-color:<?= $realisation['color'];?>">
                                <p class="item_title item_title--dark"><?= $realisation['title'];?></p>
                                <p class="item_desc item_desc--dark"><?= $realisation['abstract'];?></p>
                            </div>
@@ -213,4 +212,5 @@ include('./inc/header.php') ?>
 			<div class="round__beige__coups"></div>
 		</div>
 	</section>
+
 	<?php include('./inc/footer.php') ?>

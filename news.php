@@ -73,8 +73,6 @@
                       </div>
                   </div>
               <?php }
-
-
      }
      else {
          foreach ($news->getAll($pdo) as $new) {?>

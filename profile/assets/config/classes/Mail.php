@@ -16,7 +16,7 @@ class Mail
      $subject = strip_tags(trim($_POST['object']));
      $name = strip_tags(trim($_POST['name']));
      $mail = strip_tags(trim($_POST['mail']));
-      $message = str_replace("\n", '<br/>', $_POST['message']);
+      $message = str_replace("\n", '<br/>', strip_tags($_POST['message']));
 
   if(!empty($subject) OR !empty($name) OR !empty($mail) OR !empty($message)) {
       // message

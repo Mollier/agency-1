@@ -13,11 +13,11 @@ class Realisations {
 
 
     public function add(PDO $con) {
-        $title = $_POST['title'];
-        $abstract = $_POST['abstract'];
-        $link = $_POST['link'];
-        $color = $_POST['color'];
-        $category = $_POST['category'];
+        $title = strip_tags($_POST['title']);
+        $abstract = strip_tags($_POST['abstract']);
+        $link = strip_tags($_POST['link']);
+        $color = strip_tags($_POST['color']);
+        $category = strip_tags($_POST['category']);
 
         if(empty($title) OR empty($abstract) OR empty($link) OR empty($color OR empty($category))) {
             echo 'Veuillez remplir tout les champs.';
@@ -51,8 +51,15 @@ class Realisations {
     public function filter(PDO $con, $filtre) {
         if($filtre == "Artistes" OR $filtre == "Institutions" OR $filtre == "Education" OR $filtre == "IT"
             OR $filtre == "IT" OR $filtre == "Associations" OR $filtre == "Cabinets") {
-            $req = $con->query("SELECT * FROM realisations WHERE category ='$filtre'");
+
+            $req = $con->prepare("SELECT * FROM realisations WHERE category LIKE :filtre");
+            // Liaison du marqueur avec les termes de recherches entre "%" pour faire fonctionner l'opérateur LIKE
+            $req->bindValue('filtre', '%' . $filtre . '%');
+            // Execution de la requete & récupération des résultats
+            $req->execute();
             return $req->fetchAll(PDO::FETCH_ASSOC);
+
+
         } else {
             die("Error2");
             header("Location: index.php");

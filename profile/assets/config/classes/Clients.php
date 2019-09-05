@@ -15,19 +15,25 @@ class Clients {
     }
     public function getOne(PDO $con, $id)
     {
-        $req = $con->query('SELECT * FROM clients WHERE id_client ='.$id);
+        // Utilisation d'un marqueur nominatif ":search"
+        $req = $con->prepare("SELECT * FROM clients WHERE id_client = :id");
+        // Liaison du marqueur avec les termes de recherches entre "%" pour faire fonctionner l'opérateur LIKE
+        $req->bindValue('id', $id);
+        // Execution de la requete & récupération des résultats
+        $req->execute();
         return $req->fetch(PDO::FETCH_ASSOC);
     }
 
     public function add(PDO $con) {
-        $customer_name = $_POST['customer_name'];
-        $phone = $_POST['phone'];
-        $email = $_POST['email'];
-        $password = password_hash($_POST['password'], PASSWORD_ARGON2I);
-        $first_name = $_POST['first_name'];
-        $last_name = $_POST['last_name'];
-        $email_admin = $_POST['email_admin'];
-        $password_admin = $_POST['password_admin'];
+        $customer_name = strip_tags($_POST['customer_name']);
+        $phone = strip_tags($_POST['phone']);
+        $email = strip_tags($_POST['email']);
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        // $password = password_hash($_POST['password'], PASSWORD_ARGON2I);
+        $first_name = strip_tags($_POST['first_name']);
+        $last_name = strip_tags($_POST['last_name']);
+        $email_admin = strip_tags($_POST['email_admin']);
+        $password_admin = strip_tags($_POST['password_admin']);
 
         if(empty($customer_name) OR empty($phone) OR empty($email)) {
             $this->message->createAlert("Veuillez remplir tout les champs", 'red');
@@ -45,7 +51,7 @@ class Clients {
               $req->bindParam(':password_admin', $password_admin);
               $req->execute();
 
-              $customer_name = $_POST['customer_name'];
+              $customer_name = strip_tags($_POST['customer_name']);
 
               $req = $con->prepare('INSERT INTO users (first_name, last_name, password, email, customer_name) 
             VALUES ( :first_name, :last_name, :password, :email, :customer_name)');
@@ -77,22 +83,21 @@ class Clients {
 
     function update(PDO $con, $id)
     {
-        $customer_name = $_POST['customer_name'];
-        $phone = $_POST['phone'];
-        $email = $_POST['email'];
-        $email_admin = $_POST['email_admin'];
-        $password_admin = $_POST['password_admin'];
+        $customer_name = strip_tags($_POST['customer_name']);
+        $phone = strip_tags($_POST['phone']);
+        $email = strip_tags($_POST['email']);
+        $email_admin = strip_tags($_POST['email_admin']);
+        $password_admin = strip_tags($_POST['password_admin']);
 
 
         if(empty($customer_name) OR empty($phone) OR empty($email)  ) {
            die('Vide');
-
-
         } else {
             $req = $con->prepare('UPDATE clients 
             SET customer_name = :customer_name, phone = :phone, email = :email, email_admin = :email_admin, password_admin = :password_admin
-             WHERE id_client =' . $id);
+             WHERE id_client = :id');
             $req->bindParam(':customer_name', $customer_name);
+            $req->bindParam(':id', $id);
             $req->bindParam(':phone', $phone);
             $req->bindParam(':email', $email);
             $req->bindParam(':email_admin', $email_admin);
@@ -108,12 +113,19 @@ class Clients {
 
     public function getCharte(PDO $con, $id)
     {
-        $req = $con->query('SELECT * FROM chartes WHERE id_client ='.$id);
+        // $req = $con->query('SELECT * FROM chartes WHERE id_client ='.$id);
+        // return $req->fetch(PDO::FETCH_ASSOC);
+
+        $req = $con->prepare("SELECT * FROM chartes WHERE id_client = :id");
+        // Liaison du marqueur avec les termes de recherches entre "%" pour faire fonctionner l'opérateur LIKE
+        $req->bindValue('id', $id);
+        // Execution de la requete & récupération des résultats
+        $req->execute();
         return $req->fetch(PDO::FETCH_ASSOC);
     }
 
     public function uploadCharte(PDO $con, $id) {
-        $charte_file = $_POST['customer_name'] .'.pdf';
+        $charte_file = strip_tags($_POST['customer_name']) .'.pdf';
 
 
         if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -141,8 +153,9 @@ class Clients {
                        } else{
                            move_uploaded_file($_FILES["charte_file"]["tmp_name"], "../assets/upload/chartes/" . $charte_file);
 
-                           $req = $con->prepare('UPDATE chartes SET link = :charte_file WHERE id_client =' . $id);
+                           $req = $con->prepare('UPDATE chartes SET link = :charte_file WHERE id_client = :id');
                            $req->bindParam(':charte_file', $charte_file);
+                           $req->bindParam(':id', $id);
                            $req->execute();
                        }
                    } else{
@@ -161,13 +174,20 @@ class Clients {
 
     public function getTutoriel(PDO $con, $id)
     {
-        $req = $con->query('SELECT * FROM tutoriels WHERE id_client ='.$id);
+        // $req = $con->query('SELECT * FROM tutoriels WHERE id_client ='.$id);
+        // return $req->fetch(PDO::FETCH_ASSOC);
+
+        $req = $con->prepare("SELECT * FROM tutoriels WHERE id_client = :id");
+        // Liaison du marqueur avec les termes de recherches entre "%" pour faire fonctionner l'opérateur LIKE
+        $req->bindValue('id',$id);
+        // Execution de la requete & récupération des résultats
+        $req->execute();
         return $req->fetch(PDO::FETCH_ASSOC);
     }
 
 
     public function uploadTutoriel(PDO $con, $id) {
-        $tuto_file = $_POST['customer_name'] .'.pdf';
+        $tuto_file = strip_tags($_POST['customer_name']) .'.pdf';
 
 
         if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -195,14 +215,13 @@ class Clients {
                     } else{
                         move_uploaded_file($_FILES["tutoriel"]["tmp_name"], "../assets/upload/tutoriels/" . $tuto_file);
 
-                        $req = $con->prepare('UPDATE tutoriels SET link = :tutoriel WHERE id_client =' . $id);
+                        $req = $con->prepare('UPDATE tutoriels SET link = :tutoriel WHERE id_client = :id');
                         $req->bindParam(':tutoriel', $tuto_file);
+                        $req->bindParam(':id', $id);
                         $req->execute();
                     }
                 } else{
                     $this->message->createAlert("Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.", 'red');
-
-
                 }
             } //else{
             // echo "Error: " . $_FILES["charte_file"]["error"];
@@ -212,7 +231,7 @@ class Clients {
 
     public function uploadFacture(PDO $con) {
         $facture = $_FILES['facture']['name'];
-        $customer_name = $_POST['customer_name'];
+        $customer_name = strip_tags($_POST['customer_name']);
         $date = date("Y/m/d");
 
         if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -257,12 +276,26 @@ class Clients {
     }
 
     public function getFactures(PDO $con, $user) {
-        $req = $con->query('SELECT * FROM factures WHERE customer_name = "'.$user.'"');
-        return $req->fetchAll(PDO::FETCH_ASSOC);
+        // $req = $con->query('SELECT * FROM factures WHERE customer_name = "'.$user.'"');
+        // return $req->fetchAll(PDO::FETCH_ASSOC);
+
+        $req = $con->prepare("SELECT * FROM factures WHERE customer_name = :user");
+        // Liaison du marqueur avec les termes de recherches entre "%" pour faire fonctionner l'opérateur LIKE
+        $req->bindValue('user', $user);
+        // Execution de la requete & récupération des résultats
+        $req->execute();
+        return $req->fetch(PDO::FETCH_ASSOC);
     }
 
     public function getIdentifiants(PDO $con, $user) {
-        $req = $con->query('SELECT * FROM clients WHERE customer_name = "'.$user.'"');
+        // $req = $con->query('SELECT * FROM clients WHERE customer_name = "'.$user.'"');
+        // return $req->fetch(PDO::FETCH_ASSOC);
+
+        $req = $con->prepare("SELECT * FROM clients WHERE customer_name = :customer_name");
+        // Liaison du marqueur avec les termes de recherches entre "%" pour faire fonctionner l'opérateur LIKE
+        $req->bindValue('customer_name', $user);
+        // Execution de la requete & récupération des résultats
+        $req->execute();
         return $req->fetch(PDO::FETCH_ASSOC);
     }
 

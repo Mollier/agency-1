@@ -428,7 +428,7 @@ h2 {
 }
 @media screen and (min-width:980px) {
     .list_offres {
-        width: 40%;
+        max-width: 35%;
     }
     .offres_items {
         min-width: 170px;
@@ -610,6 +610,7 @@ h2 {
     justify-content: center;
     flex-direction: column;
     box-shadow: 0px -16px 139px rgba(4, 0, 40, 0.05);
+    width: 100vw;
 }
 
 .realisations__list {
@@ -620,6 +621,7 @@ h2 {
     width: 100%;
     height: auto;
     flex-wrap: wrap;
+
 }
 
 .realisations__items {
@@ -635,12 +637,6 @@ h2 {
     padding-left: 10px;
     margin-bottom: 30px;
     z-index: 100;
-    transition: 1s;
-}
-
-.realisations__items>a {
-    height: 203px;
-    margin-bottom: 30px;
 }
 
 .realisations__items:hover {
@@ -672,6 +668,13 @@ h2 {
     transition: 1s;
 }
 
+
+.realisations__items>a {
+    height: 203px;
+    margin-bottom: 30px;
+}
+
+
 a {
     z-index: 100;
 }
@@ -680,9 +683,11 @@ a {
     .realisations__items {
         width: 395px;
         height: 203px;
+        color: red;
     }
+
     .realisations__list {
-        width: calc(100vw - 100px);
+        width: calc(100vw - 700px);
         flex-direction: row;
     }
 }
@@ -698,6 +703,8 @@ a {
     font-weight: bold;
     margin-bottom: 20px;
 }
+
+
 
 .item_desc {
     font-family: 'GTWalsheimProBold', sans-serif;

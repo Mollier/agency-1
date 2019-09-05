@@ -117,7 +117,6 @@ if($_SESSION['user']['rights'] != 10) {
                        <a href="../assets/upload/tutoriels/<?= $clients->getTutoriel($pdo, $_GET['view'])['link']; ?>"
                           target="_blank">Tutoriel actuel</a>
                    </p>
-
                    <br>
                    <p><label for="charte_file">Changer la charte graphique</label></p>
                    <input type="file" name="charte_file"">

@@ -4,13 +4,14 @@ class News {
     public function __construct()
     {
         $this->message = new Alert();
+
     }
     public function add(PDO $con)
     {
-        $title = $_POST['title'];
+        $title = strip_tags($_POST['title']);
         $image = $_FILES['image']['name'];
-        $content = $_POST['content'];
-        $category = $_POST['category'];
+        $content = strip_tags($_POST['content']);
+        $category = strip_tags($_POST['category']);
 
         if(empty($title) OR empty($content) OR empty($category)) {
             $this->message->createAlert("Erreur, veuillez recommencer", 'red');
@@ -75,12 +76,16 @@ class News {
 
     public function getOne(PDO $con, $id)
     {
-        $req =  $con->query('SELECT * FROM news WHERE id_news=' . $id);
+        $req = $con->prepare("SELECT * FROM news WHERE id_news = :id");
+        $req->bindValue('id', $id);
+        $req->execute();
         return $req->fetch(PDO::FETCH_ASSOC);
     }
 
     public function getAllLessFive(PDO $con) {
-        $req = $con->query('SELECT * FROM news order by date DESC LIMIT 0,4');
+        $req = $con->prepare("SELECT * FROM news ORDER BY date DESC LIMIT 0,4");
+        $req->bindValue();
+        $req->execute();
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }
 
@@ -103,8 +108,12 @@ class News {
 
 
         if ($pos === false) {
-            $req = $con->query("SELECT * FROM news WHERE title LIKE '$search' order by date DESC");
-            return $req->fetchAll(PDO::FETCH_ASSOC);
+
+
+                $req = $con->prepare("SELECT * FROM news WHERE title LIKE :search order by date DESC");
+                $req->bindValue('search', '%' . $search . '%');
+                $req->execute();
+                return $req->fetchAll(PDO::FETCH_ASSOC);
         } else {
            header("Location: index.php");
         }
@@ -113,7 +122,10 @@ class News {
     }
 
     public function count(PDO $con, $search) {
-        $req = $con->query("SELECT count(*) as nb FROM news WHERE title LIKE '$search'");
+
+        $req = $con->prepare("SELECT count(*) as nb FROM news WHERE title LIKE :search");
+        $req->bindValue('search', '%' . $search . '%');
+        $req->execute();
         return $req->fetch(PDO::FETCH_ASSOC);
     }
 
