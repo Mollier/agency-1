@@ -9,7 +9,9 @@
     <title><?= $titlePage?></title>
     <link rel="stylesheet" href="./css/basic/style.css">
     <script defer src="./js/change.js"></script>
-
+    <script defer src="./js/app.js"></script>
+    <script defer src="./js/loader.js"></script>
+    <script defer src="./js/souris.js"></script>
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
@@ -20,9 +22,6 @@
 
 <body>
 <header>
-<script defer src="./js/app.js"></script>
-<script defer src="./js/loader.js"></script>
-<script defer src="./js/souris.js"></script>
 <div class="loader" id="loader">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 217.85 48.33">
         <defs>

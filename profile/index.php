@@ -47,12 +47,12 @@ if(isset($_SESSION['user'])) {
     <div class="selection__item">
       <span class="selection_i-am">Je suis</span>
       <h3><a href="connect.php">UN CLIENT</a></h3>
-      <p class="selection_intro">Coactique aliquotiens persequendos scandere clivos sublimes</p>
+      <p class="selection_intro">Accédez à votre espace client</p>
     </div>
     <div class="round"></div>
     <div class="selection__item"><span class="selection_i-am">Je suis</span>
       <h3><a href="connect.php">UN BAÏ-BAO</a></h3>
-      <p class="selection_intro">Coactique aliquotiens persequendos scandere clivos sublimes</p>
+      <p class="selection_intro">Gérer le site en tant que Baï-Bao</p>
     </div>
    <?php $alert->showAlert(); ?>
 
